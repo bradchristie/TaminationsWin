@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="TaminationsWin.FirstLandscapePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="40"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Rectangle >
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="#FF00C000" Offset="0"/>
+          <GradientStop Color="#FF004000" Offset="1"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Button x:Name="Back" Style="{StaticResource TamButton}" Content="Back" HorizontalAlignment="Left" Height="40" Width="70" Tapped="Back_Tapped"/>
+    <TextBlock x:Name="Title" HorizontalAlignment="Center" Text="Taminations" FontSize="21.333" FontWeight="Bold" VerticalAlignment="Center" Foreground="White" />
+    <Grid Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="2*"/>
+      </Grid.ColumnDefinitions>
+      <Frame x:Name="LeftFrame" Grid.Column="0" />
+      <Frame x:Name="RightFrame" Grid.Column="1" Navigated="RightFrame_Navigated" />
+    </Grid>
+  </Grid>
+  
+</Page>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="refresh" content="6;url=../b1/all_around_the_corner.html"/>
+
+function redirect()
+{
+  var search = document.URL.split(/\?/)[1];
+  if (search != null)
+    document.location = "../b1/all_around_the_corner.html?"+search;
+  else
+    document.location = "../b1/all_around_the_corner.html";
+}
+window.setTimeout(redirect,5000);
+
+</head>
+<body><div class="definition">
+<p>This page has been moved.  You will be redirected in 5 seconds.</p>
+
+</div></body>
+</html>

@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="TaminationsWin.AnimationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="Black">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="20*"/>
+      <RowDefinition />
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+
+    <local:AnimationView Grid.Row="0" x:Name="animationView" Tapped="animationView_Tapped" />
+    <Grid x:Name="saysPanel" Background="#c0ffffff" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <TextBlock x:Name="saysText" TextWrapping="Wrap" VerticalAlignment="Top" FontStyle="Italic" HorizontalAlignment="Left" FontSize="21.333"/>
+    </Grid>
+    <TextBlock x:Name="optionsText" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="21.333"  />
+    <Slider x:Name="slider" Maximum="100" Minimum="0" Grid.Row="1"  ValueChanged="slider_ValueChanged" IsThumbToolTipEnabled="False" />
+    <local:SliderTicView x:Name="sliderTicView" Grid.Row="2" Margin="0,4,0,0"/>
+    <Grid Grid.Row="3">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="Start" Tapped="Start_Tapped" Grid.Column="0" Style="{StaticResource TamButton}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Viewbox Stretch="Uniform">
+          <Canvas Width="20" Height="20">
+            <Path Data="M 9.2 7.5 L 4.8 10 L 9.2 12.5" Stroke="Black" />
+            <Path Data="M 15.2 7.5 L 10.8 10 L 15.2 12.5" Stroke="Black" />
+          </Canvas>
+        </Viewbox>
+      </Button>
+      <Button x:Name="Back" Tapped="Back_Tapped" Style="{StaticResource TamButton}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch">
+        <Viewbox Stretch="Uniform">
+          <Canvas Width="20" Height="20">
+            <Path Data="M 12.2 7.5 L 7.8 10 L 12.2 12.5" Stroke="Black" />
+          </Canvas>
+        </Viewbox>
+      </Button>
+      <Button x:Name="Play" Style="{StaticResource TamButton}" Tapped="Play_Tapped" Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch">
+        <Viewbox Stretch="Uniform">
+          <Canvas Width="20" Height="20">
+            <Path x:Name="PlayPath" Data="M 5.6 5 L 14 10 L 5.6 15 Z" Fill="Black" />
+            <Path x:Name="PausePath" Data="M 5 5 L 5 15 L 8 15 L 8 5 Z M 15 5 L 15 15 L 12 15 L 12 5 Z" Fill="#00000000"/>
+          </Canvas>
+        </Viewbox>
+      </Button>
+      <Button x:Name="Forward" Tapped="Forward_Tapped" Style="{StaticResource TamButton}" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch">
+        <Viewbox Stretch="Uniform">
+          <Canvas Width="20" Height="20">
+            <Path Data="M 7.8 7.5 L 12.2 10 L 7.8 12.5" Stroke="Black" />
+          </Canvas>
+        </Viewbox>
+      </Button>
+      <Button x:Name="End" Tapped="End_Tapped" Style="{StaticResource TamButton}" Grid.Column="4" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch">
+        <Viewbox Stretch="Uniform">
+          <Canvas Width="20" Height="20">
+            <Path Data="M 4.8 7.5 L 9.2 10 L 4.8 12.5" Stroke="Black" />
+            <Path Data="M 10.8 7.5 L 15.2 10 L 10.8 12.5" Stroke="Black" />
+          </Canvas>
+        </Viewbox>
+      </Button>
+    </Grid>
+    <Grid Margin="0" Grid.Row="4">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="Definition" Tapped="Definition_Tapped" Content="Definition" Style="{StaticResource TamButton}"  HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch"/>
+      <Button x:Name="Settings" Tapped="Settings_Tapped" Content="Settings" Style="{StaticResource TamButton}" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch"/>
+    </Grid>
+
+
+  </Grid>
+
+</Page>

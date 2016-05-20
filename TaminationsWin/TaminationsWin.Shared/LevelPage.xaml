@@ -1,0 +1,129 @@
+﻿<Page
+    x:Class="TaminationsWin.LevelPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="4*"/>
+      <RowDefinition/>
+      <RowDefinition Height="3*"/>
+      <RowDefinition Height="5*"/>
+      <RowDefinition/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Grid x:Name="bms" Grid.Row="0" Tapped="Level_Tapped">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="9*"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+      <Rectangle Fill="{StaticResource bms}" Margin="0,0,0,-1" Grid.RowSpan="4" Grid.ColumnSpan="2" Stroke="Black"/>
+      <TextBlock Margin="20,0,0,0" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Basic and Mainstream" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      <Grid Grid.Row="1" Grid.Column="1" x:Name="b1" Tapped="Level_Tapped">
+        <Rectangle Fill="{StaticResource b1}" Margin="0,0,0,-1" Stroke="Black"/>
+        <TextBlock Margin="20,0,0,0" TextWrapping="Wrap" Text="Basic 1" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid x:Name="b2" Tapped="Level_Tapped" Grid.Row="2" Grid.Column="1">
+        <Rectangle Fill="{StaticResource b2}" Margin="0,0,0,-1" Stroke="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Basic 2" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid x:Name="ms" Tapped="Level_Tapped" Grid.Row="3" Grid.Column="1" >
+        <Rectangle Fill="{StaticResource ms}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Mainstream" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+    </Grid>
+    <Grid x:Name="plus" Tapped="Level_Tapped" Grid.Row="1" >
+      <Rectangle Fill="{StaticResource plus}" Margin="0,0,0,-1" Grid.Row="4" Stroke="Black"/>
+      <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Plus" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+    </Grid>
+    <Grid x:Name="adv" Tapped="Level_Tapped" Grid.Row="2" >
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="9*"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+      <Rectangle Fill="{StaticResource adv}" Margin="0,0,0,-1" Grid.Row="0" Grid.Column="0" Stroke="Black" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+      <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="0" TextWrapping="Wrap" Text="Advanced" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      <Grid x:Name="a1" Tapped="Level_Tapped" Grid.Row="1" Grid.Column="1">
+        <Rectangle Fill="{StaticResource a1}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="A-1" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid x:Name="a2" Tapped="Level_Tapped" Grid.Row="2" Grid.Column="1">
+        <Rectangle Fill="{StaticResource a2}" Margin="0,0,0,-1" Stroke="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="A-2" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+    </Grid>
+    <Grid x:Name="challenge" Tapped="Level_Tapped" Grid.Row="3">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="9*"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+      <Rectangle Fill="{StaticResource challenge}" Margin="0,0,0,-1" Grid.Row="0" Stroke="Black" Grid.ColumnSpan="2" Grid.Column="0" Grid.RowSpan="5"/>
+      <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="0" TextWrapping="Wrap" Text="Challenge" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      <Grid x:Name="c1" Tapped="Level_Tapped" Grid.Row="1" Grid.Column="1">
+        <Rectangle Fill="{StaticResource c1}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="C-1" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid x:Name="c2" Tapped="Level_Tapped" Grid.Row="2" Grid.Column="1">
+        <Rectangle Fill="{StaticResource c2}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="C-2" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid x:Name="c3a" Tapped="Level_Tapped" Grid.Row="3" Grid.Column="1">
+        <Rectangle Fill="{StaticResource c3a}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="C-3A" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid x:Name="c3b" Tapped="Level_Tapped" Grid.Row="4" Grid.Column="1">
+        <Rectangle Fill="{StaticResource c3b}" Margin="0,0,0,-1" Stroke="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="C-3B" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+    </Grid>
+
+    <Grid x:Name="all" Tapped="Level_Tapped" Grid.Row="4">
+      <Rectangle Fill="{StaticResource all}" Margin="0,0,0,-1" Stroke="Black" />
+      <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Index of All Calls" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+    </Grid>
+    <!--
+        <Rectangle Fill="#FFc0c0c0" Margin="0,0,-1,-1" Grid.Row="14" Stroke="Black" Grid.ColumnSpan="2" Grid.Column="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="14" TextWrapping="Wrap" Text="Practice" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+        <Rectangle Fill="#FFc0c0c0" Margin="0,0,0,-1" Grid.Row="14" Stroke="Black" Grid.ColumnSpan="1" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="14" TextWrapping="Wrap" Text="Sequencer" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="2" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          -->
+    <Grid Grid.Row="5">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Grid Tapped="About_Tapped" Grid.Column="0">
+        <Rectangle Fill="{StaticResource all}" Margin="0,0,-1,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="About" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid Tapped="Settings_Tapped" Grid.Column="1">
+        <Rectangle Fill="{StaticResource all}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+    </Grid>
+  </Grid>
+</Page>

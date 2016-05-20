@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="TaminationsWin.DefinitionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <WebView Grid.Row="0" x:Name="webview"/>
+    <StackPanel Name="AbbrevFullPanel" Grid.Row="1" Background="LightGray" Orientation="Horizontal">
+      <RadioButton GroupName="AbbrevFull" x:Name="Abbrev" Tapped="Abbrev_Tapped" Content="Abbreviated" Margin="20,0,20,0"/>
+      <RadioButton GroupName="AbbrevFull" x:Name="Full" Tapped="Full_Tapped" Content="Full"/>
+    </StackPanel>
+  </Grid>
+</Page>

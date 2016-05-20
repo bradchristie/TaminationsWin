@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="TaminationsWin.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="LightGray">
+    <ScrollViewer>
+      <StackPanel  Margin="0">
+        <StackPanel Margin="2" Background="White">
+          <TextBlock Padding="8" Text="Dancer Speed" FontSize="18.667" FontFamily="Segoe UI" FontWeight="SemiBold" />
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+              <ColumnDefinition/>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton GroupName="Speed" x:Name="speedSlowRB" Checked="speedSlowRB_Checked" Grid.Column="0" Content="Slow"/>
+            <RadioButton GroupName="Speed" x:Name="speedNormalRB" Grid.Column="1" Checked="speedNormalRB_Checked" Content="Normal"/>
+            <RadioButton GroupName="Speed" x:Name="speedFastRB" Checked="speedFastRB_Checked" Grid.Column="2" Content="Fast"/>
+          </Grid>
+          <TextBlock Text="Dancers move at a Normal pace" FontSize="16" />
+        </StackPanel>
+
+        <StackPanel Margin="2" Background="White">
+          <ToggleSwitch x:Name="loopSwitch" Toggled="loopSwitch_Toggled" OffContent="Loop" OnContent="Loop" FontSize="18.667"   />
+          <TextBlock Text="Repeat the animation continuously" FontSize="16"  />
+        </StackPanel>
+
+        <StackPanel Margin="2" Background="White">
+          <ToggleSwitch x:Name="gridSwitch" Toggled="gridSwitch_Toggled" OffContent="Grid" OnContent="Grid" FontSize="18.667"   />
+          <TextBlock Text="Show a dancer-sized grid" FontSize="16"  />
+        </StackPanel>
+
+        <StackPanel Margin="2" Background="White">
+          <ToggleSwitch x:Name="pathsSwitch" Toggled="pathsSwitch_Toggled" OffContent="Paths" OnContent="Paths" FontSize="18.667"   />
+          <TextBlock Text="Draw a line for each dancer's route" FontSize="16"  />
+        </StackPanel>
+
+        <StackPanel Margin="2" Background="White">
+          <TextBlock Text="Numbers" Padding="8" VerticalAlignment="Top" FontSize="18.667" FontWeight="SemiBold" FontFamily="Segoe UI"/>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <RadioButton GroupName="Numbers" x:Name="numbersNoneRB" Tapped="numbersNoneRB_Tapped" Grid.Column="0" Content="None"/>
+          <RadioButton GroupName="Numbers" x:Name="numbersDancersRB" Tapped="numbersDancersRB_Tapped" Grid.Column="1" Content="Dancers"/>
+          <RadioButton GroupName="Numbers" x:Name="numbersCouplesRB" Tapped="numbersCouplesRB_Tapped" Grid.Column="2" Content="Couples"/>
+        </Grid>
+        <TextBlock Text="Number dancers 1-8" FontSize="16" />
+        </StackPanel>
+
+        <StackPanel Margin="2" Background="White">
+          <ToggleSwitch x:Name="phantomsSwitch" Toggled="phantomsSwitch_Toggled" OffContent="Phantoms" OnContent="Phantoms" FontSize="18.667"   />
+          <TextBlock Text="Show phantom dancers where used for Challenge" FontSize="16"  />
+        </StackPanel>
+
+        <StackPanel Margin="2" Background="White">
+          <TextBlock Text="Special Geometry" Padding="8" VerticalAlignment="Top" FontSize="18.667" FontFamily="Segoe UI" FontWeight="SemiBold"/>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <RadioButton GroupName="Geometry" x:Name="geometrySquareRB" Tapped="geometrySquareRB_Tapped" Grid.Column="0" Content="None"/>
+          <RadioButton GroupName="Geometry" x:Name="geometryHexagonRB" Tapped="geometryHexagonRB_Tapped" Grid.Column="1" Content="Hexagon"/>
+          <RadioButton GroupName="Geometry" x:Name="geometryBigonRB" Tapped="geometryBigonRB_Tapped" Grid.Column="2" Content="Bi-gon"/>
+        </Grid>
+        </StackPanel>
+
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+</Page>

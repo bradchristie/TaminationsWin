@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="TaminationsWin.AnimListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <ListBox x:Name="AnimList" SelectionChanged="AnimList_SelectionChanged" Background="DarkGray" ItemContainerStyle="{StaticResource TamListBoxItem}">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Grid Background="{Binding CellColor}">
+            <Rectangle Fill="{Binding CellColor}" HorizontalAlignment="Stretch"/>
+            <TextBlock Grid.Column="0" Foreground="{Binding TextColor}" Text="{Binding Text}" FontSize="21.333" HorizontalAlignment="Left" Margin="{Binding Margin}" Padding="10,0,10,0" TextWrapping="Wrap"/>
+          </Grid>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+    <Grid Grid.Row="1" x:Name="DifficultyLegend" >
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Rectangle Grid.Column="0" Fill="#FFC0FFC0" />
+      <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16">Common</TextBlock>
+      <Rectangle Grid.Column="1" Fill="#FFFFFFC0" />
+      <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">Harder</TextBlock>
+      <Rectangle Grid.Column="2" Fill="#FFFFC0C0" />
+      <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">Expert</TextBlock>
+    </Grid>
+    <Grid Grid.Row="2" x:Name="ButtonPanel" MinHeight="40">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Button Grid.Column="0" Tapped="Definition_Tapped" Style="{StaticResource TamButton}" Content="Definition" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="18.667"/>
+      <Button Grid.Column="1" Tapped="Settings_Tapped" Style="{StaticResource TamButton}" Content="Settings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="18.667"/>
+    </Grid>
+  </Grid>
+</Page>

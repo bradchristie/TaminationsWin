@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="TaminationsWin.PortraitPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition MinHeight="40" Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Rectangle Grid.ColumnSpan="3">
+        <Rectangle.Fill>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF00C000" Offset="0"/>
+            <GradientStop Color="#FF004000" Offset="1"/>
+          </LinearGradientBrush>
+        </Rectangle.Fill>
+      </Rectangle>
+      <Button Grid.Column="0" x:Name="Back" Style="{StaticResource TamButton}" Content="Back" HorizontalAlignment="Left" Height="40" Width="70" Tapped="Back_Tapped"/>
+      <TextBlock Grid.Column="1" x:Name="Title"  HorizontalAlignment="Center" Text="Taminations"  FontWeight="Bold" VerticalAlignment="Center" Foreground="White" TextWrapping="Wrap" FontSize="16" />
+      <Button Grid.Column="2" x:Name="Level" Style="{StaticResource TamButton}" Content="Plus" Visibility="Collapsed" HorizontalAlignment="Right" Height="40" Width="70" Tapped="Level_Tapped"/>
+    </Grid>
+    <Frame x:Name="PageFrame" Grid.Row="1" Navigating="PageFrame_Navigating" Navigated="PageFrame_Navigated" />
+  </Grid>
+</Page>

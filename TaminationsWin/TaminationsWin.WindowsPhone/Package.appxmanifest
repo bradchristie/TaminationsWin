@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="59302Taminations.Taminations" Publisher="CN=12C8C935-0778-4FF8-82CB-A8FD3E6D2DBC" Version="1.1.6.1" />
+  <mp:PhoneIdentity PhoneProductId="5b386141-eb5a-4f54-b367-746b55b9eb8e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Taminations</DisplayName>
+    <PublisherDisplayName>Brad Christie</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TaminationsWin.WindowsPhone.App">
+      <m3:VisualElements DisplayName="Taminations" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Animations for Square Dance calls.   Levels from Mainstream through C-3B.  Also includes definitions for every call from Callerlab. There are over 2500 animations covering more than 500 calls." ForegroundText="light" BackgroundColor="white" ToastCapable="false">
+        <m3:DefaultTile Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#fff3e7" />
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+</Package>
