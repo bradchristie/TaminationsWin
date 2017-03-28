@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 
 */
 
+using Windows.Graphics.Display;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
@@ -28,7 +29,18 @@ namespace TaminationsWin {
     public LevelPage()
     {
       this.InitializeComponent();
+      var screenSize = MainPage.ScreenSize();
+      if (screenSize.Length() < 6)
+        DisplayInformation.AutoRotationPreferences = DisplayOrientations.Portrait;
       Callouts.SetTitle("Taminations");
+    }
+
+    private void Practice_Tapped(object sender, TappedRoutedEventArgs e) {
+      Callouts.StartPracticeAction();
+    }
+
+    private void Sequencer_Tapped(object sender, TappedRoutedEventArgs e) {
+      Callouts.SequencerAction();
     }
 
     private void About_Tapped(object sender, TappedRoutedEventArgs e)

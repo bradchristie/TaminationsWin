@@ -2,7 +2,7 @@
 <!DOCTYPE tamination SYSTEM "tamination.dtd">
 <!--
 
-    Copyright 2016 Brad Christie
+    Copyright 2017 Brad Christie
 
     This file is part of Taminations.
 
@@ -21,6 +21,28 @@
 
 -->
 <tamination title="As Couples Concept">
+
+  <tam title="As Couples Cast Off Three Quarters" group="As Couples"
+       formation="Tidal Line LH">
+    <path>
+      <move select="Quarter Right" beats="2"/>
+      <move select="Quarter Right" beats="2"/>
+      <move select="Quarter Right" beats="3" hands="both" offsetX="-1"/>
+    </path>
+    <path>
+      <move select="BackHinge Left" beats="2"/>
+      <move select="BackHinge Left" beats="2"/>
+      <move select="BackHinge Left" beats="3" scaleX="3"/>
+    </path>
+    <path>
+      <move select="Swing Right" beats="4" scaleX="2" scaleY="2"/>
+      <move select="Hinge Right" beats="3" scaleX="3" scaleY="2"/>
+    </path>
+    <path>
+      <move select="Swing Right" beats="4"/>
+      <move select="Hinge Right" beats="3" hands="both"/>
+    </path>
+  </tam>
 
   <tam title="As Couples Chase Right" group="As Couples"
        formation="Lines Facing Out">
@@ -220,6 +242,28 @@
     </path>
   </tam>
 
+  <tam title="As Couples Follow Your Neighbor" group="As Couples" display="none"
+       formation="Two-Faced Lines LH">
+    <path>
+      <move select="Lead Left" hands="left" beats="2" scaleX="2" scaleY="3" />
+      <move select="Run Left" offsetY="-.5" />
+    </path>
+    <path>
+      <move select="Lead Left" hands="right" beats="2" />
+      <move select="U-Turn Left" offsetY="-.5" />
+    </path>
+    <path>
+      <move select="Extend Left" hands="right" beats="2" scaleX="2" scaleY=".5" />
+      <move select="Swing Left" scaleX=".5" scaleY=".5" />
+      <move select="Hinge Left" scaleX=".5" scaleY=".5" />
+    </path>
+    <path>
+      <move select="Extend Left" hands="left" beats="2" scaleX="2" scaleY="1.5" />
+      <move select="Swing Left" scaleX="1.5" scaleY="1.5" />
+      <move select="Hinge Left" scaleX="1.5" scaleY="1.5" />
+    </path>
+  </tam>
+
   <tam title="As Couples Half Sashay" group="As Couples"
        formation="Normal Lines" >
     <path>
@@ -268,6 +312,24 @@
       <move select="Forward" beats="2" hands="left" scaleX="2" offsetY="-.2"/>
       <move select="Stand" beats=".5"/>
       <move select="Back" beats="2" hands="left" scaleX="2" offsetY=".2"/>
+    </path>
+  </tam>
+
+  <tam title="As Couples Left Swing Thru" group="As Couples"
+       formation="Two-Faced Tidal Line LH">
+    <path>
+      <move select="Swing Left" scaleX="1.5" scaleY="1.5" />
+      <move select="Swing Right" scaleX=".5" scaleY=".5" />
+    </path>
+    <path>
+      <move select="Swing Left" scaleX=".5" scaleY=".5" />
+      <move select="Swing Right" scaleX="1.5" scaleY="1.5" />
+    </path>
+    <path>
+      <move select="Swing Left" scaleX=".5" scaleY=".5" />
+    </path>
+    <path>
+      <move select="Swing Left" scaleX="1.5" scaleY="1.5" />
     </path>
   </tam>
 
@@ -432,6 +494,26 @@
     </path>
     <path>
       <move select="Run Right" hands="right" beats="5" scaleX="2.5" scaleY="3" />
+    </path>
+  </tam>
+
+  <tam title="As Couples Scoot Back" group="As Couples" display="none"
+       formation="Two-Faced Lines LH">
+    <path>
+      <move select="Run Left" hands="left" beats="5" scaleX="2.5" scaleY="3" />
+    </path>
+    <path>
+      <move select="Run Left" hands="right" beats="5" />
+    </path>
+    <path>
+      <move select="Extend Left" hands="right" beats="2" scaleX="2" scaleY=".5" />
+      <move select="Swing Left" scaleX=".5" scaleY=".5" />
+      <move select="Extend Right" hands="right" beats="2" scaleX="2" scaleY=".5" />
+    </path>
+    <path>
+      <move select="Extend Left" hands="left" beats="2" scaleX="2" scaleY="1.5" />
+      <move select="Swing Left" scaleX="1.5" scaleY="1.5" />
+      <move select="Extend Right" hands="left" beats="2" scaleX="2" scaleY="1.5" />
     </path>
   </tam>
 
@@ -641,6 +723,10 @@
   <tamxref title="As Couples (A-1) Left Wheel Thru" group="As Couples (A-1)"
            xref-link="a1/left_wheel_thru"
            xref-title="As Couples Left Wheel Thru" />
+
+  <tamxref title="As Couples (A-1) Linear Cycle" group="As Couples (A-1)"
+           xref-link="a1/linear_cycle"
+           xref-title="As Couples Linear Cycle" />
 
   <tamxref title="As Couples (A-1) Lockit" group="As Couples (A-1)"
            xref-link="a1/lock_it"

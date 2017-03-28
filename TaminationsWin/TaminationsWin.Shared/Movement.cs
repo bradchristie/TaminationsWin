@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ namespace TaminationsWin {
 
     public double beats,fullbeats;
     public int hands;
-    private Bezier btranslate, brotate;
+    public Bezier btranslate, brotate;
 
     public static int getHands(string s) {
       switch (s) {
@@ -58,8 +58,8 @@ namespace TaminationsWin {
 
     public Movement(double fullbeats, int hands,
                     double cx1, double cy1, double cx2, double cy2, double x2, double y2,
-                    double cx3, double cx4, double cy4, double x4, double y4, double beats) {
-      this.beats = beats;
+                    double cx3, double cx4, double cy4, double x4, double y4, double beats=0) {
+      this.beats = beats > 0 ? beats : fullbeats;
       this.hands = hands;
       this.fullbeats = fullbeats;
       btranslate = new Bezier(0, 0, cx1, cy1, cx2, cy2, x2, y2);

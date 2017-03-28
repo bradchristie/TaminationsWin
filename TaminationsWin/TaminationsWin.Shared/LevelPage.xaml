@@ -16,6 +16,7 @@
       <RowDefinition Height="5*"/>
       <RowDefinition/>
       <RowDefinition/>
+      <RowDefinition/>
     </Grid.RowDefinitions>
 
     <Grid x:Name="bms" Grid.Row="0" Tapped="Level_Tapped">
@@ -105,13 +106,21 @@
       <Rectangle Fill="{StaticResource all}" Margin="0,0,0,-1" Stroke="Black" />
       <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Index of All Calls" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
     </Grid>
-    <!--
-        <Rectangle Fill="#FFc0c0c0" Margin="0,0,-1,-1" Grid.Row="14" Stroke="Black" Grid.ColumnSpan="2" Grid.Column="0"/>
-        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="14" TextWrapping="Wrap" Text="Practice" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
-        <Rectangle Fill="#FFc0c0c0" Margin="0,0,0,-1" Grid.Row="14" Stroke="Black" Grid.ColumnSpan="1" Grid.Column="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="14" TextWrapping="Wrap" Text="Sequencer" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="2" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
-          -->
     <Grid Grid.Row="5">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Grid Tapped="Practice_Tapped" Grid.Column="0">
+        <Rectangle Fill="{StaticResource all}" Margin="0,0,-1,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Practice" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+      <Grid Tapped="Sequencer_Tapped" Grid.Column="1">
+        <Rectangle Fill="{StaticResource all}" Margin="0,0,0,-1" Stroke="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="Sequencer" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+      </Grid>
+    </Grid>
+    <Grid Grid.Row="6">
       <Grid.ColumnDefinitions>
         <ColumnDefinition/>
         <ColumnDefinition/>

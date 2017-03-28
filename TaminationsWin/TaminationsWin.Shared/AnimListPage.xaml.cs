@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,7 +24,6 @@ using Windows.Data.Xml.Dom;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using System.Collections.Generic;
-using Windows.UI;
 
 namespace TaminationsWin {
 
@@ -78,13 +77,13 @@ namespace TaminationsWin {
       reset();
     }
 
-    public async void reset() {
+    public void reset() {
       // Fetch the list of animations and build the table
       var prevtitle = "";
       var prevgroup = "";
       link = this.Intent()["link"];
       Callouts.SetLevel(link);
-      XmlDocument tamdoc = await TamUtils.getXMLAssetAsync(link);
+      XmlDocument tamdoc = TamUtils.getXMLAsset(link);
       var title = tamdoc.SelectSingleNode("/tamination").attr("title");
       Callouts.SetTitle(title);
       var tams = TamUtils.tamList(tamdoc);
@@ -93,9 +92,9 @@ namespace TaminationsWin {
       var i = 0;
       foreach (IXmlNode tam in tams) {
         var tamtitle = tam.attr("title");
-        var from = (await TamUtils.tamXref(tam)).attr("from");
+        var from = TamUtils.tamXref(tam).attr("from");
         var group = tam.attr("group");
-        var diffstr = (await TamUtils.tamXref(tam)).attr("difficulty");
+        var diffstr = TamUtils.tamXref(tam).attr("difficulty");
         var diff = diffstr.Length > 0 ? int.Parse(diffstr) : 0;
         diffsum += diff;
         if (group.Length > 0) {

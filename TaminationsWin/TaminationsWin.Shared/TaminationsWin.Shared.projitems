@@ -28,11 +28,64 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Bezier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CallContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CallError.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CallListPage.xaml.cs">
       <DependentUpon>CallListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Callouts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Action.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\AllemandeLeft.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Beaus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Belles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\BoxCounterRotate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\BoxtheGnat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Boys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Call.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Centers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\CodedCall.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\CrossRun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Ends.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\ExplodeAnd.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\FaceIn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\FaceLeft.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\FaceOut.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\FaceRight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\FacingDancers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\FilterActives.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Girls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Half.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\HalfSashay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Hinge.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Leaders.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\OneAndaHalf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\PassThru.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\QuarterIn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\QuarterOut.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\QuarterTurns.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Roll.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Run.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\SlideThru.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Slip.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Spread.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\StarThru.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\TouchAQuarter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Trade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Trailers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\TurnBack.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\TurnThru.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\VeryCenters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\WheelAround.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\XMLCall.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Zag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\ZagZag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\ZagZig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Zig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\ZigZag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\ZigZig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Calls\Zoom.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dancer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DancerData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DefinitionPage.xaml.cs">
       <DependentUpon>DefinitionPage.xaml</DependentUpon>
     </Compile>
@@ -42,6 +95,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Geometry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Handhold.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InteractiveDancer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LevelData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LevelPage.xaml.cs">
       <DependentUpon>LevelPage.xaml</DependentUpon>
@@ -51,8 +105,21 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Movement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Path.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PracticeControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PracticePage.xaml.cs">
+      <DependentUpon>PracticePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SecondLandscapePage.xaml.cs">
       <DependentUpon>SecondLandscapePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SequencerInstructionsPage.xaml.cs">
+      <DependentUpon>SequencerInstructionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SequencerLandscapePage.xaml.cs">
+      <DependentUpon>SequencerLandscapePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SequencerPage.xaml.cs">
+      <DependentUpon>SequencerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
@@ -60,7 +127,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)SliderTicView.xaml.cs">
       <DependentUpon>SliderTicView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)StartPractice.xaml.cs">
+      <DependentUpon>StartPractice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)TamUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TutorialControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)AboutPage.xaml">
@@ -99,7 +170,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)PracticePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)SecondLandscapePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SequencerInstructionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SequencerLandscapePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SequencerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)SliderTicView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)StartPractice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1512,6 +1603,11 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\c2\tandem_based_triangle.html" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\c2\tandem_based_triangle.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\c2\tandem_based_triangle.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\c2\the_k.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\c2\the_k.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\c2\the_k_1a.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\c2\the_k_1b.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\c2\the_k_1c.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\c2\trail_to_a_diamond.html" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\c2\trail_to_a_diamond.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\c2\truck.html" />
@@ -1878,6 +1974,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\c3b\z_concept.html" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\c3b\z_concept.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\info\about.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\info\sequencer.html" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\ms0\allemande.html" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\ms0\all_around_the_corner.html" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\ms0\arm_turns.html" />

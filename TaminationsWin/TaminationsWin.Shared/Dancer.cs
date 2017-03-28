@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ namespace TaminationsWin {
 
   public class Dancer : IComparable {
 
-    private string number = " ";
+    public string number = " ";
     private string number_couple = " ";
     public int showNumber = DancerNumbers.OFF;
     private Geometry geom;
@@ -69,6 +69,8 @@ namespace TaminationsWin {
     public bool leftHandVisibility = false;
     public bool rightHandNewVisibility = false;
     public bool leftHandNewVisibility = false;
+
+    public DancerData data = new DancerData();
 
     /**
      *     Constructor for a new dancer
@@ -99,7 +101,9 @@ namespace TaminationsWin {
     }
 
     public Dancer(Dancer from) : this(from.number, from.number_couple, from.gender, from.fillColor, from.tx,
-      GeometryMaker.makeOne(from.geom.geometry(), 0), new List<Movement>()) { }
+      GeometryMaker.makeOne(from.geom.geometry(), 0), new List<Movement>()) {
+      clonedFrom = from;
+    }
 
     public Vector2 location {
       get {

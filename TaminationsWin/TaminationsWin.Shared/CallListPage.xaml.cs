@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,10 +48,10 @@ namespace TaminationsWin {
       reset(level);
     }
 
-    public async void reset(string level) {
+    public void reset(string level) {
       LevelData d = LevelData.find(level);
       var isIndex = d.dir == "all";
-      XmlDocument calldoc = await TamUtils.getXMLAssetAsync(isIndex ? "src\\callindex.xml" : "src\\calls.xml");
+      XmlDocument calldoc = TamUtils.getXMLAsset(isIndex ? "src\\callindex.xml" : "src\\calls.xml");
       Callouts.SetTitle(d.name);
       calls = calldoc.SelectNodes(isIndex ? "/calls/call" : $"/calls/call[@{d.selector}]");
       searchCallList("");

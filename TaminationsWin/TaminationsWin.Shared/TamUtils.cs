@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,12 +26,40 @@ using Windows.Data.Xml.Dom;
 
 namespace TaminationsWin {
 
+  public class CallListDatum {
+    public string title;
+    public string text;
+    public string link;
+    public string sublevel;
+    public string languages;
+    public CallListDatum(string title, string text, string link, string sublevel, string languages) {
+      this.title = title;
+      this.text = text;
+      this.link = link;
+      this.sublevel = sublevel;
+      this.languages = languages;
+    } 
+  }
+
   static class TamUtils {
 
     static XmlDocument fdoc = null;
     static XmlDocument mdoc = null;
+    public static List<CallListDatum> calllistdata;
+
 
     public static async void init() {
+      //  Read the global list of calls and save in a local list
+      //  to speed up searching
+      var index = await getXMLAssetAsync("src/callindex.xml");
+      var nodelist = index.SelectNodes("/calls/call[@level!='Info']");
+      calllistdata = nodelist.Select(n => new CallListDatum(
+        n.attr("title"),
+        n.attr("text"),
+        n.attr("link"),
+        n.attr("sublevel"),
+        n.attr("languages"))).ToList();
+      //  Read other definition files
       fdoc = await getXMLAssetAsync("src/formations.xml");
       mdoc = await getXMLAssetAsync("src/moves.xml");
     }
@@ -41,10 +69,14 @@ namespace TaminationsWin {
      * @param name file name
      * @return document
      */
-    public static async Task<XmlDocument> getXMLAssetAsync(String name) {
+    private static async Task<XmlDocument> getXMLAssetAsync(String name) {
       var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-      var file = await folder.GetFileAsync(@"Assets\"+name.ReplaceAll("ms/","ms0/").Replace('/','\\').ReplaceAll(@"\..*","")+".xml");
+      var file = await folder.GetFileAsync(@"Assets\" + name.ReplaceAll("ms/", "ms0/").Replace('/', '\\').ReplaceAll(@"\..*", "") + ".xml");
       return await XmlDocument.LoadFromFileAsync(file, new XmlLoadSettings { ProhibitDtd = false });
+    }
+    public static XmlDocument getXMLAsset(String name) {
+      var task = Task.Run(() => getXMLAssetAsync(name));
+      return task.Result;
     }
 
     /**
@@ -57,10 +89,10 @@ namespace TaminationsWin {
     /**
      *  Returns animation element, looking up cross-reference if needed.
      */
-    public static async Task<IXmlNode> tamXref(IXmlNode tam) {
+    public static IXmlNode tamXref(IXmlNode tam) {
       if (tam.hasAttr("xref-link")) {
         var link = tam.attr("xref-link") + ".xml";
-        var xdoc = await getXMLAssetAsync(link);
+        var xdoc = getXMLAsset(link);
         var s = "//tam";
         if (tam.hasAttr("xref-title"))
           s += "[@title='" + tam.attr("xref-title") + "']";
@@ -73,8 +105,8 @@ namespace TaminationsWin {
     }
 
     //  Return the main title from an animation xml doc
-    public static async Task<string> getTitle(string link) {
-      var doc = await getXMLAssetAsync(link);
+    public static string getTitle(string link) {
+      var doc = getXMLAsset(link);
       var tamination = doc.SelectNodes("tamination").ElementAt(0);
       return tamination.attr("title");
     }
@@ -85,8 +117,8 @@ namespace TaminationsWin {
 
     //  From a tam element, look up any cross-references, then
     //  return all the processed paths
-    public static async Task<List<List<Movement>>> getPaths(IXmlNode tam) {
-      return (await tamXref(tam)).SelectNodes("path").Select(translatePath).ToList();
+    public static List<Path> getPaths(IXmlNode tam) {
+      return (tamXref(tam)).SelectNodes("path").Select(m => new Path(translatePath(m))).ToList();
     }
 
     public static List<Movement> translate(IXmlNode elem) {
@@ -147,7 +179,7 @@ namespace TaminationsWin {
      *   Gets a named path (move) from the file of moves
      */
     public static Path getMove(string name) {
-      return new Path(translate(mdoc.SelectNodes($"/move/path[@name='{name}']").First()));
+      return new Path(translate(mdoc.SelectNodes($"/moves/path[@name='{name}']").First()));
     }
 
     /**
@@ -227,7 +259,7 @@ namespace TaminationsWin {
 
     //  Finally repair the upper case and dup numbers
     //  and make spaces optional
-    .ToLower().ReplaceAll("([0-9])\\1", "$1").ReplaceAll("\\s+", "\\\\s*");
+    .ToLower().ReplaceAll("([0-9])\\1", "$1").ReplaceAll("\\s+", "\\s*");
     }
 
 

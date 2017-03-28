@@ -22,7 +22,7 @@
 /*  Force scrolling inside each table cell
     instead of overall page  */
 html {
-  overflow: hidden;
+  
   margin: 0;
   padding: 0;
 }
@@ -32,7 +32,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  
   background-color: #fff8f0;
 }
 

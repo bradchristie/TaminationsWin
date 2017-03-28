@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,12 +47,12 @@ namespace TaminationsWin {
       };
     }
 
-    private async void setAnimation() {
-      var tamdoc = await TamUtils.getXMLAssetAsync(this.Intent()["link"]);
+    private void setAnimation() {
+      var tamdoc = TamUtils.getXMLAsset(this.Intent()["link"]);
       var alltams = TamUtils.tamList(tamdoc);
       var tam = alltams.ElementAt(int.Parse(this.Intent()["anim"]));
       Callouts.SetTitle(tam.attr("title"));
-      await animationView.setAnimation(tam);
+      animationView.setAnimation(tam);
       sliderTicView.setTics(animationView.totalBeats, animationView.parts,isParts:animationView.hasParts);
       Callouts.progressCallback = (double beat) => {
         //  Set slider to the current beat

@@ -134,6 +134,9 @@
   <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <Import Project="..\TaminationsWin.Shared\TaminationsWin.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <Import Project="..\..\packages\Win2D.win81.1.18.0\build\wpa\Win2D.win81.targets" Condition="Exists('..\..\packages\Win2D.win81.1.18.0\build\wpa\Win2D.win81.targets')" />

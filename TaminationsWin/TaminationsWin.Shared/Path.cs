@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,13 +29,18 @@ namespace TaminationsWin {
     public List<Movement> movelist = null;
     public List<Matrix3x2> transformlist = null;
 
-    private void recalculate() {
+    public void recalculate() {
       var tx = Matrix3x2.Identity;
       transformlist = movelist.Select(movement => {
         tx = movement.translate() * tx;
         tx = movement.rotate() * tx;
         return tx; // makes a copy since tx is a struct
       }).ToList();
+    }
+
+    public Path() {
+      movelist = new List<Movement>();
+      recalculate();
     }
 
     public Path(List<Movement> move) {
@@ -110,7 +115,7 @@ namespace TaminationsWin {
       //  Apply the skew to just the last movement
       if (movelist != null && movelist.Count > 0) {
         var m = pop();
-        m.skew(x, y);
+        m = m.skew(x, y);
         add(m);
       }
       return this;

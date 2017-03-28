@@ -28,7 +28,8 @@
       </Rectangle>
       <Button Grid.Column="0" x:Name="Back" Style="{StaticResource TamButton}" Content="Back" HorizontalAlignment="Left" Height="40" Width="70" Tapped="Back_Tapped"/>
       <TextBlock Grid.Column="1" x:Name="Title" HorizontalAlignment="Center" FontSize="21.333" FontWeight="Bold" VerticalAlignment="Center" Foreground="White" TextWrapping="Wrap"/>
-      <Button Grid.Column="2" x:Name="Level" Style="{StaticResource TamButton}" Content="Plus" HorizontalAlignment="Left" Height="40" Width="70" Tapped="Level_Tapped"/>    </Grid>
+      <Button Grid.Column="2" x:Name="Level" Style="{StaticResource TamButton}" Content="Plus" HorizontalAlignment="Left" Height="40" Width="70" Tapped="Level_Tapped"/>
+    </Grid>
     <Grid Grid.Row="1">
       <Grid.ColumnDefinitions>
         <ColumnDefinition/>

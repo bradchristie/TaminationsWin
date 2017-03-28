@@ -1,0 +1,48 @@
+﻿<Page
+  x:Class="TaminationsWin.PracticePage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="using:TaminationsWin"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="4*"/>
+      <ColumnDefinition Width="5*"/>
+      <ColumnDefinition Width="1*"/>
+    </Grid.ColumnDefinitions>
+    <local:AnimationView x:Name="animationView" 
+                         PointerMoved="animationView_PointerMoved"
+                         PointerReleased="animationView_PointerReleased"
+                         PointerPressed="animationView_PointerPressed"
+                         Grid.Column="0" Grid.ColumnSpan="3"/>
+    <TextBlock x:Name="scoreView" Text="123" FontSize="30" VerticalAlignment="Top" Grid.Column="2"/>
+    <StackPanel x:Name="resultsPanel" Grid.Column="0">
+      <TextBlock TextAlignment="Center" Text="Animation Complete" FontSize="20"/>
+      <TextBlock TextAlignment="Center" Text="Your Score" FontSize="20"/>
+      <TextBlock x:Name="finalScore" TextAlignment="Center" Text="40 / 40" FontSize="20" />
+      <TextBlock x:Name="congratsView" TextAlignment="Center" Text="Excellent!" FontSize="20"/>
+      <Grid x:Name="buttonPanel">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="repeatButton" Height="50" Content="Repeat" Style="{StaticResource TamButton}" Tapped="repeatButton_Tapped" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Button x:Name="continueButton" Content="Continue" Style="{StaticResource TamButton}" Tapped="continueButton_Tapped"  Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Button x:Name="returnButton" Content="Return" Style="{StaticResource TamButton}" Tapped="returnButton_Tapped" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+      </Grid>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="definitionButton" Height="50" Grid.Column="1" Content="Definition" Style="{StaticResource TamButton}" Tapped="definitionButton_Tapped" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+      </Grid>
+    </StackPanel>
+    <TextBlock Grid.Column="0" x:Name="countdown" Text="3" FontSize="200" Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+  </Grid>
+</Page>

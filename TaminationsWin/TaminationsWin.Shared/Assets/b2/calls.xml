@@ -2,7 +2,7 @@
 <!DOCTYPE calls SYSTEM "calls.dtd">
 <!--
 
-    Copyright 2016 Brad Christie
+    Copyright 2017 Brad Christie
 
     This file is part of Taminations.
 
@@ -168,6 +168,7 @@
     <call title="Cross Kick Off" level="Challenge" sublevel="C-2" link="c2/cross_kick_off"/>
     <call title="Cross Lockit" level="Challenge" sublevel="C-3B" link="c3b/cross_lockit"/>
     <call title="Cross Over Circulate" level="Advanced" sublevel="A-1" link="a1/cross_over_circulate"/>
+    <call title="Cross Over Circulate" level="Challenge" sublevel="C-1" link="c1/cross_over_circulate"/>
     <call title="Cross Ramble" level="Challenge" sublevel="C-2" link="c2/cross_ramble"/>
     <call title="Cross Roll" level="Challenge" sublevel="C-1" link="c1/cross_roll"/>
     <call title="Cross Run" level="Basic and Mainstream" sublevel="Basic 2" link="b2/run" anim="CentersCrossRunfromRightHandWaves"/>
@@ -223,6 +224,7 @@
     <call title="Explode the Wave" level="Plus" sublevel="Plus" link="plus/explode_the_wave"/>
     <call title="Extend" level="Basic and Mainstream" sublevel="Basic 2" link="b2/extend"/>
     <call title="Extend" level="Plus" sublevel="Plus" link="plus/extend"/>
+		<call title="Face Left / Right / In / Out" level="Basic and Mainstream" sublevel="Basic 1" link="b1/face"/>
     <call title="Facing Couples Rule" level="Basic and Mainstream" sublevel="Basic 2" link="b2/facing_couples_rule"/>
     <call title="Fan Concept" level="Challenge" sublevel="C-3B" link="c3b/fan_concept"/>
     <call title="Fan the Top" level="Plus" sublevel="Plus" link="plus/fan_the_top"/>
@@ -271,7 +273,6 @@
     <call title="Grand Square" level="Basic and Mainstream" sublevel="Basic 1" link="b1/grand_square"/>
     <call title="Grand Swing Thru" level="Plus" sublevel="Plus" link="plus/grand_swing_thru"/>
     <call title="Grand Three-Quarter Thru" sublevel="A-1" level="Advanced" link="a1/grand_three_quarter_thru"/>
-    <call title="Half Breed Thru" level="Advanced" sublevel="A-1" link="a1/brace_thru"/>
     <call title="Half Sashay" level="Basic and Mainstream" sublevel="Basic 1" link="b1/sashay"/>
     <call title="Half Tag" level="Basic and Mainstream" sublevel="Mainstream" link="ms/half_tag"/>
     <call title="Here Comes the Judge" level="Challenge" sublevel="C-2" link="c2/here_comes_the_judge"/>
@@ -317,7 +318,6 @@
     <call title="Lickety Split" level="Challenge" sublevel="C-3B" link="c3b/lickety_split"/>
     <call title="Lift Off" level="Challenge" sublevel="C-3B" link="c3b/lift_off"/>
     <call title="Like a Ripple" level="Challenge" sublevel="C-2" link="c2/like_a_ripple"/>
-    <call title="Line to Line" level="Challenge" sublevel="C-3B" link="c3b/line_to_line"/>
     <call title="Linear Action" level="Challenge" sublevel="C-1" link="c1/linear_action"/>
     <call title="Linear Cycle" level="Advanced" sublevel="A-1" link="a1/linear_cycle"/>
     <call title="Linear Cycle" level="Plus" sublevel="Plus" link="plus/linear_cycle"/>
@@ -349,7 +349,6 @@
     <call title="Oddly / Evenly Concept" level="Challenge" sublevel="C-3B" link="c3b/oddly_evenly_concept"/>
     <call title="Offset Concept" level="Challenge" sublevel="C-2" link="c2/offset_concept"/>
     <call title="Once Removed Concept" level="Challenge" sublevel="C-2" link="c2/once_removed_concept"/>
-    <call title="Once Removed Diamond Concept" level="Challenge" sublevel="C-3A" link="c3a/once_removed_diamonds"/>
     <call title="Open Up the Column" level="Challenge" sublevel="C-3A" link="c3a/open_up_the_column"/>
     <call title="Out-Roll Circulate" level="Advanced" sublevel="A-2" link="a2/out_roll_circulate"/>
     <call title="Outlet" level="Challenge" sublevel="C-2" link="c2/outlet"/>
@@ -584,6 +583,7 @@
     <call title="Team Up" level="Challenge" sublevel="C-3A" link="c3a/team_up"/>
     <call title="The Axle" level="Challenge" sublevel="C-1" link="c1/the_axle"/>
     <call title="The Gamut" level="Challenge" sublevel="C-3A" link="c3a/the_gamut"/>
+    <call title="The K" level="Challenge" sublevel="C-2" link="c2/the_k"/>
     <call title="Thirdly" level="Challenge" sublevel="C-3B" link="c3b/secondly_thirdly_fourthly"/>
     <call title="Three by Two Acey Deucey" level="Challenge" sublevel="C-1" link="c1/three_by_two_acey_deucey"/>
     <call title="Three Quarter Thru" level="Advanced" sublevel="A-1" link="a1/three_quarter_thru"/>

@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="TaminationsWin.StartPractice"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaminationsWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+
+      <Grid Grid.Column="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="0">
+          <StackPanel Margin="0" Background="White">
+            <TextBlock Padding="8" Text="Gender" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" />
+            <RadioButton GroupName="Gender" x:Name="genderBoyRB" Margin="0" Checked="genderBoyRB_Checked" Content="Boy"/>
+            <RadioButton GroupName="Gender" x:Name="genderGirlRB" Margin="0" Checked="genderGirlRB_Checked" Content="Girl"/>
+          </StackPanel>
+          <StackPanel Margin="2" Background="White">
+            <TextBlock Padding="8" Text="Primary Control" TextWrapping="Wrap" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" />
+            <RadioButton GroupName="PrimaryControl" x:Name="fingerRightRB" Checked="fingerRightRB_Checked" Content="Right Finger"/>
+            <RadioButton GroupName="PrimaryControl" x:Name="fingerLeftRB" Checked="fingerLeftRB_Checked" Content="Left Finger"/>
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0">
+          <StackPanel Margin="2" Background="White">
+            <TextBlock Padding="8" Text="Speed" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" />
+            <RadioButton GroupName="Speed" x:Name="speedSlowRB" Checked="speedSlowRB_Checked" Content="Slow"/>
+            <RadioButton GroupName="Speed" x:Name="speedModerateRB" Checked="speedModerateRB_Checked" Content="Moderate"/>
+            <RadioButton GroupName="Speed" x:Name="speedNormalRB" Checked="speedNormalRB_Checked" Content="Normal"/>
+          </StackPanel>
+        </StackPanel>
+      </Grid>
+      
+      <Grid Grid.Column="1">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+          </Grid.RowDefinitions>
+          <Grid Tapped="Tutorial_Tapped" Grid.Row="0" Grid.ColumnSpan="2">
+            <Rectangle Fill="{StaticResource all}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="Tutorial" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="b1" Grid.Row="1" Grid.Column="0">
+            <Rectangle Fill="{StaticResource b1}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="Basic 1" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="b2" Grid.Row="1" Grid.Column="1">
+            <Rectangle Fill="{StaticResource b2}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="Basic 2" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="ms" Grid.Row="2" Grid.Column="0">
+            <Rectangle Fill="{StaticResource ms}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="Mainstream" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="plus" Grid.Row="2" Grid.Column="1">
+            <Rectangle Fill="{StaticResource plus}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="Plus" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="a1" Grid.Row="3" Grid.Column="0">
+            <Rectangle Fill="{StaticResource a1}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="A-1" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="a2" Grid.Row="3" Grid.Column="1">
+            <Rectangle Fill="{StaticResource a2}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="A-2" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="c1" Grid.Row="4" Grid.Column="0">
+            <Rectangle Fill="{StaticResource c1}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="C-1" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="c2" Grid.Row="4" Grid.Column="1">
+            <Rectangle Fill="{StaticResource c1}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="C-2" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="c3a" Grid.Row="5" Grid.Column="0">
+            <Rectangle Fill="{StaticResource c1}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="C-3A" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+          <Grid Tapped="Level_Tapped" x:Name="c3b" Grid.Row="5" Grid.Column="1">
+            <Rectangle Fill="{StaticResource c1}" Margin="0,0,-1,-1" Stroke="Black" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="C-3B" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="18.667"/>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  </Grid>
+</Page>

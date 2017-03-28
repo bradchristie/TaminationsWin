@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,8 +43,8 @@ namespace TaminationsWin {
       Uri url = webview.BuildLocalStreamUri("assets", link.ReplaceAll("ms/","ms0/"));
       webview.NavigationCompleted += navigationCompleted;
       webview.NavigateToLocalStreamUri(url, this);
-      if (!Regex.Match(link, "^(b1|b2|ms0)").Success)
-        AbbrevFullPanel.Visibility = Visibility.Collapsed;
+    //  if (!Regex.Match(link, "^(b1|b2|ms0)").Success)
+    //    AbbrevFullPanel.Visibility = Visibility.Collapsed;
       Callouts.AnimationPart = async (int part) => {
         await webview.InvokeScriptAsync("eval", new string[] { $"setPart({part})" });
       };

@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,13 +46,15 @@ namespace TaminationsWin {
     private DateTime lastTime;
     private IXmlNode tam = null;
     private int interactiveDancer = -1;
-    private double leadin = 2;
-    private double leadout = 2;
+    public double leadin = 2;
+    public double leadout = 2;
     private bool isRunning = false;
     private double beats = 0.0;
-    private double beat = 0.0;
+    public double beat = 0.0;
     private double prevbeat = 0.0;
     public Dancer[] dancers;
+    public InteractiveDancer idancer;
+    private double iscore;
     private int geometry = GeometryType.SQUARE;
     private bool showPhantoms = false;
     public double totalBeats { get { return leadin + beats; } }
@@ -76,6 +78,7 @@ namespace TaminationsWin {
       if (beat > beats)
         beat = -leadin;
       isRunning = true;
+      iscore = 0.0;
       canvas.Invalidate();
     }
 
@@ -288,6 +291,34 @@ namespace TaminationsWin {
       }
     }
 
+    public bool isInteractiveDancerOnTrack() {
+      //  Get where the dancer should be
+      var computex = idancer.computeMatrix(beat);
+      //  Get computed and actual location vectors
+      var ivu = idancer.tx.Location();
+      var ivc = computex.Location();
+
+      //  Check dancer's facing direction
+      var au = idancer.tx.Angle();
+      var ac = computex.Angle();
+      if (Math.Abs(Vector.angleDiff(au, ac)) > Math.PI / 4)
+        return false;
+      //  Check relationship with the other dancers
+      foreach (var d in dancers) {
+        if (d != idancer) {
+          var dv = d.tx.Location();
+          //  Compare angle to computed vs actual
+          var d2ivu = dv.vectorTo(ivu);
+          var d2ivc = dv.vectorTo(ivc);
+          var a = d2ivu.angleDiff(d2ivc);
+          if (Math.Abs(a) > Math.PI / 4)
+            return false;
+        }
+      }
+
+      return true;
+    }
+
     //  This is called by the system to redraw the animation
     private void canvas_Draw(CanvasControl sender, CanvasDrawEventArgs args) {
       if (tam != null) {
@@ -432,8 +463,16 @@ namespace TaminationsWin {
           d.rightHandVisibility = false;
       }
 
-      //  TODO Update interactive dancer score
+      //  Update interactive dancer score
+      if (idancer != null && beat > 0.0 && beat < beats-leadout) {
+        idancer.onTrack = isInteractiveDancerOnTrack();
+        if (idancer.onTrack)
+          iscore += (beat - Math.Max(prevbeat, 0)) * 10;
+      }
+    }
 
+    public double getScore() {
+      return iscore;
     }
 
     private void doDraw(CanvasDrawingSession ds) {
@@ -504,8 +543,8 @@ namespace TaminationsWin {
      * @param xtam     XML element containing the call
      * @param intdan  Dancer controlled by the user, or -1 if not used
      */
-    public async Task<IXmlNode> setAnimation(IXmlNode xtam, int intdan = -1) {
-      tam = await TamUtils.tamXref(xtam);
+    public IXmlNode setAnimation(IXmlNode xtam, int intdan = -1) {
+      tam = TamUtils.tamXref(xtam);
       interactiveDancer = intdan;
       resetAnimation();
       return tam;
@@ -562,9 +601,29 @@ namespace TaminationsWin {
           : TamUtils.getCouples(tam);
         var geoms = GeometryMaker.makeAll(geometry);
 
-        //  TODO interactive dancer
+        //  Select a random dancer of the correct gender for the interactive dancer
+        var icount = -1;
         var im = Matrix3x2.Identity;
-        //  ...
+        if (interactiveDancer > 0) {
+          var rand = new Random();
+          var selector = interactiveDancer == (int)Gender.BOY
+            ? "dancer[@gender='boy']" : "dancer[@gender='girl']";
+          var glist = formation.SelectNodes(selector);
+          icount = rand.Next(glist.Count);
+          //  If the animations starts with "Heads" or "Sides"
+          //  then select the first dancer.
+          //  Otherwise the formation could rotate 90 degrees
+          //  which would be confusing
+          var title = tam.attr("title");
+          if (title.Contains("Heads") || title.Contains("Sides")) {
+            icount = 0;
+          }
+          //  Find the angle the interactive dancer faces at start
+          //  We want to rotate the formation so that direction is up
+          var iangle = double.Parse(glist.Item((uint)icount).attr("angle"));
+          im = Matrix.CreateRotation(-iangle.toRadians()) * im;
+          icount = icount * geoms.Count() + 1;
+        }
 
         //  Create the dancers and set their starting positions
         int dnum = 0;
@@ -575,7 +634,8 @@ namespace TaminationsWin {
           var angle = double.Parse(fd.attr("angle"));
           var gender = fd.attr("gender");
           var g = gender == "boy" ? Gender.BOY : gender == "girl" ? Gender.GIRL : Gender.PHANTOM;
-          var movelist = paths.Length > i ? TamUtils.translatePath(paths.ElementAt(i)) : null;
+          var movelist = paths.Length > i ? TamUtils.translatePath(paths.ElementAt(i)) 
+                                          : new List<Movement>();
           //  Each dancer listed in the formation corresponds to
           //  one, two, or three real dancers depending on the geometry
           foreach (Geometry geom in geoms) {
@@ -584,9 +644,14 @@ namespace TaminationsWin {
             var cstr = g == Gender.PHANTOM ? " " : couples[dnum];
             var c = g == Gender.PHANTOM ? Colors.LightGray : dancerColor[int.Parse(cstr) - 1];
             //  add one dancer
-            //  TODO interactive dancer
-            dancers[dnum] = new Dancer(nstr, cstr, g, c, m, geom.clone(), movelist);
-            dancers[dnum].hidden = g == Gender.PHANTOM && !showPhantoms;
+            //icount -= 1;
+            if ((int)g == interactiveDancer && --icount == 0) {
+              idancer = new InteractiveDancer(nstr, cstr, g, c, m, geom.clone(), movelist);
+              dancers[dnum] = idancer;
+            } else {
+              dancers[dnum] = new Dancer(nstr, cstr, g, c, m, geom.clone(), movelist);
+              dancers[dnum].hidden = g == Gender.PHANTOM && !showPhantoms;
+            }
             beats = Math.Max(dancers[dnum].beats+leadout, beats);
             dnum++;
           }
@@ -602,8 +667,14 @@ namespace TaminationsWin {
         //  force a redraw
         canvas.Invalidate();
         //  ready callback
+        Callouts.animationReady();
 
       }
+    }
+
+    public void recalculate() {
+      foreach (Dancer d in dancers)
+        beats = Math.Max(beats, d.beats + leadout);
     }
 
   }

@@ -1,7 +1,7 @@
 ﻿/*
 
     Taminations Square Dance Animations App for Android
-    Copyright (C) 2016 Brad Christie
+    Copyright (C) 2017 Brad Christie
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,11 +31,14 @@ namespace TaminationsWin
     public static Action<string> LevelButtonAction = (string level) => { };
     public static Action AboutAction = () => { };
     public static Action LevelSettingsAction = () => { };
+    public static Action StartPracticeAction = () => { };
+    public static Action SequencerAction = () => { };
     public static Action<string> CallSelected = (string link) => { };
     public static Action<AnimListItem> AnimationSelected = (AnimListItem item) => { };
     public static Action<AnimListItem> FirstAnimationReady = (AnimListItem item) => { };
     public static Action AnimationSettingsAction = () => { };
     public static Action<string> AnimationDefinitionAction = (string link) => { };
+    public static Action animationReady = () => { };
     public static Action AnimationFinished = () => { };
     public static Action<int> AnimationPart = (int part) => { };
   }

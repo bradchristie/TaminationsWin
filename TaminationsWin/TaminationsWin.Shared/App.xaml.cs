@@ -44,9 +44,8 @@ namespace TaminationsWin {
       }
 #endif
       TamUtils.init();
-      var screenSize = MainPage.ScreenSize();
-      if (screenSize.Length() < 6)
-        DisplayInformation.AutoRotationPreferences = DisplayOrientations.Portrait;
+      //if (screenSize.Length() < 6)
+      //  DisplayInformation.AutoRotationPreferences = DisplayOrientations.Portrait;
       Frame rootFrame = Window.Current.Content as Frame;
 
       // Do not repeat app initialization when the Window already has content,
@@ -88,8 +87,11 @@ namespace TaminationsWin {
         // When the navigation stack isn't restored navigate to the first page,
         // configuring the new page by passing required information as a navigation
         // parameter
+        var screenSize = MainPage.ScreenSize();
         var isLandscape = screenSize.Length() > 6 && screenSize.X > screenSize.Y;
-        if (!rootFrame.Navigate(isLandscape ? typeof(FirstLandscapePage) : typeof(PortraitPage), e.Arguments))
+        if (!rootFrame.Navigate(isLandscape 
+          ? typeof(FirstLandscapePage) 
+          : typeof(PortraitPage), e.Arguments))
         {
           throw new Exception("Failed to create initial page");
         }
