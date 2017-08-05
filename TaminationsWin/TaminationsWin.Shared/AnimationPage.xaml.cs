@@ -19,7 +19,9 @@
 */
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Windows.Data.Xml.Dom;
 using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Xaml.Controls;
@@ -33,11 +35,19 @@ namespace TaminationsWin {
 
     bool playing = false;
     bool userDrag = true;
+    int x1, x2;
+    int animnum;
+    int animtot;
+    IEnumerable<IXmlNode> alltams;
     private ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
 
     public AnimationPage() {
       this.InitializeComponent();
       var link = this.Intent()["link"];
+      var tamdoc = TamUtils.getXMLAsset(this.Intent()["link"]);
+      alltams = TamUtils.tamList(tamdoc).Where(t => t.attr("display") != "none");
+      animtot = alltams.Count();
+      animnum = int.Parse(this.Intent()["anim"]);
       Callouts.SetLevel(link);
       setAnimation();
       Callouts.AnimationFinished = () => {
@@ -45,12 +55,25 @@ namespace TaminationsWin {
         PausePath.Fill = new SolidColorBrush(Colors.Transparent);
         playing = false;
       };
+      ManipulationMode = ManipulationModes.TranslateX;
+      ManipulationStarted += (x,e) => x1 = (int)e.Position.X;
+      ManipulationCompleted += (x,e) =>
+      {
+        x2 = (int)e.Position.X;
+        if (x1-x2 > animationView.ActualWidth/2 && animnum+1 < animtot) {
+          // swipe left
+          animnum++;
+          setAnimation();
+        } else if (x2-x1 > animationView.ActualWidth/2 && animnum > 0) {
+          // swipe right
+          animnum--;
+          setAnimation();
+        }
+      };
     }
 
     private void setAnimation() {
-      var tamdoc = TamUtils.getXMLAsset(this.Intent()["link"]);
-      var alltams = TamUtils.tamList(tamdoc);
-      var tam = alltams.ElementAt(int.Parse(this.Intent()["anim"]));
+      var tam = alltams.ElementAt(animnum);
       Callouts.SetTitle(tam.attr("title"));
       animationView.setAnimation(tam);
       sliderTicView.setTics(animationView.totalBeats, animationView.parts,isParts:animationView.hasParts);
@@ -68,6 +91,7 @@ namespace TaminationsWin {
       if (taminator != null) {
         saysText.Text = taminator.FirstChild.NodeValue.ToString().Trim().ReplaceAll("\\s+"," ");
       }
+      animnumText.Text = $"{animnum+1} of {animtot}";
       readSettings();
     }
 

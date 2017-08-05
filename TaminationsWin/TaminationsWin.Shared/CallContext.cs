@@ -81,7 +81,7 @@ namespace TaminationsWin
     };
 
 
-    string callname = "";
+    public string callname = "";
     public List<Call> callstack = new List<Call>();
     public List<Dancer> dancers;
     public List<Dancer> actives { get {
@@ -117,8 +117,8 @@ namespace TaminationsWin
       for (uint i=0; i<fds.Count; i++) {
         var fd = fds.Item(i);
         //  Assume square geometry
-        var m = Matrix.CreateRotation(double.Parse(fd.attr("angle")) * Math.PI / 180);
-        m = m * Matrix.CreateTranslation(double.Parse(fd.attr("x")), double.Parse(fd.attr("y")));
+        var m = Matrix.CreateRotation(fd.attr("angle").toDouble() * Math.PI / 180);
+        m = m * Matrix.CreateTranslation(fd.attr("x").toDouble(), fd.attr("y").toDouble());
         dancers.Add(new Dancer($"{i * 2 + 1}", $"{i + 1}", 
           genderMap(fd.attr("gender")), Colors.White, m, 
           GeometryMaker.makeOne(GeometryType.SQUARE, 0), new List<Movement>()));
@@ -367,35 +367,6 @@ namespace TaminationsWin
       callstack.ForEach((Call c, int i) => c.postProcess(this, i));
     }
 
-    //  This is used to match XML calls
-    public int[] matchShapes(CallContext ctx2) {
-      var ctx1 = this;
-      if (ctx1.dancers.Count != ctx2.dancers.Count)
-        return null;
-      var mapping = new int[ctx1.dancers.Count];
-      var reversemap = new int[ctx1.dancers.Count];
-      ctx1.dancers.ForEach((d1, i) => {
-        var bestd2 = -1;
-        var bestdistance = 100.0;
-        var v1 = d1.location;
-        ctx2.dancers.ForEach((d2, j) => {
-          var d = (double)(v1 - d2.location).Length();
-          if (d.isApprox(bestdistance)) {
-            bestd2 = -1;
-          } else if (d < bestdistance) {
-            bestdistance = d;
-            bestd2 = j;
-          }
-        });
-        if (bestd2 >= 0) {
-          mapping[i] = bestd2;
-          reversemap[bestd2] = i;
-        }
-      });
-      //  Make sure we have a 1:1 mapping
-      return mapping.All(i => i >= 0) && reversemap.All(i => i >= 0) ? mapping : null;
-    }
-
     //  Re-center dancers
     public void center() {
       var xave = dancers.Sum(d => d.location.X) / dancers.Count;
@@ -468,6 +439,16 @@ namespace TaminationsWin
       return dancersInOrder(d, isLeft(d));
     }
 
+    //  Return all the dancers in front, in order
+    public IEnumerable<Dancer> dancersInFront(Dancer d) {
+      return dancersInOrder(d,isInFront(d));
+    }
+
+    //  Return all the dancers in back, in order
+    public IEnumerable<Dancer> dancersInBack(Dancer d) {
+      return dancersInOrder(d,isInBack(d));
+    }
+
     //  Return true if this dancer is in a wave or mini-wave
     public bool isInWave(Dancer d) {
       return d.data.partner != null &&
@@ -499,6 +480,16 @@ namespace TaminationsWin
         (dancers.All(d => ((double)d.location.X).isApprox(0.0)) ||
           //  or on the x axis
           dancers.All(d => ((double)d.location.Y).isApprox(0.0)));
+    }
+
+    //  Return true if 8 dancers are in 2 general lines of 4 dancers each
+    public bool isLines() {
+      return dancers.All(d => dancersToRight(d).Count() + dancersToLeft(d).Count() == 3);
+    }
+
+    //  Return true if 8 dancers are in 2 general columns of 4 dancers each
+    public bool isColumns() {
+      return dancers.All(d => dancersInFront(d).Count() + dancersInBack(d).Count() == 3);
     }
 
     //  Level off the number of beats for each dancer

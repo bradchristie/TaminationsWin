@@ -67,20 +67,20 @@ namespace TaminationsWin {
     }
 
     public Movement(IXmlNode elem) :
-        this(double.Parse(elem.attr("beats")),
+        this(elem.attr("beats").toDouble(),
              getHands(elem.attr("hands")),
-             double.Parse(elem.attr("cx1")),
-             double.Parse(elem.attr("cy1")),
-             double.Parse(elem.attr("cx2")),
-             double.Parse(elem.attr("cy2")),
-             double.Parse(elem.attr("x2")),
-             double.Parse(elem.attr("y2")),
-             double.Parse(elem.attr(elem.hasAttr("cx3") ? "cx3" : "cx1")),
-             double.Parse(elem.attr(elem.hasAttr("cx4") ? "cx4" : "cx2" )),
-             double.Parse(elem.attr(elem.hasAttr("cy4") ? "cy4" : "cy2" )),
-             double.Parse(elem.attr(elem.hasAttr("x4") ? "x4" : "x2" )),
-             double.Parse(elem.attr(elem.hasAttr("y4") ? "y4" : "y2" )),
-             double.Parse(elem.attr("beats")))
+             elem.attr("cx1").toDouble(),
+             elem.attr("cy1").toDouble(),
+             elem.attr("cx2").toDouble(),
+             elem.attr("cy2").toDouble(),
+             elem.attr("x2").toDouble(),
+             elem.attr("y2").toDouble(),
+             elem.attr(elem.hasAttr("cx3") ? "cx3" : "cx1").toDouble(),
+             elem.attr(elem.hasAttr("cx4") ? "cx4" : "cx2" ).toDouble(),
+             elem.attr(elem.hasAttr("cy4") ? "cy4" : "cy2" ).toDouble(),
+             elem.attr(elem.hasAttr("x4") ? "x4" : "x2" ).toDouble(),
+             elem.attr(elem.hasAttr("y4") ? "y4" : "y2" ).toDouble(),
+             elem.attr("beats").toDouble())
       { }
       
     

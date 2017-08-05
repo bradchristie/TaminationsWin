@@ -1100,24 +1100,6 @@
     </path>
   </tam>
 
-  <tam title="(From tidal formation) Concentric Reverse Explode" from="" group="(From tidal formation) Concentric"
-       formation="Tidal Wave RH BGGB">
-    <path numbers="8 1">
-      <move select="Forward 2"/>
-      <move select="Quarter Left" beats="2" offsetX="1" offsetY="-1.5" />
-    </path>
-    <path numbers="7 2">
-      <move select="Forward 2"/>
-      <move select="Quarter Right" beats="2" offsetX="1" offsetY=".5"/>
-    </path>
-    <path numbers="6 3">
-      <move select="Lead Left" beats="4" scaleY=".5" />
-    </path>
-    <path numbers="5 4">
-      <move select="Lead Right" beats="4" scaleY="1.5"/>
-    </path>
-  </tam>
-
   <tam title="(From tidal formation) Concentric Spin the Top" group="(From tidal formation) Concentric"
        formation="Tidal Wave RH BGGB">
     <path>
@@ -1281,6 +1263,14 @@
            xref-link="c1/zing"
            xref-title="Concentric Zing"/>
 
+  <tamxref title="Concentric (C-2) Bounce the Boys" group="Concentric (C-2)"
+           xref-link="c2/bounce_the_anyone"
+           xref-title="Concentric Bounce the Boys"/>
+
+  <tamxref title="Concentric (C-2) Circle to a Wave" group="Concentric (C-2)"
+           xref-link="c2/circle_to_a_wave"
+           xref-title="Concentric Circle to a Wave"/>
+
   <tamxref title="Concentric (C-2) Criss Cross Your Neighbor" group="Concentric (C-2)"
            xref-link="c2/criss_cross_your_neighbor"
            xref-title="Concentric Criss Cross Your Neighbor"/>
@@ -1288,6 +1278,10 @@
   <tamxref title="Concentric (C-2) Peel to a Diamond" group="Concentric (C-2)"
            xref-link="c2/peel_to_a_diamond"
            xref-title="Concentric Peel to a Diamond"/>
+
+  <tamxref title="Concentric (C-2) The K" group="Concentric (C-2)"
+           xref-link="c2/anything_the_k"
+           xref-title="Concentric the K"/>
 
   <tamxref title="Concentric (C-2) Trail to a Diamond" group="Concentric (C-2)"
            xref-link="c2/trail_to_a_diamond"

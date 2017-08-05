@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Data.Xml.Dom;
@@ -157,16 +158,16 @@ namespace TaminationsWin {
       //  Get the list of movements
       var movements = translatePath(pathelem);
       //  Get any modifications
-      var scaleX = move.hasAttr("scaleX") ? double.Parse(move.attr("scaleX")) : 1;
-      var scaleY = (move.hasAttr("scaleY") ? double.Parse(move.attr("scaleY")) : 1) *
+      var scaleX = move.hasAttr("scaleX") ? move.attr("scaleX").toDouble() : 1;
+      var scaleY = (move.hasAttr("scaleY") ? move.attr("scaleY").toDouble() : 1) *
                    (move.hasAttr("reflect") ? -1 : 1);
-      var offsetX = move.hasAttr("offsetX") ? double.Parse(move.attr("offsetX")) : 0;
-      var offsetY = move.hasAttr("offsetY") ? double.Parse(move.attr("offsetY")) : 0;
+      var offsetX = move.hasAttr("offsetX") ? move.attr("offsetX").toDouble() : 0;
+      var offsetY = move.hasAttr("offsetY") ? move.attr("offsetY").toDouble() : 0;
       var hands = move.attr("hands");
       //  Sum up the total beats so if beats is given as a modification
       //  we know how much to change each movement
       var oldbeats = movements.Sum(m => m.beats);
-      var beatfactor = move.hasAttr("beats") ? double.Parse(move.attr("beats"))/oldbeats : 1;
+      var beatfactor = move.hasAttr("beats") ? move.attr("beats").toDouble()/oldbeats : 1;
       //  Now go through the movements applying the modifications
       //  The resulting list is the return value
       return movements.Select(m => m.useHands(hands.Length > 0 ? Movement.getHands(hands) : m.hands)
@@ -223,7 +224,7 @@ namespace TaminationsWin {
     }
 
     public static string callnameQuery(string query) {
-      return query.ToLower()
+      return query.ToLower().ReplaceAll("[^a-zA-Z0-9 ]","")
     //  Use upper case and dup numbers while building regex
     //  so expressions don't get compounded
     //  Through => Thru

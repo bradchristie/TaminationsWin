@@ -62,7 +62,7 @@ namespace TaminationsWin {
       var qq = TamUtils.callnameQuery(query);
       foreach (IXmlNode call in calls) {
         var title = (string)call.Attributes.GetNamedItem("title").NodeValue;
-        if (Regex.Match(title.ToLower(), qq).Success) {
+        if (Regex.Match(title.ToLower().ReplaceAll("\\W",""), qq).Success) {
           var sublevel = (string)call.Attributes.GetNamedItem("sublevel").NodeValue;
           calllistdata.Add(new CallListItem() {
             Title = (string)call.Attributes.GetNamedItem("title").NodeValue,

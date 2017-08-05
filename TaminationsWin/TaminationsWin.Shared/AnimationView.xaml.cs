@@ -126,7 +126,7 @@ namespace TaminationsWin {
      */
     private double[] partsValues() {
       if (parts.Length == 0)
-        return new double[] { -2.0, 0.0, beats - 2.0, beats };
+        return new double[] { -2.0, 0.0 };
       else {
         var b = 0.0;
         var t = parts.Split(';');
@@ -134,11 +134,9 @@ namespace TaminationsWin {
         retval.Add(-leadin);
         retval.Add(0);
         for (int i=0; i<t.Length; i++) {
-          b += double.Parse(t[i]);
+          b += t[i].toDouble();
           retval.Add(b);
         }
-        retval.Add(beats - 2);
-        retval.Add(beats);
         return retval.ToArray();
       }
     }
@@ -161,6 +159,16 @@ namespace TaminationsWin {
         beat = partsValues().Reverse().Where(b => b < beat).First();
         canvas.Invalidate();
       }
+    }
+
+    /**
+     *   Go to a specific part
+     *   The first part is 0
+     */
+    public void goToPart(int i) {
+      var pv = partsValues();
+      beat = pv[Math.Min(i+1,pv.Count()-1)] + 0.01;
+      canvas.Invalidate();
     }
 
     /**
@@ -620,7 +628,7 @@ namespace TaminationsWin {
           }
           //  Find the angle the interactive dancer faces at start
           //  We want to rotate the formation so that direction is up
-          var iangle = double.Parse(glist.Item((uint)icount).attr("angle"));
+          var iangle = glist.Item((uint)icount).attr("angle").toDouble();
           im = Matrix.CreateRotation(-iangle.toRadians()) * im;
           icount = icount * geoms.Count() + 1;
         }
@@ -629,9 +637,9 @@ namespace TaminationsWin {
         int dnum = 0;
         for (var i=0; i<flist.Length; i++) {
           var fd = flist.ElementAt(i);
-          var x = double.Parse(fd.attr("x"));
-          var y = double.Parse(fd.attr("y"));
-          var angle = double.Parse(fd.attr("angle"));
+          var x = fd.attr("x").toDouble();
+          var y = fd.attr("y").toDouble();
+          var angle = fd.attr("angle").toDouble();
           var gender = fd.attr("gender");
           var g = gender == "boy" ? Gender.BOY : gender == "girl" ? Gender.GIRL : Gender.PHANTOM;
           var movelist = paths.Length > i ? TamUtils.translatePath(paths.ElementAt(i)) 

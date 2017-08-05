@@ -22,6 +22,14 @@
 -->
 <tamination title="Cross-Concentric Concept">
 
+  <tamxref title="Cross Concentric Bounce the Boys" group="Cross Concentric"
+           xref-link="c2/bounce_the_anyone"
+           xref-title="Cross Concentric Bounce the Boys"/>
+
+  <tamxref title="Cross Concentric Circle to a Wave" group="Cross Concentric"
+           xref-link="c2/circle_to_a_wave"
+           xref-title="Cross Concentric Circle to a Wave" />
+
   <tam title="Cross Concentric Crossfire" group="Cross Concentric"
        formation="Two-Faced Tidal Line RH">
     <path numbers="1 8">
@@ -220,6 +228,10 @@
       <move select="Extend Right" beats="3" scaleX="3" scaleY=".5"/>
     </path>
   </tam>
+
+  <tamxref title="Cross Concentric The K" group="Cross Concentric"
+           xref-link="c2/anything_the_k"
+           xref-title="Cross Concentric the K"/>
 
   <tamxref title="Cross Concentric Turn to a Line" group="Cross Concentric"
            xref-link="c2/turn_to_a_line"

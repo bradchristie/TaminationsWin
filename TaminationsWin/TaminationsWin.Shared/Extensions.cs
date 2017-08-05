@@ -26,6 +26,7 @@ using Windows.Data.Xml.Dom;
 using System.Numerics;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.Globalization;
 
 namespace TaminationsWin {
 
@@ -471,6 +472,12 @@ tx   ty    1          MTRANS_X(2)   MTRANS_Y(5)    MPERSP_2(8)       M31    M32 
   }
 
   public static class StringUtilities {
+
+    //  The standard double.Parse(str) uses the user's localization
+    //  We don't want that, so this function is used instead
+    public static double toDouble(this string value) {
+      return double.Parse(value,new CultureInfo("en-US"));
+    }
 
     public static string ReplaceAll(this string source, string pattern, string repl) {
       return Regex.Replace(source, pattern, repl);

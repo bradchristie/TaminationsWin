@@ -20,7 +20,7 @@
   <call level="Challenge" link="c2/3_by_1_checkmate_the_column" sublevel="C-2" text="3by1checkmatethecolumn" title="3 by 1 Checkmate the Column" />
   <call level="Challenge" link="c2/3_by_1_triangle_formation" sublevel="C-2" text="3by1interlockedtrianglecirculate" title="3 by 1 Interlocked Triangle Circulate" />
   <call level="Challenge" link="c2/3_by_1_transfer_the_column" sublevel="C-2" text="3by1transferthecolumn" title="3 by 1 Transfer The Column" />
-  <call level="Challenge" link="c2/3_by_1_transfer_the_column" sublevel="C-2" text="3by1transferthecolumn" title="3 By 1 Transfer the Column" />
+  <call level="Challenge" link="c2/3_by_1_transfer_the_column" sublevel="C-2" text="3by1transferthecolumn" title="3 by 1 Transfer the Column" />
   <call level="Challenge" link="c2/3_by_1_triangle_formation" sublevel="C-2" text="3by1trianglecirculate" title="3 by 1 Triangle Circulate" />
   <call level="Challenge" link="c2/3_by_1_triangle_formation" sublevel="C-2" text="3by1triangleformation" title="3 by 1 Triangle Formation" />
   <call level="Basic and Mainstream" link="ms/walk_and_dodge" sublevel="Mainstream" text="3by1walkanddodge" title="3 by 1 Walk and Dodge" />
@@ -37,6 +37,9 @@
   <call level="Challenge" link="c3a/3_4_wheel_the_ocean" sublevel="C-3A" text="34wheeltheocean" title="3/4 Wheel the Ocean" />
   <call level="Challenge" link="c3a/3_4_wheel_the_sea" sublevel="C-3A" text="34wheelthesea" title="3/4 Wheel the Sea" />
   <call level="Challenge" link="c3b/n_steps_at_a_time" sublevel="C-3B" text="4stepsatatime" title="4 Steps at a Time" />
+  <call level="Challenge" link="c3a/anything_choice" sublevel="C-3A" text="anythingchoice" title="&lt;anything&gt; Choice" />
+  <call level="Challenge" link="c3a/choice" sublevel="C-3A" text="anythingchoice" title="&lt;anything&gt; Choice" />
+  <call level="Challenge" link="c3a/anythingers_couple_up" sublevel="C-3A" text="anythingerscoupleup" title="&lt;anything&gt;er's Couple Up" />
   <call languages="lang-ja" level="Plus" link="plus/acey_deucey" sublevel="Plus" text="aceydeucey" title="Acey Deucey" />
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="aceydeuceyandspread" title="Acey Deucey and Spread" />
   <call level="Plus" link="plus/acey_deucey" sublevel="Plus" text="aceydeuceyonceandahalf" title="Acey Deucey Once and a Half" />
@@ -46,6 +49,7 @@
   <call level="Basic and Mainstream" link="b2/swing_thru" sublevel="Basic 2" text="alamoswingthru" title="Alamo Swing Thru" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all4couplesall8concepts" title="All 4 Couples / All 8 concepts" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all4coupleschaseright" title="All 4 Couples Chase Right" />
+  <call level="Challenge" link="c2/circle_to_a_wave" sublevel="C-2" text="all4couplescircletoawave" title="All 4 Couples Circle to a Wave" />
   <call level="Advanced" link="a1/double_star_thru" sublevel="A-1" text="all4couplesdoublestarthru" title="All 4 Couples Double Star Thru" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all4couplesextend" title="All 4 Couples Extend" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all4couplesfanthetop" title="All 4 Couples Fan the Top" />
@@ -88,7 +92,7 @@
   <call level="Challenge" link="c3a/follow_to_a_diamond" sublevel="C-3A" text="all8followtoadiamond" title="All 8 Follow to a Diamond" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all8followyourneighbor" title="All 8 Follow Your Neighbor" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all8followyourneighborandspread" title="All 8 Follow Your Neighbor and Spread" />
-  <call level="Challenge" link="c3a/hinge_the_lock" sublevel="C-3A" text="all8hingethelock" title="All 8 Hinge the Lock" />
+  <call level="Challenge" link="c3a/lock_the_hinge" sublevel="C-3A" text="all8hingethelock" title="All 8 Hinge the Lock" />
   <call level="Advanced" link="a1/left_roll_to_a_wave" sublevel="A-1" text="all8leftrolltoawave" title="All 8 Left Roll to a Wave" />
   <call level="Plus" link="plus/all_8_spin_the_top" sublevel="Plus" text="all8leftspinthetop" title="All 8 Left Spin the Top" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all8leftswingthru" title="All 8 Left Swing Thru" />
@@ -107,6 +111,7 @@
   <call level="Advanced" link="a1/quarter_thru" sublevel="A-1" text="all8quarterthru" title="All 8 Quarter Thru" />
   <call level="Advanced" link="a2/all_4_all_8" sublevel="A-2" text="all8recycle" title="All 8 Recycle" />
   <call level="Advanced" link="a2/recycle" sublevel="A-2" text="all8recycle" title="All 8 Recycle" />
+  <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="all8recycleandcircle14" title="All 8 Recycle and Circle 1/4" />
   <call level="Challenge" link="c1/reverse_cross_and_turn" sublevel="C-1" text="all8reversecrossandturn" title="All 8 Reverse Cross and Turn" />
   <call level="Challenge" link="c1/reverse_explode" sublevel="C-1" text="all8reverseexplode" title="All 8 Reverse Explode" />
   <call level="Basic and Mainstream" link="b2/flutterwheel" sublevel="Basic 2" text="all8reverseflutterwheel" title="All 8 Reverse Flutterwheel" />
@@ -145,7 +150,7 @@
   <call level="Challenge" link="c1/all_eight_recycle" sublevel="C-1" text="alleightrecycle" title="All Eight Recycle" />
   <call level="Plus" link="plus/teacup_chain" sublevel="Plus" text="allladiescenterteacupchain" title="All Ladies Center, Teacup Chain" />
   <call level="Plus" link="plus/teacup_chain" sublevel="Plus" text="allladiesrightteacupchain" title="All Ladies Right, Teacup Chain" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/allemande" sublevel="Basic 1" text="allemandefamily" title="Allemande Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/allemande" sublevel="Basic 1" text="allemandefamily" title="Allemande Family" />
   <call level="Basic and Mainstream" link="b1/allemande" sublevel="Basic 1" text="allemandeleft" title="Allemande Left" />
   <call level="Basic and Mainstream" link="b2/alamo_style" sublevel="Basic 2" text="allemandelefttoanalamoring" title="Allemande Left to an Alamo Ring" />
   <call level="Basic and Mainstream" link="b2/thar" sublevel="Basic 2" text="allemandelefttoanallemandethar" title="Allemande Left to an Allemande Thar" />
@@ -179,7 +184,7 @@
   <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="anythingthek" title="Anything the K" />
   <call level="Challenge" link="c1/anything_the_windmill" sublevel="C-1" text="anythingthewindmill" title="Anything the Windmill" />
   <call level="Challenge" link="c1/anything_to_a_wave" sublevel="C-1" text="anythingtoawave" title="Anything to a Wave" />
-  <call level="Basic and Mainstream" link="b1/arm_turns" sublevel="Basic 1" text="armturns" title="Arm Turns" />
+  <call languages="lang-de" level="Basic and Mainstream" link="b1/arm_turns" sublevel="Basic 1" text="armturns" title="Arm Turns" />
   <call level="Challenge" link="c3a/1_4_mix" sublevel="C-3A" text="ascouples14mix" title="As Couples 1/4 Mix" />
   <call level="Challenge" link="c1/2_3_recycle" sublevel="C-1" text="ascouples23recycle" title="As Couples 2/3 Recycle" />
   <call level="Advanced" link="a1/three_quarter_thru" sublevel="A-1" text="ascouples34thru" title="As Couples 3/4 Thru" />
@@ -195,6 +200,7 @@
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplescentersrun" title="As Couples Centers Run" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascoupleschaseright" title="As Couples Chase Right" />
   <call level="Challenge" link="c1/chase_your_neighbor" sublevel="C-1" text="ascoupleschaseyourneighbor" title="As Couples Chase Your Neighbor" />
+  <call level="Challenge" link="c2/circle_to_a_wave" sublevel="C-2" text="ascouplescircletoawave" title="As Couples Circle to a Wave" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesconcept" title="As Couples Concept" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="ascouplescoupleup" title="As Couples Couple Up" />
   <call level="Challenge" link="c2/criss_cross_your_neighbor" sublevel="C-2" text="ascouplescrisscrossyourneighbor" title="As Couples Criss Cross Your Neighbor" />
@@ -210,13 +216,14 @@
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesendscrossfold" title="As Couples Ends Cross Fold" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesendsfold" title="As Couples Ends Fold" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesexplodethewave" title="As Couples Explode the Wave" />
+  <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesextend" title="As Couples Extend" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesfanthetop" title="As Couples Fan the Top" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesflutterwheel" title="As Couples Flutterwheel" />
   <call level="Challenge" link="c1/follow_thru" sublevel="C-1" text="ascouplesfollowthru" title="As Couples Follow Thru" />
   <call level="Challenge" link="c3a/follow_to_a_diamond" sublevel="C-3A" text="ascouplesfollowtoadiamond" title="As Couples Follow to a Diamond" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesfollowyourneighbor" title="As Couples Follow Your Neighbor" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascoupleshalfsashay" title="As Couples Half Sashay" />
-  <call level="Challenge" link="c3a/hinge_the_lock" sublevel="C-3A" text="ascoupleshingethelock" title="As Couples Hinge the Lock" />
+  <call level="Challenge" link="c3a/lock_the_hinge" sublevel="C-3A" text="ascoupleshingethelock" title="As Couples Hinge the Lock" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesladiescenterasthemensashay" title="As Couples Ladies Center as the Men Sashay" />
   <call level="Advanced" link="a1/left_roll_to_a_wave" sublevel="A-1" text="ascouplesleftrolltoawave" title="As Couples Left Roll to a Wave" />
   <call level="Challenge" link="c1/shakedown" sublevel="C-1" text="ascouplesleftshakedown" title="As Couples Left Shakedown" />
@@ -232,6 +239,7 @@
   <call level="Advanced" link="a1/mix" sublevel="A-1" text="ascouplesmix" title="As Couples Mix" />
   <call level="Advanced" link="a1/pair_off" sublevel="A-1" text="ascouplespairoff" title="As Couples Pair Off" />
   <call level="Advanced" link="a2/pass_and_roll" sublevel="A-2" text="ascouplespassandroll" title="As Couples Pass and Roll" />
+  <call level="Advanced" link="a2/pass_and_roll_your_neighbor" sublevel="A-2" text="ascouplespassandrollyourneighbor" title="As Couples Pass and Roll Your Neighbor" />
   <call level="Advanced" link="a1/pass_in" sublevel="A-1" text="ascouplespassin" title="As Couples Pass In" />
   <call level="Advanced" link="a1/pass_out" sublevel="A-1" text="ascouplespassout" title="As Couples Pass Out" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplespasstheocean" title="As Couples Pass the Ocean" />
@@ -256,7 +264,7 @@
   <call level="Advanced" link="a2/scoot_and_weave" sublevel="A-2" text="ascouplesscootandweave" title="As Couples Scoot and Weave" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesscootback" title="As Couples Scoot Back" />
   <call level="Challenge" link="c1/shakedown" sublevel="C-1" text="ascouplesshakedown" title="As Couples Shakedown" />
-  <call level="Challenge" link="c3a/single_checkmate" sublevel="C-3A" text="ascouplessinglecheckmate" title="As Couples Single Checkmate" />
+  <call level="Challenge" link="c3a/single_concept" sublevel="C-3A" text="ascouplessinglecheckmate" title="As Couples Single Checkmate" />
   <call level="Advanced" link="a2/slide" sublevel="A-2" text="ascouplesslide" title="As Couples Slide" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesslidethru" title="As Couples Slide Thru" />
   <call level="Advanced" link="a2/slip" sublevel="A-2" text="ascouplesslip" title="As Couples Slip" />
@@ -274,7 +282,7 @@
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplesswingthru" title="As Couples Swing Thru" />
   <call level="Challenge" link="c1/switch_the_line" sublevel="C-1" text="ascouplesswitchtheline" title="As Couples Switch the Line" />
   <call level="Advanced" link="a2/switch_the_wave" sublevel="A-2" text="ascouplesswitchthewave" title="As Couples Switch the Wave" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="ascouplesthek" title="As Couples the K" />
+  <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="ascouplesthek" title="As Couples the K" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplestouchaquarter" title="As Couples Touch a Quarter" />
   <call level="Advanced" link="a1/as_couples" sublevel="A-1" text="ascouplestradethewave" title="As Couples Trade the Wave" />
   <call level="Advanced" link="a2/trail_off" sublevel="A-2" text="ascouplestrailoff" title="As Couples Trail Off" />
@@ -305,7 +313,7 @@
   <call level="Challenge" link="c1/beaus_and_belles" sublevel="C-1" text="bellescross" title="Belles Cross" />
   <call level="Challenge" link="c1/beaus_and_belles" sublevel="C-1" text="bellestrade" title="Belles Trade" />
   <call level="Advanced" link="a1/belles_and_beaus" sublevel="A-1" text="belleswalkbeausdodge" title="Belles Walk, Beaus Dodge" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/bend_the_line" sublevel="Basic 1" text="bendtheline" title="Bend the Line" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/bend_the_line" sublevel="Basic 1" text="bendtheline" title="Bend the Line" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="bendthelineandroll" title="Bend the Line and Roll" />
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="bendthelineandspread" title="Bend the Line and Spread" />
   <call level="Challenge" link="c3b/by_golly" sublevel="C-3B" text="bendthelinebygolly" title="Bend the Line By Golly" />
@@ -324,6 +332,9 @@
   <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="bouncetheanyone" title="Bounce the Anyone" />
   <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="bouncetheboys" title="Bounce the Boys" />
   <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="bouncethecenters" title="Bounce the Centers" />
+  <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="bouncethegirls" title="Bounce the Girls" />
+  <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="bouncetheleaders" title="Bounce the Leaders" />
+  <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="bouncethetrailers" title="Bounce the Trailers" />
   <call level="Basic and Mainstream" link="b1/circulate" sublevel="Basic 1" text="boxcirculate" title="Box Circulate" />
   <call level="Advanced" link="a2/box_counter_rotate" sublevel="A-2" text="boxcounterrotate" title="Box Counter Rotate" />
   <call level="Advanced" link="a2/box_counter_rotate" sublevel="A-2" text="boxcounterrotate34" title="Box Counter Rotate 3/4" />
@@ -387,7 +398,7 @@
   <call level="Challenge" link="c1/butterfly_formation" sublevel="C-1" text="butterflywheelthru" title="Butterfly Wheel Thru" />
   <call level="Challenge" link="c1/zing" sublevel="C-1" text="butterflyzing" title="Butterfly Zing" />
   <call level="Challenge" link="c3b/by_golly" sublevel="C-3B" text="bygolly" title="By Golly" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/california_twirl" sublevel="Basic 1" text="californiatwirl" title="California Twirl" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/california_twirl" sublevel="Basic 1" text="californiatwirl" title="California Twirl" />
   <call level="Advanced" link="a1/cast_a_shadow" sublevel="A-1" text="castashadow" title="Cast a Shadow" />
   <call level="Challenge" link="c1/cast_a_shadow" sublevel="C-1" text="castashadow" title="Cast a Shadow" />
   <call level="Challenge" link="c1/cast_back" sublevel="C-1" text="castback" title="Cast Back" />
@@ -454,14 +465,14 @@
   <call level="Challenge" link="c1/chase_your_neighbor" sublevel="C-1" text="chaseyourneighbor" title="Chase Your Neighbor" />
   <call level="Challenge" link="c3b/chase_the_fraction_tag" sublevel="C-3B" text="chasersdelight" title="Chaser's Delight" />
   <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboardanything" title="Checkerboard Anything" />
+  <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboardbouncetheboys" title="Checkerboard Bounce the Boys" />
   <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboardrecycle" title="Checkerboard Recycle" />
   <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboardswapthewave" title="Checkerboard Swap the Wave" />
   <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboardswingthru" title="Checkerboard Swing Thru" />
   <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboardtagtheline" title="Checkerboard Tag the Line" />
-  <call level="Challenge" link="c3a/checkerbox_anything" sublevel="C-3A" text="checkerboxanything" title="Checkerbox Anything" />
-  <call level="Challenge" link="c3a/checkerbox_anything" sublevel="C-3A" text="checkerboxrecycle" title="Checkerbox Recycle" />
-  <call level="Challenge" link="c3a/checkerbox_anything" sublevel="C-3A" text="checkerboxswaparound" title="Checkerbox Swap Around" />
-  <call level="Challenge" link="c3a/checkerbox_anything" sublevel="C-3A" text="checkerboxturnthru" title="Checkerbox Turn Thru" />
+  <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboxrecycle" title="Checkerbox Recycle" />
+  <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboxswaparound" title="Checkerbox Swap Around" />
+  <call level="Challenge" link="c3a/checkerboard_anything" sublevel="C-3A" text="checkerboxturnthru" title="Checkerbox Turn Thru" />
   <call level="Advanced" link="a2/checkmate" sublevel="A-2" text="checkmate" title="Checkmate" />
   <call level="Challenge" link="c1/checkover" sublevel="C-1" text="checkover" title="Checkover" />
   <call level="Challenge" link="c2/checkpoint" sublevel="C-2" text="checkpoint" title="Checkpoint" />
@@ -470,8 +481,8 @@
   <call level="Challenge" link="c2/checkpoint" sublevel="C-2" text="checkpointcounterrotatebytrianglecirculate" title="Checkpoint Counter Rotate by Triangle Circulate" />
   <call level="Challenge" link="c2/checkpoint" sublevel="C-2" text="checkpointtagthelinebyswingthru" title="Checkpoint Tag the Line by Swing Thru" />
   <call level="Challenge" link="c2/chisel_thru" sublevel="C-2" text="chiselthru" title="Chisel Thru" />
-  <call level="Challenge" link="c3a/lockers_choice" sublevel="C-3A" text="choice" title="Choice" />
   <call level="Challenge" link="c3b/chuck_a_luck" sublevel="C-3B" text="chuckaluck" title="Chuck-A-Luck" />
+  <call level="Challenge" link="c2/circle_to_a_wave" sublevel="C-2" text="circle12toawave" title="Circle 1/2 to a Wave" />
   <call level="Challenge" link="c1/circle_by" sublevel="C-1" text="circleby" title="Circle By" />
   <call level="Challenge" link="c1/circle_by" sublevel="C-1" text="circleby12and12" title="Circle By 1/2 and 1/2" />
   <call level="Challenge" link="c1/circle_by" sublevel="C-1" text="circleby12and14" title="Circle By 1/2 and 1/4" />
@@ -489,7 +500,7 @@
   <call level="Challenge" link="c1/circle_by" sublevel="C-1" text="circlebynothingand14" title="Circle By Nothing and 1/4" />
   <call level="Challenge" link="c1/circle_by" sublevel="C-1" text="circlebynothingand34" title="Circle By Nothing and 3/4" />
   <call level="Challenge" link="c1/circle_by" sublevel="C-1" text="circlebynothingandnothing" title="Circle By Nothing and Nothing" />
-  <call languages="lang-ja lang-ja" level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circlefamily" title="Circle Family" />
+  <call languages="lang-de lang-ja lang-de lang-ja" level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circlefamily" title="Circle Family" />
   <call level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circlefourleft12" title="Circle Four Left 1/2" />
   <call level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circlefourleft14" title="Circle Four Left 1/4" />
   <call level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circlefourleft34" title="Circle Four Left 3/4" />
@@ -498,7 +509,7 @@
   <call level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circlefourright34" title="Circle Four Right 3/4" />
   <call level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circleleft" title="Circle Left" />
   <call level="Basic and Mainstream" link="b1/circle" sublevel="Basic 1" text="circleright" title="Circle Right" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/circle_to_a_line" sublevel="Basic 1" text="circletoaline" title="Circle to a Line" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/circle_to_a_line" sublevel="Basic 1" text="circletoaline" title="Circle to a Line" />
   <call level="Basic and Mainstream" link="b1/circle_to_a_line" sublevel="Basic 1" text="circletoalinecallerlabstyle" title="Circle to a Line Callerlab Style" />
   <call level="Basic and Mainstream" link="b1/circle_to_a_line" sublevel="Basic 1" text="circletoalinemodernstyle" title="Circle to a Line Modern Style" />
   <call level="Basic and Mainstream" link="b1/circle_to_a_line" sublevel="Basic 1" text="circletoalinesimplestyle" title="Circle to a Line Simple Style" />
@@ -506,7 +517,7 @@
   <call level="Challenge" link="c1/circulate" sublevel="C-1" text="circulate" title="Circulate" />
   <call level="Challenge" link="c1/t_bone_formation" sublevel="C-1" text="circulate" title="Circulate" />
   <call level="Basic and Mainstream" link="b1/same_position_rule" sublevel="Basic 1" text="circulate112" title="Circulate 1 1/2" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/circulate" sublevel="Basic 1" text="circulatefamily" title="Circulate Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/circulate" sublevel="Basic 1" text="circulatefamily" title="Circulate Family" />
   <call level="Advanced" link="a1/clover_and_anything" sublevel="A-1" text="cloverandanything" title="Clover and Anything" />
   <call level="Advanced" link="a1/clover_and_anything" sublevel="A-1" text="cloverandlockit" title="Clover and Lock It" />
   <call level="Advanced" link="a1/clover_and_anything" sublevel="A-1" text="cloverandpasstheocean" title="Clover and Pass the Ocean" />
@@ -523,12 +534,14 @@
   <call level="Challenge" link="c1/ah_so" sublevel="C-1" text="concentricahso" title="Concentric Ah So" />
   <call level="Challenge" link="c1/alter_the_wave" sublevel="C-1" text="concentricalterthewave" title="Concentric Alter the Wave" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricbendtheline" title="Concentric Bend the Line" />
+  <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="concentricbouncetheboys" title="Concentric Bounce the Boys" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricboxcounterrotate" title="Concentric Box Counter Rotate" />
   <call level="Challenge" link="c1/box_split_recycle" sublevel="C-1" text="concentricboxrecycle" title="Concentric Box Recycle" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricboxtransfer" title="Concentric Box Transfer" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentriccastoff34" title="Concentric Cast Off 3/4" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricchaseright" title="Concentric Chase Right" />
   <call level="Challenge" link="c1/chase_your_neighbor" sublevel="C-1" text="concentricchaseyourneighbor" title="Concentric Chase Your Neighbor" />
+  <call level="Challenge" link="c2/circle_to_a_wave" sublevel="C-2" text="concentriccircletoawave" title="Concentric Circle to a Wave" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricconcept" title="Concentric Concept" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="concentriccoupleup" title="Concentric Couple Up" />
   <call level="Challenge" link="c2/criss_cross_your_neighbor" sublevel="C-2" text="concentriccrisscrossyourneighbor" title="Concentric Criss Cross Your Neighbor" />
@@ -557,7 +570,6 @@
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentriclockit" title="Concentric Lockit" />
   <call level="Challenge" link="c3a/mini_chase" sublevel="C-3A" text="concentricminichase" title="Concentric Mini Chase" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricmix" title="Concentric Mix" />
-  <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="concentricmotivate" title="Concentric Motivate" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricpairoff" title="Concentric Pair Off" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricpassin" title="Concentric Pass In" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricpasstheocean" title="Concentric Pass the Ocean" />
@@ -568,7 +580,6 @@
   <call level="Challenge" link="c2/peel_to_a_diamond" sublevel="C-2" text="concentricpeeltoadiamond" title="Concentric Peel to a Diamond" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricrecycle" title="Concentric Recycle" />
   <call level="Challenge" link="c1/reverse_cross_and_turn" sublevel="C-1" text="concentricreversecrossandturn" title="Concentric Reverse Cross and Turn" />
-  <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricreverseexplode" title="Concentric Reverse Explode" />
   <call level="Challenge" link="c1/reverse_explode" sublevel="C-1" text="concentricreverseexplode" title="Concentric Reverse Explode" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricrightandleftthru" title="Concentric Right and Left Thru" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricscootback" title="Concentric Scoot Back" />
@@ -579,6 +590,7 @@
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricstarthru" title="Concentric Star Thru" />
   <call level="Challenge" link="c1/step_and_fold" sublevel="C-1" text="concentricstepandfold" title="Concentric Step and Fold" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentricswingthru" title="Concentric Swing Thru" />
+  <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="concentricthek" title="Concentric the K" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentrictouchaquarter" title="Concentric Touch a Quarter" />
   <call level="Challenge" link="c1/concentric_concept" sublevel="C-1" text="concentrictradethewave" title="Concentric Trade the Wave" />
   <call level="Challenge" link="c2/trail_to_a_diamond" sublevel="C-2" text="concentrictrailtoadiamond" title="Concentric Trail to a Diamond" />
@@ -595,6 +607,7 @@
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="coordinateandspread" title="Coordinate and Spread" />
   <call level="Challenge" link="c1/replace" sublevel="C-1" text="coordinatereplacetradewitharemake" title="Coordinate, Replace Trade with a Remake" />
   <call level="Challenge" link="c2/counter" sublevel="C-2" text="counter" title="Counter" />
+  <call level="Challenge" link="c3a/anythingers_couple_up" sublevel="C-3A" text="countercoupleup" title="Counter Couple Up" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="countercoupleup" title="Counter Couple Up" />
   <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="countermotivate" title="Counter Motivate" />
   <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="counterpercolate" title="Counter Percolate" />
@@ -612,7 +625,7 @@
   <call level="Challenge" link="c3a/twosome_concept" sublevel="C-3A" text="couplestwosomesinglewheel" title="Couples Twosome Single Wheel" />
   <call level="Challenge" link="c3a/twosome_concept" sublevel="C-3A" text="couplestwosomeswingthru" title="Couples Twosome Swing Thru" />
   <call level="Challenge" link="c3a/twosome_concept" sublevel="C-3A" text="couplestwosometrade" title="Couples Twosome Trade" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/courtesy_turn" sublevel="Basic 1" text="courtesyturn" title="Courtesy Turn" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/courtesy_turn" sublevel="Basic 1" text="courtesyturn" title="Courtesy Turn" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazycirculate" title="Crazy Circulate" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazycirculate1223" title="Crazy Circulate 1-2-2-3" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazycirculate3" title="Crazy Circulate 3" />
@@ -620,7 +633,7 @@
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazycounterrotate14" title="Crazy Counter Rotate 1/4" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazyflutterwheel" title="Crazy Flutterwheel" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazymix" title="Crazy Mix" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="crazythek" title="Crazy the K" />
+  <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="crazythek" title="Crazy the K" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazytrade" title="Crazy Trade" />
   <call level="Challenge" link="c2/crazy_concept" sublevel="C-2" text="crazytrianglecirculate" title="Crazy Triangle Circulate" />
   <call level="Challenge" link="c3b/criss_cross_the_deucey" sublevel="C-3B" text="crisscrossthedeucey" title="Criss Cross The Deucey" />
@@ -639,6 +652,8 @@
   <call level="Challenge" link="c3b/chuck_a_luck" sublevel="C-3B" text="crosschuckaluck" title="Cross Chuck-A-Luck" />
   <call level="Advanced" link="a1/cross_clover_and_anything" sublevel="A-1" text="crosscloverandanything" title="Cross Clover and Anything" />
   <call level="Advanced" link="a1/cross_clover_and_anything" sublevel="A-1" text="crosscloverandswaparound" title="Cross Clover and Swap Around" />
+  <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="crossconcentricbouncetheboys" title="Cross Concentric Bounce the Boys" />
+  <call level="Challenge" link="c2/circle_to_a_wave" sublevel="C-2" text="crossconcentriccircletoawave" title="Cross Concentric Circle to a Wave" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentriccrossfire" title="Cross Concentric Crossfire" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentricflipthediamond" title="Cross Concentric Flip the Diamond" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentrichinge" title="Cross Concentric Hinge" />
@@ -646,6 +661,7 @@
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentricreverseexplode" title="Cross Concentric Reverse Explode" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentricstarthru" title="Cross Concentric Star Thru" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentricstepandfold" title="Cross Concentric Step and Fold" />
+  <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="crossconcentricthek" title="Cross Concentric the K" />
   <call level="Challenge" link="c2/turn_to_a_line" sublevel="C-2" text="crossconcentricturntoaline" title="Cross Concentric Turn to a Line" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentricwheelanddeal" title="Cross Concentric Wheel and Deal" />
   <call level="Challenge" link="c3a/cross_counter" sublevel="C-3A" text="crosscounter" title="Cross Counter" />
@@ -675,7 +691,6 @@
   <call level="Challenge" link="c2/cross_trade_and_wheel" sublevel="C-2" text="crosstradeandwheel" title="Cross Trade and Wheel" />
   <call level="Advanced" link="a1/cross_trail_thru" sublevel="A-1" text="crosstrailthru" title="Cross Trail Thru" />
   <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="crosstrailthruthek" title="Cross Trail Thru the K" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="crosstrailthruthek" title="Cross Trail Thru the K" />
   <call level="Challenge" link="c1/cross_your_neighbor" sublevel="C-1" text="crossyourneighbor" title="Cross Your Neighbor" />
   <call level="Challenge" link="c2/cross_concentric_concept" sublevel="C-2" text="crossconcentricconcept" title="Cross-Concentric Concept" />
   <call languages="lang-ja" level="Plus" link="plus/crossfire" sublevel="Plus" text="crossfire" title="Crossfire" />
@@ -696,11 +711,12 @@
   <call level="Challenge" link="c3b/diagonal_box_concept" sublevel="C-3B" text="diagonalboxscootback" title="Diagonal Box Scoot Back" />
   <call level="Advanced" link="a2/diamond_chain_thru" sublevel="A-2" text="diamondchainthru" title="Diamond Chain Thru" />
   <call languages="lang-ja" level="Plus" link="plus/diamond_circulate" sublevel="Plus" text="diamondcirculate" title="Diamond Circulate" />
+  <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="diamondcirculateandcircle14" title="Diamond Circulate and Circle 1/4" />
   <call level="Challenge" link="c3a/delight_dilemma" sublevel="C-3A" text="dilemma" title="Dilemma" />
   <call level="Challenge" link="c3b/disband" sublevel="C-3B" text="disband" title="Disband" />
   <call level="Challenge" link="c2/disconnected_concept" sublevel="C-2" text="disconnectedcolumnsof3circulate" title="Disconnected Columns of 3 Circulate" />
   <call level="Challenge" link="c2/disconnected_concept" sublevel="C-2" text="disconnectedconcept" title="Disconnected Concept" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/dive_thru" sublevel="Basic 1" text="divethru" title="Dive Thru" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/dive_thru" sublevel="Basic 1" text="divethru" title="Dive Thru" />
   <call level="Challenge" link="c3b/divide_the_ocean" sublevel="C-3B" text="dividetheoceanright" title="Divide the Ocean Right" />
   <call level="Challenge" link="c3b/divide_the_ocean" sublevel="C-3B" text="dividetheoceanseadirectionanything" title="Divide The Ocean | Sea direction | anything" />
   <call level="Challenge" link="c3b/divide_the_ocean" sublevel="C-3B" text="dividetheseaout" title="Divide the Sea Out" />
@@ -710,13 +726,13 @@
   <call level="Challenge" link="c1/dixie_sashay" sublevel="C-1" text="dixiesashay" title="Dixie Sashay" />
   <call level="Basic and Mainstream" link="ms/dixie_style" sublevel="Mainstream" text="dixiestyletoawave" title="Dixie Style to a Wave" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/dixie_style" sublevel="Mainstream" text="dixiestyletoanoceanwave" title="Dixie Style to an Ocean Wave" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/do_paso" sublevel="Basic 1" text="dopaso" title="Do Paso" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/do_paso" sublevel="Basic 1" text="dopaso" title="Do Paso" />
   <call level="Challenge" link="c2/dodge_anything" sublevel="C-2" text="dodgeanything" title="Dodge Anything" />
   <call level="Challenge" link="c2/dodge_anything" sublevel="C-2" text="dodgecirculate" title="Dodge Circulate" />
   <call level="Challenge" link="c2/dodge_anything" sublevel="C-2" text="dodgehocuspocus" title="Dodge Hocus Pocus" />
   <call level="Challenge" link="c2/dodge_anything" sublevel="C-2" text="dodgeloadtheboat" title="Dodge Load the Boat" />
   <call level="Challenge" link="c2/dodge_anything" sublevel="C-2" text="dodgetrade" title="Dodge Trade" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/dosado" sublevel="Basic 1" text="dosado" title="Dosado" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/dosado" sublevel="Basic 1" text="dosado" title="Dosado" />
   <call level="Advanced" link="a1/triple_cross" sublevel="A-1" text="doublecross" title="Double Cross" />
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/double_pass_thru" sublevel="Basic 2" text="doublepassthru" title="Double Pass Thru" />
   <call level="Advanced" link="a1/double_star_thru" sublevel="A-1" text="doublestarthru" title="Double Star Thru" />
@@ -778,10 +794,10 @@
   <call level="Basic and Mainstream" link="b2/zoom" sublevel="Basic 2" text="endszoom" title="Ends Zoom" />
   <call level="Challenge" link="c3a/anyone_hop" sublevel="C-3A" text="everybodyhop" title="Everybody Hop" />
   <call level="Challenge" link="c3a/exchange_the_box" sublevel="C-3A" text="exchangethebox" title="Exchange the Box" />
+  <call level="Challenge" link="c3a/exchange_the_box" sublevel="C-3A" text="exchangetheboxestriangles" title="Exchange the Boxes / Triangles" />
   <call level="Challenge" link="c2/exchange_the_diamond" sublevel="C-2" text="exchangethediamond" title="Exchange the Diamond" />
   <call level="Challenge" link="c2/exchange_the_diamond" sublevel="C-2" text="exchangethediamond141234full" title="Exchange the Diamond 1/4, 1/2, 3/4, Full" />
-  <call level="Challenge" link="c3a/exchange_the_triangle" sublevel="C-3A" text="exchangetheinsidetriangles" title="Exchange the Inside Triangles" />
-  <call level="Challenge" link="c3a/exchange_the_triangle" sublevel="C-3A" text="exchangethetriangle" title="Exchange the Triangle" />
+  <call level="Challenge" link="c3a/exchange_the_box" sublevel="C-3A" text="exchangetheinsidetriangles" title="Exchange the Inside Triangles" />
   <call level="Challenge" link="c3a/expand_the_column" sublevel="C-3A" text="expandthecolumn" title="Expand the Column" />
   <call level="Advanced" link="a1/explode_and_anything" sublevel="A-1" text="explodeandanything" title="Explode and Anything" />
   <call languages="lang-ja" level="Plus" link="plus/explode_and_anything" sublevel="Plus" text="explodeandanything" title="Explode and Anything" />
@@ -794,7 +810,6 @@
   <call level="Plus" link="plus/explode_and_anything" sublevel="Plus" text="explodeandtouchaquarter" title="Explode and Touch a Quarter" />
   <call level="Plus" link="plus/explode_and_anything" sublevel="Plus" text="explodeandtouchaquarterandroll" title="Explode and Touch a Quarter and Roll" />
   <call level="Challenge" link="c3b/explode_the_diamond" sublevel="C-3B" text="explodethediamond" title="Explode the Diamond" />
-  <call level="Challenge" link="c3b/explode_the_diamond" sublevel="C-3B" text="explodethediamond" title="Explode The Diamond" />
   <call level="Advanced" link="a1/explode_the_line" sublevel="A-1" text="explodetheline" title="Explode the Line" />
   <call level="Challenge" link="c3a/explode_the_top" sublevel="C-3A" text="explodethetop" title="Explode the Top" />
   <call languages="lang-ja" level="Plus" link="plus/explode_the_wave" sublevel="Plus" text="explodethewave" title="Explode the Wave" />
@@ -805,7 +820,7 @@
   <call level="Basic and Mainstream" link="b1/face" sublevel="Basic 1" text="faceleftrightinout" title="Face Left / Right / In / Out" />
   <call level="Basic and Mainstream" link="b1/face" sublevel="Basic 1" text="faceout" title="Face Out" />
   <call level="Basic and Mainstream" link="b1/face" sublevel="Basic 1" text="faceright" title="Face Right" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b2/facing_couples_rule" sublevel="Basic 2" text="facingcouplesrule" title="Facing Couples Rule" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b2/facing_couples_rule" sublevel="Basic 2" text="facingcouplesrule" title="Facing Couples Rule" />
   <call level="Challenge" link="c3b/fan_concept" sublevel="C-3B" text="fan12castandrelay" title="Fan 1/2 Cast and Relay" />
   <call level="Challenge" link="c3b/fan_concept" sublevel="C-3B" text="fanalterandcirculate" title="Fan Alter and Circulate" />
   <call level="Challenge" link="c3b/fan_concept" sublevel="C-3B" text="fanalterthewave" title="Fan Alter the Wave" />
@@ -893,7 +908,7 @@
   <call languages="lang-ja" level="Plus" link="plus/follow_your_neighbor" sublevel="Plus" text="followyourneighbor" title="Follow Your Neighbor" />
   <call level="Plus" link="plus/follow_your_neighbor" sublevel="Plus" text="followyourneighborandspread" title="Follow Your Neighbor and Spread" />
   <call level="Challenge" link="c1/anything_the_windmill" sublevel="C-1" text="followyourneighborthewindmillforward" title="Follow Your Neighbor the Windmill Forward" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/forward_and_back" sublevel="Basic 1" text="forwardandback" title="Forward and Back" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/forward_and_back" sublevel="Basic 1" text="forwardandback" title="Forward and Back" />
   <call level="Basic and Mainstream" link="b1/promenade" sublevel="Basic 1" text="fourboyspromenade" title="Four Boys Promenade" />
   <call level="Basic and Mainstream" link="b1/promenade" sublevel="Basic 1" text="fourgirlspromenade" title="Four Girls Promenade" />
   <call level="Basic and Mainstream" link="b1/ladies_chain" sublevel="Basic 1" text="fourladieschain" title="Four Ladies Chain" />
@@ -941,8 +956,8 @@
   <call level="Challenge" link="c2/grand_cross_back" sublevel="C-2" text="grandcrossback" title="Grand Cross Back" />
   <call level="Challenge" link="c2/grand_cross_trade_and_wheel" sublevel="C-2" text="grandcrosstradeandwheel" title="Grand Cross Trade and Wheel" />
   <call level="Challenge" link="c1/cross_your_neighbor" sublevel="C-1" text="grandcrossyourneighbor" title="Grand Cross Your Neighbor" />
-  <call level="Advanced" link="a1/grand_follow_your_neighbor" sublevel="A-1" text="grandfollowyourneighbor" title="Grand Follow Your Neighbor" />
   <call level="Advanced" link="a1/grand_follow_your_neighbor" sublevel="A-1" text="grandfollowyourneighbor" title="Grand follow your neighbor" />
+  <call level="Advanced" link="a1/grand_follow_your_neighbor" sublevel="A-1" text="grandfollowyourneighbor" title="Grand Follow Your Neighbor" />
   <call level="Advanced" link="a1/grand_follow_your_neighbor" sublevel="A-1" text="grandfollowyourneighborandspread" title="Grand Follow Your Neighbor and Spread" />
   <call level="Challenge" link="c3a/1_4_mix" sublevel="C-3A" text="grandleft14mix" title="Grand Left 1/4 Mix" />
   <call level="Challenge" link="c3a/3_4_mix" sublevel="C-3A" text="grandleft34mix" title="Grand Left 3/4 Mix" />
@@ -953,12 +968,12 @@
   <call level="Challenge" link="c2/grand_single_cross_and_wheel" sublevel="C-2" text="grandsinglecrossandwheel" title="Grand Single Cross and Wheel" />
   <call level="Challenge" link="c2/grand_single_cross_trade_and_wheel" sublevel="C-2" text="grandsinglecrosstradeandwheel" title="Grand Single Cross Trade and Wheel" />
   <call level="Basic and Mainstream" link="ms/grand_spin" sublevel="Mainstream" text="grandspin" title="Grand Spin" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/grand_square" sublevel="Basic 1" text="grandsquare" title="Grand Square" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/grand_square" sublevel="Basic 1" text="grandsquare" title="Grand Square" />
   <call level="Challenge" link="c3a/grand_mix" sublevel="C-3A" text="grandswingandmix" title="Grand Swing and Mix" />
   <call languages="lang-ja" level="Plus" link="plus/grand_swing_thru" sublevel="Plus" text="grandswingthru" title="Grand Swing Thru" />
   <call level="Challenge" link="c2/solid_concept" sublevel="C-2" text="groupsof4worksolidtouchaquarter" title="Groups of 4 work Solid, Touch a Quarter" />
   <call level="Basic and Mainstream" link="b1/sashay" sublevel="Basic 1" text="halfsashay" title="Half Sashay" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/sashay" sublevel="Basic 1" text="halfsashayfamily" title="Half Sashay Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/sashay" sublevel="Basic 1" text="halfsashayfamily" title="Half Sashay Family" />
   <call level="Basic and Mainstream" link="ms/half_tag" sublevel="Mainstream" text="halftag" title="Half Tag" />
   <call level="Challenge" link="c1/anything_the_windmill" sublevel="C-1" text="halftagthewindmillright" title="Half Tag the Windmill Right" />
   <call level="Advanced" link="a1/fractional_tops" sublevel="A-1" text="halfthetop" title="Half the Top" />
@@ -993,10 +1008,11 @@
   <call level="Challenge" link="c1/reverse_single_rotate" sublevel="C-1" text="headsreversesinglerotate" title="Heads Reverse Single Rotate" />
   <call level="Challenge" link="c2/reverse_split_swap_around" sublevel="C-2" text="headsreversesplitswaparound" title="Heads Reverse Split Swap Around" />
   <call level="Challenge" link="c1/rotate" sublevel="C-1" text="headsrotate" title="Heads Rotate" />
-  <call level="Challenge" link="c3a/single_checkmate" sublevel="C-3A" text="headssinglecheckmate" title="Heads Single Checkmate" />
+  <call level="Challenge" link="c3a/single_concept" sublevel="C-3A" text="headssinglecheckmate" title="Heads Single Checkmate" />
   <call level="Challenge" link="c1/single_rotate" sublevel="C-1" text="headssinglerotate" title="Heads Single Rotate" />
   <call level="Challenge" link="c3a/spin_the_pulley" sublevel="C-3A" text="headsspinthepulley" title="Heads Spin the Pulley" />
   <call level="Basic and Mainstream" link="ms/spin_the_top" sublevel="Mainstream" text="headsspinthetop" title="Heads Spin the Top" />
+  <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="headsspinthetopandcircle14" title="Heads Spin the Top and Circle 1/4" />
   <call level="Advanced" link="a1/split_square_chain_thru" sublevel="A-1" text="headssplitsquarechainthru" title="Heads Split Square Chain Thru" />
   <call level="Challenge" link="c2/split_swap_around" sublevel="C-2" text="headssplitswaparound" title="Heads Split Swap Around" />
   <call level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="headssquarethru2" title="Heads Square Thru 2" />
@@ -1016,7 +1032,7 @@
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="hingeandroll" title="Hinge and Roll" />
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="hingeandspread" title="Hinge and Spread" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/hinge" sublevel="Mainstream" text="hingefamily" title="Hinge Family" />
-  <call level="Challenge" link="c3a/hinge_the_lock" sublevel="C-3A" text="hingethelock" title="Hinge the Lock" />
+  <call level="Challenge" link="c3a/lock_the_hinge" sublevel="C-3A" text="hingethelock" title="Hinge the Lock" />
   <call level="Challenge" link="c2/hocus_pocus" sublevel="C-2" text="hocuspocus" title="Hocus Pocus" />
   <call level="Advanced" link="a1/horseshoe_turn" sublevel="A-1" text="horseshoeturn" title="Horseshoe Turn" />
   <call level="Advanced" link="a2/hourglass_circulate" sublevel="A-2" text="hourglasscirculate" title="Hourglass Circulate" />
@@ -1049,6 +1065,7 @@
   <call level="Challenge" link="c3a/initially_concept" sublevel="C-3A" text="initiallyascouplesmix" title="Initially As Couples Mix" />
   <call level="Challenge" link="c3a/initially_concept" sublevel="C-3A" text="initiallyascouplesspinthetop" title="Initially As Couples Spin the Top" />
   <call level="Challenge" link="c2/inlet" sublevel="C-2" text="inlet" title="Inlet" />
+  <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="inletandcircle14" title="Inlet and Circle 1/4" />
   <call level="Challenge" link="c2/interlocked_triangle_formation" sublevel="C-2" text="inpointinterlockedtrianglecirculate" title="Inpoint Interlocked Triangle Circulate" />
   <call level="Challenge" link="c1/triangle_formation" sublevel="C-1" text="inpointtrianglecirculate" title="Inpoint Triangle Circulate" />
   <call level="Challenge" link="c2/interlocked_triangle_formation" sublevel="C-2" text="insideinterlockedtrianglecirculate" title="Inside Interlocked Triangle Circulate" />
@@ -1058,6 +1075,7 @@
   <call level="Challenge" link="c1/anything_chain_thru" sublevel="C-1" text="interlockeddiamondchainthru" title="Interlocked Diamond Chain Thru" />
   <call level="Challenge" link="c1/interlocked_diamond_circulate" sublevel="C-1" text="interlockeddiamondcirculate" title="Interlocked Diamond Circulate" />
   <call level="Challenge" link="c3a/interlocked_little" sublevel="C-3A" text="interlockedlittle" title="Interlocked Little" />
+  <call level="Challenge" link="c3a/interlocked_little_more" sublevel="C-3A" text="interlockedlittlemore" title="Interlocked Little More" />
   <call level="Challenge" link="c3a/interlocked_plenty" sublevel="C-3A" text="interlockedplenty" title="Interlocked Plenty" />
   <call level="Challenge" link="c3b/interlocked_rally" sublevel="C-3B" text="interlockedrally" title="Interlocked Rally" />
   <call level="Challenge" link="c3b/interlocked_ramble" sublevel="C-3B" text="interlockedramble" title="Interlocked Ramble" />
@@ -1079,13 +1097,13 @@
   <call level="Challenge" link="c3a/keep_busy" sublevel="C-3A" text="keepbusy" title="Keep Busy" />
   <call level="Challenge" link="c2/kick_off" sublevel="C-2" text="kickoff" title="Kick Off" />
   <call level="Basic and Mainstream" link="b1/ladies_chain" sublevel="Basic 1" text="ladieschain" title="Ladies Chain" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/ladies_chain" sublevel="Basic 1" text="ladieschainfamily" title="Ladies Chain Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/ladies_chain" sublevel="Basic 1" text="ladieschainfamily" title="Ladies Chain Family" />
   <call level="Basic and Mainstream" link="b1/sashay" sublevel="Basic 1" text="ladiesinmensashay" title="Ladies In, Men Sashay" />
   <call level="Challenge" link="c1/start" sublevel="C-1" text="ladiesstarttouch14andcross" title="Ladies Start, Touch 1/4 and Cross" />
   <call level="Challenge" link="c3a/latch_on" sublevel="C-3A" text="latchon" title="Latch On" />
   <call level="Challenge" link="c2/lateral_substitute" sublevel="C-2" text="lateralsubstitute" title="Lateral Substitute" />
   <call level="Basic and Mainstream" link="b1/lead_right" sublevel="Basic 1" text="leadleft" title="Lead Left" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/lead_right" sublevel="Basic 1" text="leadright" title="Lead Right" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/lead_right" sublevel="Basic 1" text="leadright" title="Lead Right" />
   <call level="Advanced" link="a1/left" sublevel="A-1" text="left" title="Left" />
   <call level="Challenge" link="c1/left" sublevel="C-1" text="left" title="Left" />
   <call level="Challenge" link="c3a/1_4_mix" sublevel="C-3A" text="left14mix" title="Left 1/4 Mix" />
@@ -1137,6 +1155,7 @@
   <call level="Basic and Mainstream" link="ms/half_tag" sublevel="Mainstream" text="leftshoulderhalftag" title="Left-Shoulder Half Tag" />
   <call level="Challenge" link="c3b/lickety_split" sublevel="C-3B" text="licketysplit" title="Lickety Split" />
   <call level="Challenge" link="c3b/lift_off" sublevel="C-3B" text="liftoff" title="Lift Off" />
+  <call level="Challenge" link="c3a/like_a_couple_up" sublevel="C-3A" text="likeacoupleup" title="Like a Couple Up" />
   <call level="Basic and Mainstream" link="b1/bend_the_line" sublevel="Basic 1" text="lineof8bendtheline" title="Line of 8, Bend the Line" />
   <call level="Basic and Mainstream" link="ms/tag" sublevel="Mainstream" text="lineof8tagtheline" title="Line of 8, Tag the Line" />
   <call level="Challenge" link="c1/linear_action" sublevel="C-1" text="linearaction" title="Linear Action" />
@@ -1232,8 +1251,8 @@
   <call level="Challenge" link="c1/o_formation" sublevel="C-1" text="owheelthru" title="O Wheel Thru" />
   <call level="Challenge" link="c1/zing" sublevel="C-1" text="ozing" title="O Zing" />
   <call level="Challenge" link="c1/o_formation" sublevel="C-1" text="ozoom" title="O Zoom" />
-  <call languages="lang-ja lang-ja" level="Basic and Mainstream" link="b2/ocean_wave" sublevel="Basic 2" text="oceanwavefamily" title="Ocean Wave Family" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b2/ocean_wave_rule" sublevel="Basic 2" text="oceanwaverule" title="Ocean Wave Rule" />
+  <call languages="lang-ja lang-de lang-ja" level="Basic and Mainstream" link="b2/ocean_wave" sublevel="Basic 2" text="oceanwavefamily" title="Ocean Wave Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b2/ocean_wave_rule" sublevel="Basic 2" text="oceanwaverule" title="Ocean Wave Rule" />
   <call level="Challenge" link="c3b/oddly_evenly_concept" sublevel="C-3B" text="oddlyonceremovedreset" title="Oddly Once Removed Reset" />
   <call level="Challenge" link="c3b/oddly_evenly_concept" sublevel="C-3B" text="oddlytandemremake" title="Oddly Tandem Remake" />
   <call level="Challenge" link="c3b/oddly_evenly_concept" sublevel="C-3B" text="oddlytandemswingandmix" title="Oddly Tandem Swing and Mix" />
@@ -1241,21 +1260,44 @@
   <call level="Challenge" link="c2/offset_concept" sublevel="C-2" text="offsetlinesbendtheline" title="Offset Lines Bend the Line" />
   <call level="Challenge" link="c2/offset_concept" sublevel="C-2" text="offsetlinescouplescirculate" title="Offset Lines Couples Circulate" />
   <call level="Challenge" link="c2/offset_concept" sublevel="C-2" text="offsetlinespasstheocean" title="Offset Lines Pass the Ocean" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="offsetlinesthek" title="Offset Lines the K" />
+  <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="offsetlinesthek" title="Offset Lines the K" />
   <call level="Challenge" link="c2/offset_concept" sublevel="C-2" text="offsetwaveslinescolumnsconcept" title="Offset Waves/Lines/Columns Concept" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedbendtheline" title="Once Removed Bend the Line" />
   <call level="Challenge" link="c3b/bingo" sublevel="C-3B" text="onceremovedbingo" title="Once Removed Bingo" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedboysrun" title="Once Removed Boys Run" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedchaseright" title="Once Removed Chase Right" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedcircleby14by12" title="Once Removed Circle By 1/4 by 1/2" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedcirculate" title="Once Removed Circulate" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedconcept" title="Once Removed Concept" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedcounterrotate" title="Once Removed Counter Rotate" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="onceremovedcoupleup" title="Once Removed Couple Up" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedcrossfire" title="Once Removed Crossfire" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedcutthediamond" title="Once Removed Cut the Diamond" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremoveddiamondcirculate" title="Once Removed Diamond Circulate" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedflipthediamond" title="Once Removed Flip the Diamond" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedhinge" title="Once Removed Hinge" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedpartnertrade" title="Once Removed Partner Trade" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedpasstheocean" title="Once Removed Pass the Ocean" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedpeeloff" title="Once Removed Peel Off" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedquarterthru" title="Once Removed Quarter Thru" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedreversecutthediamond" title="Once Removed Reverse Cut the Diamond" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedreverseexplode" title="Once Removed Reverse Explode" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedreverseflipthediamond" title="Once Removed Reverse Flip the Diamond" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedrightandleftthru" title="Once Removed Right and Left Thru" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedshakedown" title="Once Removed Shakedown" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedsinglewheel" title="Once Removed Single Wheel" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedslidethru" title="Once Removed Slide Thru" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="onceremovedthek" title="Once Removed the K" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedsquarechainthru" title="Once Removed Square Chain Thru" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedsquarethru3toawave" title="Once Removed Square Thru 3 to a Wave" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedswaparound" title="Once Removed Swap Around" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedswitchtoadiamond" title="Once Removed Switch to a Diamond" />
+  <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="onceremovedthek" title="Once Removed the K" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedtouchaquarter" title="Once Removed Touch a Quarter" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedturnanddeal" title="Once Removed Turn and Deal" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedturntoaline" title="Once Removed Turn to a Line" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedtwothirdsrecycle" title="Once Removed Two-Thirds Recycle" />
   <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedwalkanddodge" title="Once Removed Walk and Dodge" />
+  <call level="Challenge" link="c2/once_removed_concept" sublevel="C-2" text="onceremovedzoom" title="Once Removed Zoom" />
   <call level="Challenge" link="c3a/open_up_the_column" sublevel="C-3A" text="openupthecolumn" title="Open Up the Column" />
   <call level="Advanced" link="a2/out_roll_circulate" sublevel="A-2" text="outrollcirculate" title="Out-Roll Circulate" />
   <call level="Challenge" link="c2/like_a_ripple" sublevel="C-2" text="outfacingpointslikearipplejaywalkswingslipcastoff34" title="Outfacing Points Like a Ripple Jaywalk, Swing, Slip, Cast Off 3/4" />
@@ -1302,11 +1344,11 @@
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/pass_the_ocean" sublevel="Basic 2" text="passtheocean" title="Pass the Ocean" />
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="passtheoceanandspread" title="Pass the Ocean and Spread" />
   <call level="Advanced" link="a1/pass_the_sea" sublevel="A-1" text="passthesea" title="Pass the Sea" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/pass_thru" sublevel="Basic 1" text="passthru" title="Pass Thru" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/pass_thru" sublevel="Basic 1" text="passthru" title="Pass Thru" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/pass_to_the_center" sublevel="Mainstream" text="passtothecenter" title="Pass to the Center" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="passtothecenterandroll" title="Pass to the Center and Roll" />
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="passtothecenterandspread" title="Pass to the Center and Spread" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/passing_rule" sublevel="Basic 1" text="passingrule" title="Passing Rule" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/passing_rule" sublevel="Basic 1" text="passingrule" title="Passing Rule" />
   <call level="Challenge" link="c3a/patch_anyone" sublevel="C-3A" text="patchanyone" title="Patch Anyone" />
   <call level="Challenge" link="c3a/patch_anyone" sublevel="C-3A" text="patchtheboys" title="Patch the Boys" />
   <call level="Challenge" link="c3a/patch_anyone" sublevel="C-3A" text="patchthecenters" title="Patch the Centers" />
@@ -1361,7 +1403,7 @@
   <call level="Challenge" link="c1/prefer" sublevel="C-1" text="preferthemenexplodetheline" title="Prefer the Men, Explode the Line" />
   <call level="Challenge" link="c1/press" sublevel="C-1" text="pressahead" title="Press Ahead" />
   <call level="Challenge" link="c2/press" sublevel="C-2" text="pressinoutleftright" title="Press In/Out/Left/Right" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/promenade" sublevel="Basic 1" text="promenadefamily" title="Promenade Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/promenade" sublevel="Basic 1" text="promenadefamily" title="Promenade Family" />
   <call level="Basic and Mainstream" link="b1/pull_by" sublevel="Basic 1" text="pullby" title="Pull By" />
   <call level="Challenge" link="c3b/quadruple_formation" sublevel="C-3B" text="quadrupleboxsplitswap" title="Quadruple Box Split Swap" />
   <call level="Challenge" link="c3b/quadruple_formation" sublevel="C-3B" text="quadruplecolumnpassandroll" title="Quadruple Column Pass and Roll" />
@@ -1373,9 +1415,9 @@
   <call level="Advanced" link="a1/quarter_out" sublevel="A-1" text="quarterout" title="Quarter Out" />
   <call level="Advanced" link="a1/fractional_tops" sublevel="A-1" text="quarterthetop" title="Quarter the Top" />
   <call level="Advanced" link="a1/quarter_thru" sublevel="A-1" text="quarterthru" title="Quarter Thru" />
-  <call level="Challenge" link="c3a/quick_anything" sublevel="C-3A" text="quickanything" title="Quick Anything" />
-  <call level="Challenge" link="c3a/quick_step" sublevel="C-3A" text="quickstep" title="Quick Step" />
-  <call level="Challenge" link="c3a/quick_anything" sublevel="C-3A" text="quickturnanddeal" title="Quick Turn and Deal" />
+  <call level="Challenge" link="c3a/quick" sublevel="C-3A" text="quick" title="Quick" />
+  <call level="Challenge" link="c3a/quick" sublevel="C-3A" text="quickstep" title="Quick Step" />
+  <call level="Challenge" link="c3a/quick" sublevel="C-3A" text="quickturnanddeal" title="Quick Turn and Deal" />
   <call level="Challenge" link="c3a/rally" sublevel="C-3A" text="rally" title="Rally" />
   <call level="Challenge" link="c1/ramble" sublevel="C-1" text="ramble" title="Ramble" />
   <call level="Challenge" link="c3a/reach_out" sublevel="C-3A" text="reachout" title="Reach Out" />
@@ -1453,19 +1495,19 @@
   <call level="Challenge" link="c2/reverse_single_rotate" sublevel="C-2" text="reversesinglerotate141234" title="Reverse Single Rotate 1/4, 1/2, 3/4" />
   <call level="Challenge" link="c2/reverse_split_swap_around" sublevel="C-2" text="reversesplitswaparound" title="Reverse Split Swap Around" />
   <call level="Advanced" link="a1/reverse_swap_around" sublevel="A-1" text="reverseswaparound" title="Reverse Swap Around" />
-  <call level="Challenge" link="c3b/reverse_the_pass" sublevel="C-3B" text="reversethepass" title="Reverse the Pass" />
   <call level="Challenge" link="c3b/reverse_the_pass" sublevel="C-3B" text="reversethepass" title="Reverse The Pass" />
-  <call level="Challenge" link="c3b/reverse_the_top" sublevel="C-3B" text="reversethetop" title="Reverse the Top" />
+  <call level="Challenge" link="c3b/reverse_the_pass" sublevel="C-3B" text="reversethepass" title="Reverse the Pass" />
   <call level="Challenge" link="c3b/reverse_the_top" sublevel="C-3B" text="reversethetop" title="Reverse The Top" />
+  <call level="Challenge" link="c3b/reverse_the_top" sublevel="C-3B" text="reversethetop" title="Reverse the Top" />
   <call level="Challenge" link="c2/reverse_truck" sublevel="C-2" text="reversetruck" title="Reverse Truck" />
   <call level="Challenge" link="c1/reverse_wheel_and_anything" sublevel="C-1" text="reversewheelandanything" title="Reverse Wheel and Anything" />
   <call level="Challenge" link="c1/reverse_wheel_and_anything" sublevel="C-1" text="reversewheelandtouchaquarter" title="Reverse Wheel and Touch a Quarter" />
   <call level="Basic and Mainstream" link="b2/wheel_around" sublevel="Basic 2" text="reversewheelaround" title="Reverse Wheel Around" />
-  <call level="Challenge" link="c3b/revolve_to_a_wave" sublevel="C-3B" text="revolvetoawave" title="Revolve to a Wave" />
   <call level="Challenge" link="c3b/revolve_to_a_wave" sublevel="C-3B" text="revolvetoawave" title="Revolve To A Wave" />
+  <call level="Challenge" link="c3b/revolve_to_a_wave" sublevel="C-3B" text="revolvetoawave" title="Revolve to a Wave" />
   <call level="Basic and Mainstream" link="b1/right_and_left_grand" sublevel="Basic 1" text="rightandleftgrand" title="Right and Left Grand" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/right_and_left_grand" sublevel="Basic 1" text="rightandleftgrandfamily" title="Right and Left Grand Family" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/right_and_left_thru" sublevel="Basic 1" text="rightandleftthru" title="Right and Left Thru" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/right_and_left_grand" sublevel="Basic 1" text="rightandleftgrandfamily" title="Right and Left Grand Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/right_and_left_thru" sublevel="Basic 1" text="rightandleftthru" title="Right and Left Thru" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="rightandleftthruandroll" title="Right and Left Thru and Roll" />
   <call level="Basic and Mainstream" link="b1/right_and_left_thru" sublevel="Basic 1" text="rightandleftthruturnaquartermore" title="Right and Left Thru, Turn a Quarter More" />
   <call level="Challenge" link="c3b/gee_whiz" sublevel="C-3B" text="rightgeewhiz" title="Right Gee Whiz" />
@@ -1502,7 +1544,7 @@
   <call level="Challenge" link="c2/rotate" sublevel="C-2" text="rotate34" title="Rotate 3/4" />
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/run" sublevel="Basic 2" text="runfamily" title="Run Family" />
   <call level="Basic and Mainstream" link="ms/running_bear" sublevel="Mainstream" text="runningbear" title="Running Bear" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/same_position_rule" sublevel="Basic 1" text="samepositionrule" title="Same Position Rule" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/same_position_rule" sublevel="Basic 1" text="samepositionrule" title="Same Position Rule" />
   <call level="Challenge" link="c2/disconnected_concept" sublevel="C-2" text="samesexdisconnectedcrossfire" title="Same Sex Disconnected Crossfire" />
   <call level="Challenge" link="c3a/scatter_circulate" sublevel="C-3A" text="scattercirculate" title="Scatter Circulate" />
   <call level="Challenge" link="c1/scatter_scoot" sublevel="C-1" text="scatterscoot" title="Scatter Scoot" />
@@ -1530,15 +1572,15 @@
   <call level="Challenge" link="c3b/secondly_thirdly_fourthly" sublevel="C-3B" text="secondlysplitturnthekey" title="Secondly Split Turn the Key" />
   <call level="Challenge" link="c3b/secondly_thirdly_fourthly" sublevel="C-3B" text="secondlytandemreset" title="Secondly Tandem Reset" />
   <call level="Challenge" link="c3b/secondly_thirdly_fourthly" sublevel="C-3B" text="secondlythirdlyfourthlyanyconceptanything" title="Secondly | Thirdly | Fourthly anyConcept anything" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/see_saw" sublevel="Basic 1" text="seesaw" title="See Saw" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/separate" sublevel="Basic 1" text="separate" title="Separate" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/see_saw" sublevel="Basic 1" text="seesaw" title="See Saw" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/separate" sublevel="Basic 1" text="separate" title="Separate" />
   <call level="Challenge" link="c2/sets_in_motion" sublevel="C-2" text="setsinmotion" title="Sets in Motion" />
   <call level="Challenge" link="c3b/shake_and_rattle" sublevel="C-3B" text="shakeandrattle" title="Shake and Rattle" />
   <call level="Challenge" link="c3b/shake_and_rattle" sublevel="C-3B" text="shakeandrattleandroll" title="Shake and Rattle and Roll" />
   <call level="Challenge" link="c1/shakedown" sublevel="C-1" text="shakedown" title="Shakedown" />
   <call level="Challenge" link="c2/shazam" sublevel="C-2" text="shazam" title="Shazam" />
-  <call level="Basic and Mainstream" link="b2/shoot_the_star" sublevel="Basic 2" text="shootthestar" title="Shoot the Star" />
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/shoot_the_star" sublevel="Basic 2" text="shootthestar" title="Shoot The Star" />
+  <call level="Basic and Mainstream" link="b2/shoot_the_star" sublevel="Basic 2" text="shootthestar" title="Shoot the Star" />
   <call level="Basic and Mainstream" link="b2/shoot_the_star" sublevel="Basic 2" text="shootthestarallthewayaround" title="Shoot the Star All the Way Around" />
   <call level="Challenge" link="c1/siamese_concept" sublevel="C-1" text="siameseconcept" title="Siamese Concept" />
   <call level="Challenge" link="c1/siamese_concept" sublevel="C-1" text="siamesediamondcirculate" title="Siamese Diamond Circulate" />
@@ -1564,7 +1606,7 @@
   <call level="Challenge" link="c3b/sidetrack" sublevel="C-3B" text="sidetrack" title="Sidetrack" />
   <call level="Challenge" link="c2/single_bounce_the_anyone" sublevel="C-2" text="singlebounce" title="Single Bounce" />
   <call level="Challenge" link="c2/single_bounce_the_anyone" sublevel="C-2" text="singlebouncetheboys" title="Single Bounce the Boys" />
-  <call level="Challenge" link="c3a/single_checkmate" sublevel="C-3A" text="singlecheckmate" title="Single Checkmate" />
+  <call level="Challenge" link="c3a/single_concept" sublevel="C-3A" text="singlecheckmate" title="Single Checkmate" />
   <call level="Plus" link="plus/single_circle_to_a_wave" sublevel="Plus" text="singlecircle34toawave" title="Single Circle 3/4 to a Wave" />
   <call languages="lang-ja" level="Plus" link="plus/single_circle_to_a_wave" sublevel="Plus" text="singlecircletoawave" title="Single Circle to a Wave" />
   <call level="Challenge" link="c3a/single_concept" sublevel="C-3A" text="singleconcept" title="Single Concept" />
@@ -1586,6 +1628,7 @@
   <call level="Advanced" link="a2/single_wheel" sublevel="A-2" text="singlewheel3times" title="Single Wheel 3 Times" />
   <call level="Advanced" link="a1/six_two_acey_deucey" sublevel="A-1" text="sixtwoaceydeucey" title="Six-Two Acey Deucey" />
   <call level="Challenge" link="c3a/slant_anything_by_anything" sublevel="C-3A" text="slantanythingbyanything" title="Slant Anything By Anything" />
+  <call level="Challenge" link="c3a/slant_touch_and_wheel" sublevel="C-3A" text="slanttouchandwheel" title="Slant Touch and Wheel" />
   <call level="Challenge" link="c3a/slant_anything_by_anything" sublevel="C-3A" text="slantveerrightbyturnanddeal" title="Slant Veer Right by Turn and Deal" />
   <call level="Advanced" link="a2/slide" sublevel="A-2" text="slide" title="Slide" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/slide_thru" sublevel="Mainstream" text="slidethru" title="Slide Thru" />
@@ -1602,7 +1645,6 @@
   <call languages="lang-ja" level="Plus" link="plus/spin_chain_the_gears" sublevel="Plus" text="spinchainthegears" title="Spin Chain the Gears" />
   <call level="Challenge" link="c3a/spin_chain_the_line" sublevel="C-3A" text="spinchaintheline" title="Spin Chain the Line" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/spin_chain_thru" sublevel="Mainstream" text="spinchainthru" title="Spin Chain Thru" />
-  <call level="Challenge" link="c3a/spin_the_pulley" sublevel="C-3A" text="spinthepulley" title="Spin the Pulley" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/spin_the_top" sublevel="Mainstream" text="spinthetop" title="Spin the Top" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="spinthetopandroll" title="Spin the Top and Roll" />
   <call level="Advanced" link="a2/spin_the_windmill" sublevel="A-2" text="spinthewindmill" title="Spin the Windmill" />
@@ -1617,6 +1659,7 @@
   <call level="Basic and Mainstream" link="b1/circulate" sublevel="Basic 1" text="splitcirculate112" title="Split Circulate 1 1/2" />
   <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="splitcoordinate" title="Split Coordinate" />
   <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="splitcountercoordinate" title="Split Counter Coordinate" />
+  <call level="Challenge" link="c3a/anythingers_couple_up" sublevel="C-3A" text="splitcountercoupleup" title="Split Counter Couple Up" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="splitcountercoupleup" title="Split Counter Couple Up" />
   <call level="Advanced" link="a2/split_counter_rotate" sublevel="A-2" text="splitcounterrotate" title="Split Counter Rotate" />
   <call level="Challenge" link="c1/split_square_thru_variations" sublevel="C-1" text="splitdixiediamond" title="Split Dixie Diamond" />
@@ -1649,7 +1692,7 @@
   <call level="Basic and Mainstream" link="b1/split_the_outside_couple" sublevel="Basic 1" text="splittheoutsidecoupleseparategoaroundonetoaline" title="Split the Outside Couple, Separate, Go Around One to a Line" />
   <call level="Challenge" link="c2/split_trade_circulate" sublevel="C-2" text="splittradecirculate" title="Split Trade Circulate" />
   <call level="Advanced" link="a2/split_transfer" sublevel="A-2" text="splittransfer" title="Split Transfer" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/split_the_outside_couple" sublevel="Basic 1" text="splittwo" title="Split Two" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/split_the_outside_couple" sublevel="Basic 1" text="splittwo" title="Split Two" />
   <call level="Challenge" link="c1/square_chain_the_top" sublevel="C-1" text="squarechainthetop" title="Square Chain the Top" />
   <call level="Advanced" link="a1/square_chain_thru" sublevel="A-1" text="squarechainthru" title="Square Chain Thru" />
   <call level="Challenge" link="c1/anything_to_a_wave" sublevel="C-1" text="squarechainthrutoawave" title="Square Chain Thru to a Wave" />
@@ -1662,7 +1705,7 @@
   <call level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="squarethru312" title="Square Thru 3 1/2" />
   <call level="Challenge" link="c1/anything_to_a_wave" sublevel="C-1" text="squarethru3toawave" title="Square Thru 3 to a Wave" />
   <call level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="squarethru4" title="Square Thru 4" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="squarethrufamily" title="Square Thru Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="squarethrufamily" title="Square Thru Family" />
   <call level="Challenge" link="c1/interrupt" sublevel="C-1" text="squarethruinterruptonthethirdhandwithaswingthru" title="Square Thru, Interrupt on the Third Hand with a Swing Thru" />
   <call level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="squarethruonthefourthhandleftallemande" title="Square Thru, on the Fourth Hand Left Allemande" />
   <call level="Basic and Mainstream" link="b1/square_thru" sublevel="Basic 1" text="squarethruonthefourthhandleftswingthru" title="Square Thru, on the Fourth Hand Left Swing Thru" />
@@ -1683,9 +1726,9 @@
   <call level="Challenge" link="c2/stagger_concept" sublevel="C-2" text="staggerdoublepassthru" title="Stagger Double Pass Thru" />
   <call level="Challenge" link="c2/stagger_concept" sublevel="C-2" text="staggersplitcirculate" title="Stagger Split Circulate" />
   <call level="Challenge" link="c3a/stampede" sublevel="C-3A" text="stampede" title="Stampede" />
-  <call languages="lang-ja lang-ja" level="Basic and Mainstream" link="b1/star" sublevel="Basic 1" text="starfamily" title="Star Family" />
+  <call languages="lang-de lang-ja lang-de lang-ja" level="Basic and Mainstream" link="b1/star" sublevel="Basic 1" text="starfamily" title="Star Family" />
   <call level="Basic and Mainstream" link="b1/promenade" sublevel="Basic 1" text="starpromenade" title="Star Promenade" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/star_thru" sublevel="Basic 1" text="starthru" title="Star Thru" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/star_thru" sublevel="Basic 1" text="starthru" title="Star Thru" />
   <call level="Challenge" link="c1/start" sublevel="C-1" text="start" title="Start" />
   <call level="Challenge" link="c1/step_and_flip" sublevel="C-1" text="stepandflip" title="Step and Flip" />
   <call level="Challenge" link="c1/step_and_flip" sublevel="C-1" text="stepandflipandroll" title="Step and Flip and Roll" />
@@ -1703,6 +1746,7 @@
   <call level="Challenge" link="c1/2_3_recycle" sublevel="C-1" text="stretch23recycle" title="Stretch 2/3 Recycle" />
   <call level="Challenge" link="c1/ah_so" sublevel="C-1" text="stretchahso" title="Stretch Ah So" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchbendtheline" title="Stretch Bend the Line" />
+  <call level="Challenge" link="c2/bounce_the_anyone" sublevel="C-2" text="stretchbouncetheboys" title="Stretch Bounce the Boys" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchcastoff34" title="Stretch Cast Off 3/4" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchchaseright" title="Stretch Chase Right" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchconcept" title="Stretch Concept" />
@@ -1722,7 +1766,7 @@
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchreverseflutterwheel" title="Stretch Reverse Flutterwheel" />
   <call level="Challenge" link="c1/shakedown" sublevel="C-1" text="stretchshakedown" title="Stretch Shakedown" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchshakedown" title="Stretch Shakedown" />
-  <call level="Challenge" link="c3a/single_checkmate" sublevel="C-3A" text="stretchsinglecheckmate" title="Stretch Single Checkmate" />
+  <call level="Challenge" link="c3a/single_concept" sublevel="C-3A" text="stretchsinglecheckmate" title="Stretch Single Checkmate" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchsinglewheel" title="Stretch Single Wheel" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchslide" title="Stretch Slide" />
   <call level="Challenge" link="c1/stretch_concept" sublevel="C-1" text="stretchsplitcirculate" title="Stretch Split Circulate" />
@@ -1749,7 +1793,8 @@
   <call level="Challenge" link="c2/stretched_concept" sublevel="C-2" text="stretchedwaveexplodethewave" title="Stretched Wave Explode the Wave" />
   <call level="Challenge" link="c2/stretched_concept" sublevel="C-2" text="stretchedwaverecycle" title="Stretched Wave Recycle" />
   <call level="Challenge" link="c3a/strip_the_diamond" sublevel="C-3A" text="stripthediamond" title="Strip the Diamond" />
-  <call level="Challenge" link="c3a/strip_the_hourglass" sublevel="C-3A" text="stripthehourglass" title="Strip the Hourglass" />
+  <call level="Challenge" link="c3a/strip_the_diamond" sublevel="C-3A" text="stripthediamondhourglass" title="Strip the Diamond / Hourglass" />
+  <call level="Challenge" link="c3a/strip_the_diamond" sublevel="C-3A" text="stripthehourglass" title="Strip the Hourglass" />
   <call level="Challenge" link="c3b/strut" sublevel="C-3B" text="strut" title="Strut" />
   <call level="Challenge" link="c3b/strut" sublevel="C-3B" text="strutleft" title="Strut Left" />
   <call level="Challenge" link="c3b/strut" sublevel="C-3B" text="strutleftright" title="Strut Left Right" />
@@ -1763,7 +1808,7 @@
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/sweep_a_quarter" sublevel="Basic 2" text="sweepaquarter" title="Sweep a Quarter" />
   <call level="Advanced" link="a2/swing" sublevel="A-2" text="swing" title="Swing" />
   <call level="Advanced" link="a2/swing_and_mix" sublevel="A-2" text="swing" title="Swing" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/swing" sublevel="Basic 1" text="swing" title="Swing" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/swing" sublevel="Basic 1" text="swing" title="Swing" />
   <call level="Challenge" link="c2/swing_along" sublevel="C-2" text="swingalong" title="Swing Along" />
   <call level="Challenge" link="c1/swing_and_circle" sublevel="C-1" text="swingandcircle" title="Swing and Circle" />
   <call level="Challenge" link="c1/swing_and_circle" sublevel="C-1" text="swingandcircle14" title="Swing and Circle 1/4" />
@@ -1781,6 +1826,7 @@
   <call level="Basic and Mainstream" link="b1/swing" sublevel="Basic 1" text="swingyourcorner" title="Swing Your Corner" />
   <call level="Basic and Mainstream" link="b1/swing" sublevel="Basic 1" text="swingyourpartner" title="Swing Your Partner" />
   <call level="Challenge" link="c3b/swing_o_late" sublevel="C-3B" text="swingolate" title="Swing-O-Late" />
+  <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="switchandcircle12" title="Switch and Circle 1/2" />
   <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="switchandcircle14" title="Switch and Circle 1/4" />
   <call level="Challenge" link="c1/switch_the_line" sublevel="C-1" text="switchtheline" title="Switch the Line" />
   <call level="Advanced" link="a2/switch_the_wave" sublevel="A-2" text="switchthewave" title="Switch the Wave" />
@@ -1832,7 +1878,7 @@
   <call level="Challenge" link="c1/follow_thru" sublevel="C-1" text="tandemfollowthru" title="Tandem Follow Thru" />
   <call level="Challenge" link="c3a/follow_to_a_diamond" sublevel="C-3A" text="tandemfollowtoadiamond" title="Tandem Follow to a Diamond" />
   <call level="Challenge" link="c1/tandem_concept" sublevel="C-1" text="tandemhinge" title="Tandem Hinge" />
-  <call level="Challenge" link="c3a/hinge_the_lock" sublevel="C-3A" text="tandemhingethelock" title="Tandem Hinge the Lock" />
+  <call level="Challenge" link="c3a/lock_the_hinge" sublevel="C-3A" text="tandemhingethelock" title="Tandem Hinge the Lock" />
   <call level="Challenge" link="c1/wheel_fan_thru" sublevel="C-1" text="tandemleftwheelfanthru" title="Tandem Left Wheel Fan Thru" />
   <call level="Challenge" link="c3a/lock_the_hinge" sublevel="C-3A" text="tandemlockthehinge" title="Tandem Lock the Hinge" />
   <call level="Challenge" link="c3a/mini_chase" sublevel="C-3A" text="tandemminichase" title="Tandem Mini Chase" />
@@ -1843,7 +1889,7 @@
   <call level="Challenge" link="c2/reverse_split_swap_around" sublevel="C-2" text="tandemreversesplitswaparound" title="Tandem Reverse Split Swap Around" />
   <call level="Challenge" link="c1/tandem_concept" sublevel="C-1" text="tandemrightrolltoawave" title="Tandem Right Roll to a Wave" />
   <call level="Challenge" link="c1/tandem_concept" sublevel="C-1" text="tandemscootback" title="Tandem Scoot Back" />
-  <call level="Challenge" link="c3a/single_checkmate" sublevel="C-3A" text="tandemsinglecheckmate" title="Tandem Single Checkmate" />
+  <call level="Challenge" link="c3a/single_concept" sublevel="C-3A" text="tandemsinglecheckmate" title="Tandem Single Checkmate" />
   <call level="Challenge" link="c1/tandem_concept" sublevel="C-1" text="tandemsinglewheel" title="Tandem Single Wheel" />
   <call level="Challenge" link="c2/split_swap_around" sublevel="C-2" text="tandemsplitswaparound" title="Tandem Split Swap Around" />
   <call level="Challenge" link="c1/square_chain_the_top" sublevel="C-1" text="tandemsquarechainthetop" title="Tandem Square Chain the Top" />
@@ -1852,7 +1898,6 @@
   <call level="Challenge" link="c1/step_and_fold" sublevel="C-1" text="tandemstepandfold" title="Tandem Step and Fold" />
   <call level="Challenge" link="c1/tandem_concept" sublevel="C-1" text="tandemswingthru" title="Tandem Swing Thru" />
   <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="tandemthek" title="Tandem the K" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="tandemthek" title="Tandem the K" />
   <call level="Challenge" link="c1/tandem_concept" sublevel="C-1" text="tandemtouch14" title="Tandem Touch 1/4" />
   <call level="Challenge" link="c2/trail_to_a_diamond" sublevel="C-2" text="tandemtrailtoadiamond" title="Tandem Trail to a Diamond" />
   <call level="Challenge" link="c2/turn_to_a_line" sublevel="C-2" text="tandemturntoaline" title="Tandem Turn to a Line" />
@@ -1877,7 +1922,7 @@
   <call level="Challenge" link="c1/the_axle" sublevel="C-1" text="theaxle" title="The Axle" />
   <call level="Challenge" link="c3a/the_gamut" sublevel="C-3A" text="thegamut" title="The Gamut" />
   <call level="Challenge" link="c2/anything_the_k" sublevel="C-2" text="thek" title="The K" />
-  <call level="Challenge" link="c2/the_k" sublevel="C-2" text="thek" title="The K" />
+  <call level="Challenge" link="c3a/spin_the_pulley" sublevel="C-3A" text="thepulley" title="The Pulley" />
   <call level="Challenge" link="c3b/secondly_thirdly_fourthly" sublevel="C-3B" text="thirdlytandemreset" title="Thirdly Tandem Reset" />
   <call level="Challenge" link="c1/start" sublevel="C-1" text="thosefacingstartrightandleftthru" title="Those Facing, Start Right and Left Thru" />
   <call level="Challenge" link="c1/three_by_two_acey_deucey" sublevel="C-1" text="threebytwoaceydeucey" title="Three by Two Acey Deucey" />
@@ -1885,10 +1930,10 @@
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/touch_a_quarter" sublevel="Basic 2" text="touchaquarter" title="Touch a Quarter" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="touchaquarterandroll" title="Touch a Quarter and Roll" />
   <call level="Challenge" link="c1/anything_and_spread" sublevel="C-1" text="touchaquarterboysspread" title="Touch a Quarter, Boys Spread" />
-  <call level="Challenge" link="c3a/touch_by_fraction_by_fraction_anything" sublevel="C-3A" text="touchby12by14" title="Touch by 1/2 by 1/4" />
-  <call level="Challenge" link="c3a/touch_by_fraction_by_fraction_anything" sublevel="C-3A" text="touchby14by12" title="Touch by 1/4 by 1/2" />
-  <call level="Challenge" link="c3a/touch_by_fraction_by_fraction_anything" sublevel="C-3A" text="touchby14byswingthru" title="Touch by 1/4 by Swing Thru" />
-  <call level="Challenge" link="c3a/touch_by_fraction_by_fraction_anything" sublevel="C-3A" text="touchbyfractionbyfractionanything" title="Touch By Fraction By Fraction/Anything" />
+  <call level="Challenge" link="c3a/touch_by" sublevel="C-3A" text="touchby" title="Touch By" />
+  <call level="Challenge" link="c3a/touch_by" sublevel="C-3A" text="touchby12by14" title="Touch By 1/2 By 1/4" />
+  <call level="Challenge" link="c3a/touch_by" sublevel="C-3A" text="touchby14by12" title="Touch By 1/4 By 1/2" />
+  <call level="Challenge" link="c3a/touch_by" sublevel="C-3A" text="touchby14byswingthru" title="Touch By 1/4 By Swing Thru" />
   <call level="Challenge" link="c3b/track_n" sublevel="C-3B" text="trackfour" title="Track Four" />
   <call level="Challenge" link="c3b/track_n" sublevel="C-3B" text="trackn" title="Track n" />
   <call level="Challenge" link="c3b/track_n" sublevel="C-3B" text="trackone" title="Track One" />
@@ -1900,9 +1945,11 @@
   <call languages="lang-ja" level="Basic and Mainstream" link="b2/trade_by" sublevel="Basic 2" text="tradeby" title="Trade By" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="tradebyandroll" title="Trade By and Roll" />
   <call level="Advanced" link="a2/trade_circulate" sublevel="A-2" text="tradecirculate" title="Trade Circulate" />
+  <call level="Challenge" link="c3a/anythingers_couple_up" sublevel="C-3A" text="tradecoupleup" title="Trade Couple Up" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="tradecoupleup" title="Trade Couple Up" />
   <call languages="lang-ja lang-ja" level="Basic and Mainstream" link="b2/trade" sublevel="Basic 2" text="tradefamily" title="Trade Family" />
   <call level="Challenge" link="c3a/couple_up" sublevel="C-3A" text="tradelikeacoupleup" title="Trade Like a Couple Up" />
+  <call level="Challenge" link="c3a/like_a_couple_up" sublevel="C-3A" text="tradelikeacoupleup" title="Trade Like a Couple Up" />
   <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="trademotivate" title="Trade Motivate" />
   <call level="Challenge" link="c2/anything_concept" sublevel="C-2" text="tradepercolate" title="Trade Percolate" />
   <call level="Challenge" link="c3a/trade_the_deucey" sublevel="C-3A" text="tradethedeucey" title="Trade the Deucey" />
@@ -1982,7 +2029,7 @@
   <call level="Challenge" link="c1/triple_box_concept" sublevel="C-1" text="triplewaveswingthru" title="Triple Wave Swing Thru" />
   <call level="Challenge" link="c2/truck" sublevel="C-2" text="truck" title="Truck" />
   <call level="Advanced" link="a1/turn_and_deal" sublevel="A-1" text="turnanddeal" title="Turn and Deal" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/turn_back" sublevel="Basic 1" text="turnbackfamily" title="Turn Back Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/turn_back" sublevel="Basic 1" text="turnbackfamily" title="Turn Back Family" />
   <call level="Challenge" link="c3b/turn_the_key" sublevel="C-3B" text="turnthekey" title="Turn the Key" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/turn_thru" sublevel="Mainstream" text="turnthru" title="Turn Thru" />
   <call level="Challenge" link="c1/anything_to_a_wave" sublevel="C-1" text="turnthrutoawave" title="Turn Thru to a Wave" />
@@ -2015,7 +2062,7 @@
   <call level="Challenge" link="c2/unwrap" sublevel="C-2" text="unwrapfamily" title="Unwrap Family" />
   <call level="Challenge" link="c2/unwrap" sublevel="C-2" text="unwrapthediamond" title="Unwrap the Diamond" />
   <call level="Challenge" link="c2/unwrap" sublevel="C-2" text="unwrapthehourglass" title="Unwrap the Hourglass" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/veer" sublevel="Basic 1" text="veerfamily" title="Veer Family" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/veer" sublevel="Basic 1" text="veerfamily" title="Veer Family" />
   <call level="Basic and Mainstream" link="b1/veer" sublevel="Basic 1" text="veerleft" title="Veer Left" />
   <call level="Basic and Mainstream" link="b1/veer" sublevel="Basic 1" text="veerright" title="Veer Right" />
   <call level="Challenge" link="c2/vertical_anything" sublevel="C-2" text="vertical" title="Vertical" />
@@ -2034,7 +2081,7 @@
   <call level="Challenge" link="c2/ripple" sublevel="C-2" text="veryendsripple7" title="Very Ends Ripple 7" />
   <call level="Challenge" link="c2/ripple_the_wave" sublevel="C-2" text="veryendsripplethewave" title="Very Ends Ripple the Wave" />
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/walk_and_dodge" sublevel="Mainstream" text="walkanddodge" title="Walk and Dodge" />
-  <call languages="lang-ja" level="Basic and Mainstream" link="b1/all_around_the_corner" sublevel="Basic 1" text="walkaroundthecorner" title="Walk Around the Corner" />
+  <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/all_around_the_corner" sublevel="Basic 1" text="walkaroundthecorner" title="Walk Around the Corner" />
   <call level="Challenge" link="c2/walk_out_to_a_wave" sublevel="C-2" text="walkouttoawave" title="Walk Out to a Wave" />
   <call level="Challenge" link="c3b/wave_the_anyone" sublevel="C-3B" text="wavetheanyone" title="Wave The anyone" />
   <call level="Challenge" link="c3b/wave_the_anyone" sublevel="C-3B" text="wavethebeaus" title="Wave the Beaus" />
@@ -2060,8 +2107,8 @@
   <call level="Challenge" link="c2/wheel_the_ocean" sublevel="C-2" text="wheeltheocean" title="Wheel the Ocean" />
   <call level="Challenge" link="c2/wheel_the_sea" sublevel="C-2" text="wheelthesea" title="Wheel the Sea" />
   <call level="Advanced" link="a1/wheel_thru" sublevel="A-1" text="wheelthru" title="Wheel Thru" />
-  <call level="Challenge" link="c3a/wind_the_bobbin" sublevel="C-3A" text="windthebobbin" title="Wind the Bobbin" />
   <call level="Challenge" link="c3a/wind_the_bobbin" sublevel="C-3A" text="windthebobbin" title="Wind The Bobbin" />
+  <call level="Challenge" link="c3a/wind_the_bobbin" sublevel="C-3A" text="windthebobbin" title="Wind the Bobbin" />
   <call level="Challenge" link="c3b/with_confidence" sublevel="C-3B" text="withconfidence" title="With Confidence" />
   <call level="Challenge" link="c1/with_the_flow" sublevel="C-1" text="withtheflow" title="With the Flow" />
   <call level="Challenge" link="c3a/wrap_to_a_formation" sublevel="C-3A" text="wraptoaformation" title="Wrap To a Formation" />

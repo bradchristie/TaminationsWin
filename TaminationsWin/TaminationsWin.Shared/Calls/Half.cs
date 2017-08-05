@@ -34,17 +34,22 @@ namespace TaminationsWin.Calls {
     }
 
     public override void perform(CallContext ctx, int i = 0) {
-      //  Steal the next call off the stack
-      call = ctx.callstack[i + 1];
-      XMLCall xcall = call as XMLCall;
-      //  For XML calls there should be an explicit number of parts
-      if (xcall != null) {
-        //  Figure out how many beats are in half the call
-        var parts = xcall.xelem.attr("parts");
-        var partnums = parts.Split(';');
-        halfbeats = partnums.Take((partnums.Count() + 1) / 2).Sum(x => Double.Parse(x));
+
+      if (i+1 < ctx.callstack.Count) {
+        //  Steal the next call off the stack
+        call = ctx.callstack[i + 1];
+        XMLCall xcall = call as XMLCall;
+        //  For XML calls there should be an explicit number of parts
+        if (xcall != null) {
+          //  Figure out how many beats are in half the call
+          var parts = xcall.xelem.attr("parts");
+          if (parts.Length > 0) {
+            var partnums = parts.Split(';');
+            halfbeats = partnums.Take((partnums.Count() + 1) / 2).Sum(x => Double.Parse(x));
+          }
+        }
+        prevbeats = ctx.maxBeats();
       }
-      prevbeats = ctx.maxBeats();
     }
 
     //  Call is performed between these two methods
@@ -53,7 +58,7 @@ namespace TaminationsWin.Calls {
       //  Coded calls so far do not have explicit parts
       //  so just divide them in two
       CodedCall ccall = call as CodedCall;
-      if (ccall != null) {
+      if (ccall != null || halfbeats == 0) {
         halfbeats = (ctx.maxBeats() - prevbeats) / 2;
       }
 

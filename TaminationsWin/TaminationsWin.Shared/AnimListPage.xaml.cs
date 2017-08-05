@@ -91,6 +91,8 @@ namespace TaminationsWin {
       var firstanim = -1;
       var i = 0;
       foreach (IXmlNode tam in tams) {
+        if (tam.attr("display") == "none")
+          continue;
         var tamtitle = tam.attr("title");
         var from = TamUtils.tamXref(tam).attr("from");
         var group = tam.attr("group");

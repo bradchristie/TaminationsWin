@@ -34,6 +34,7 @@ namespace TaminationsWin.Calls
         case "box the gnat": return new BoxtheGnat();
         case "boys": return new Boys();
         case "centers": return new Centers();
+        case "circulate": return new Circulate();
         case "cross run": return new CrossRun();
         case "ends": return new Ends();
         case "explode and": return new ExplodeAnd();
@@ -42,6 +43,7 @@ namespace TaminationsWin.Calls
         case "face out": return new FaceOut();
         case "face right": return new FaceRight();
         case "girls": return new Girls();
+        case "half": return new Half();
         case "hinge": return new Hinge();
         case "leaders": return new Leaders();
         case "one and a half": return new OneAndaHalf();

@@ -5,8 +5,8 @@
 #  On Windows, use Cygwin
 
 #  These are the files to copy from Taminations to the app
-TAMDIRS = b1 b2 ms plus a1 a2 c1 c2 c3a c3b
-TAMTYPES = xml html png css dtd 
+TAMDIRS = b1 b2 ms plus a1 a2 c1 c2 c3a c3b sequences
+TAMTYPES = xml html png css dtd txt
 SRCTAM = $(foreach dir,$(TAMDIRS),\
          $(foreach type,$(TAMTYPES),\
          $(wildcard $(TAMINATIONS)/$(dir)/*.$(type))))
@@ -25,9 +25,18 @@ OBJMSCODE = $(filter assets/ms0/%,$(filter-out %.html,$(OBJ)))
 
 PREVOBJ = $(filter-out assets/info/about.html assets/info/sequencer.html,$(wildcard $(OBJDIR)/*/*))
 
+#  Windows needs 'lang-en' html files
+
+
+
+HTMLENFILES = $(subst .html,.lang-en.html,\
+   $(filter-out %.lang-de.html,\
+   $(filter-out %.lang-ja.html,$(OBJHTML))))
+
+
 #  Dependencies
 .PHONY: all clean
-all : $(OBJ) $(OBJDIR)/src/tamination.css
+all : $(OBJ) $(OBJDIR)/src/tamination.css $(HTMLENFILES)
 
 COPY = cp $< $@
 #  Remove overflow:hidden from css so WebView will scroll
@@ -43,6 +52,9 @@ $(OBJMSHTML) : assets/ms0/%.html : $(TAMINATIONS)/ms/%.html
 $(OBJCODE) : assets/%: $(TAMINATIONS)/%
 	$(COPY)
 $(OBJMSCODE) : assets/ms0/%: $(TAMINATIONS)/ms/%
+	$(COPY)
+
+%.lang-en.html : %.html
 	$(COPY)
 
 clean :
