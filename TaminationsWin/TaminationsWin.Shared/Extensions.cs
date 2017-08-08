@@ -32,6 +32,42 @@ namespace TaminationsWin {
 
   public static class DoubleUtilities {
 
+    public static double Sign(this double x) {
+      return x < 0 ? -1 : x > 0 ? 1 : 0;
+    }
+
+    public static double Floor(this double x) {
+      return Math.Floor(x);
+    }
+
+    public static double Ceil(this double x) {
+      return Math.Ceiling(x);
+    }
+
+    public static double Round(this double x) {
+      return Math.Round(x);
+    }
+
+    public static double Abs(this double x) {
+      return Math.Abs(x);
+    }
+
+    public static double Sqrt(this double x) {
+      return Math.Sqrt(x);
+    }
+
+    public static double Sq(this double x) {
+      return x * x;
+    }
+
+    public static double Sin(this double x) {
+      return Math.Sin(x);
+    }
+
+    public static double Cos(this double x) {
+      return Math.Cos(x);
+    }
+
     public static double toRadians(this double angle) {
       return angle * Math.PI / 180;
     }
@@ -123,40 +159,40 @@ namespace TaminationsWin {
 
   public static class Matrix {
 
-/*
-Table for matrix fields iOS and Java
-iOS                         Java                                     Win Matrix3x2
-a    b     0          MSCALE_X(0)   MSKEW_Y(3)     MPERSP_0(6)       M11    M12    0
-c    d     0          MSKEW_X(1)    MSCALE_Y(4)    MPERSP_1(7)       M21    M22    0
-tx   ty    1          MTRANS_X(2)   MTRANS_Y(5)    MPERSP_2(8)       M31    M32    1
-*/
+    /*
+    Table for matrix fields iOS and Java
+    iOS                         Java                                     Win Matrix3x2
+    a    b     0          MSCALE_X(0)   MSKEW_Y(3)     MPERSP_0(6)       M11    M12    0
+    c    d     0          MSKEW_X(1)    MSCALE_Y(4)    MPERSP_1(7)       M21    M22    0
+    tx   ty    1          MTRANS_X(2)   MTRANS_Y(5)    MPERSP_2(8)       M31    M32    1
+    */
 
-    public static Matrix3x2 CreateScale(double x, double y) {
-      return Matrix3x2.CreateScale((float)x, (float)y);
+    public static Matrix3x2 CreateScale(double x,double y) {
+      return Matrix3x2.CreateScale((float)x,(float)y);
     }
 
     public static Matrix3x2 CreateRotation(double r) {
       return Matrix3x2.CreateRotation((float)r);
     }
 
-    public static Matrix3x2 CreateTranslation(double x, double y) {
-      return Matrix3x2.CreateTranslation((float)x, (float)y);
+    public static Matrix3x2 CreateTranslation(double x,double y) {
+      return Matrix3x2.CreateTranslation((float)x,(float)y);
     }
 
-    public static Vector2 TransformVector(this Matrix3x2 m, Vector2 v) {
+    public static Vector2 TransformVector(this Matrix3x2 m,Vector2 v) {
       return new Vector2(m.M11 * v.X + m.M21 * v.Y + m.M31,
                          m.M12 * v.X + m.M22 * v.Y + m.M32);
     }
 
     public static Vector2 Location(this Matrix3x2 m) {
-      return new Vector2(m.M31, m.M32);
+      return new Vector2(m.M31,m.M32);
     }
 
     public static Vector2 Direction(this Matrix3x2 m) {
       var mat2 = m;
       mat2.M31 = 0;
       mat2.M32 = 0;
-      var pt = new Vector2(1, 0);
+      var pt = new Vector2(1,0);
       pt = mat2.TransformVector(pt);
       return pt;
     }
@@ -167,22 +203,22 @@ tx   ty    1          MTRANS_X(2)   MTRANS_Y(5)    MPERSP_2(8)       M31    M32 
 
     public static Matrix3x2 Inverse(this Matrix3x2 m) {
       var m2 = new Matrix3x2();
-      Matrix3x2.Invert(m, out m2);  //  we assume that this works
+      Matrix3x2.Invert(m,out m2);  //  we assume that this works
       return m2;
     }
 
-    public static Matrix3x2 putArray(double [,] a) {
+    public static Matrix3x2 putArray(double[,] a) {
       var m = new Matrix3x2();
       m.M11 = (float)a[0,0];
       m.M12 = (float)a[0,1];
       m.M21 = (float)a[1,0];
       m.M22 = (float)a[1,1];
-      m.M31 = (float)a[2,0];
-      m.M32 = (float)a[2,1];
+      m.M31 = a.GetUpperBound(0) > 1 ? (float)a[2,0] : 0;
+      m.M32 = a.GetUpperBound(0) > 1 ? (float)a[2,1] : 0;
       return m;
     }
 
-    public static double pythag(double aa, double bb) {
+    public static double pythag(double aa,double bb) {
       var a = Math.Abs(aa);
       var b = Math.Abs(bb);
       if (a > b)
@@ -193,282 +229,71 @@ tx   ty    1          MTRANS_X(2)   MTRANS_Y(5)    MPERSP_2(8)       M31    M32 
     }
 
     //  Transpose 3x3 matrix, for SVD result
-    public static double[,] transpose(this double [,] a)
-    {
-      return new [,] {
+    public static double[,] transposeX(this double[,] a) {
+      return new[,] {
         { a[0, 0], a[1, 0], a[2, 0]},
         { a[0, 1], a[1, 1], a[2, 1]},
         { a[0, 2], a[1, 2], a[2, 2] } };
     }
 
-    public static Tuple<double[,], double[], double[,]> SVD(double[,] u)
-    {
-      var temp = 0.0;
-      //Compute the thin SVD from G. H. Golub and C. Reinsch, Numer. Math. 14, 403-420 (1970)
-      var epsilon = 2.220446049250313e-16;
-      var prec = epsilon; //Math.pow(2,-52) // assumes double prec
-      var tolerance = 1.0e-64 / prec;
-      var itmax = 50;
-      double c;
-      var l = 0;
-
-      int m = 3;  // only three rows of matrix are used for 2-D SVD
-      var n = 3;  //
-
-      double[] e = { 0, 0, 0 };
-      double[] q = { 0, 0, 0 };
-      double[,] v = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, };
-
-      //  Householder's reduction to bidiagonal form
-
-      double f;
-      double g = 0.0;
-      double h;
-      double x = 0.0;
-      double y;
-      double z;
-      double s;
-
-      for (int i = 0; i < n; i++)
-      {
-        e[i] = g;
-        l = i + 1;
-        s = 0.until(3).Select(a => u[i, a] * u[i, a]).Sum();
-        if (s <= tolerance)
-          g = 0.0;
-        else
-        {
-          f = u[i, i];
-          g = Math.Sqrt(s);
-          if (f >= 0.0)
-            g = -g;
-          h = f * g - s;
-          u[i, i] = f - g;
-          for (int j = l; j < n; j++)
-          {
-            s = i.until(m).Select(a => u[i, a] * u[j, a]).Sum();
-            f = s / h;
-            for (int k = i; k < m; k++)
-              u[k, j] += f * u[k, i];
-          }
-        }
-        q[i] = g;
-        s = l.until(m).Select(j => u[i, j] * u[i, j]).Sum();
-        if (s <= tolerance)
-          g = 0.0;
-        else
-        {
-          f = u[i, i + 1];
-          g = Math.Sqrt(s);
-          if (f >= 0.0)
-            g = -g;
-          h = f * g - s;
-          u[i, i + 1] = f - g;
-          for (int j = l; j < n; j++)
-            e[j] = u[i, j] / h;
-          for (int j = l; j < m; j++)
-          {
-            s = l.until(n).Select(k => u[j, k] * u[i, k]).Sum();
-            for (int k = l; k < n; k++)
-              u[j, k] += s * e[k];
-          }
-        }
-        y = Math.Abs(q[i]) + Math.Abs(e[i]);
-        if (y > x)
-          x = y;
-      }
-
-      // accumulation of right hand transformations
-      for (int i = n - 1; i >= 0; i--)
-      {
-        if (g != 0.0)
-        {
-          h = g * u[i, i + 1];
-          foreach (int j in l.until(n))
-            v[j, i] = u[i, j] / h;
-          foreach (int j in l.until(n))
-          {
-            s = l.until(n).Select(k => u[i, k] * v[k, j]).Sum();
-            foreach (int k in l.until(n))
-              v[k, j] += (s * v[k, i]);
-          }
-        }
-        foreach (int j in l.until(n))
-        {
-          v[i, j] = 0.0;
-          v[j, i] = 0.0;
-        }
-        v[i, i] = 1.0;
-        g = e[i];
-        l = i;
-      }
-
-      // accumulation of left hand transformations
-      for (int i=n-1; i>=0; i--) {
-        l = i + 1;
-        g = q[i];
-        foreach (int j in l.until(n))
-          u[i, j] = 0.0;
-        if (g != 0.0) {
-          h = u[i, i] * g;
-          foreach (int j in l.until(n)) {
-            s = l.until(m).Select(a => u[a, i] * u[a, j]).Sum();
-            f = s / h;
-            foreach (int k in i.until(m))
-              u[k, j] += f * u[k, i];
-          }
-          foreach (int j in i.until(m))
-            u[j, i] = u[j, i] / g;
-        }
-        else
-          foreach (int j in i.until(m))
-            u[j, i] = 0.0;
-        u[i, i] += 1.0;
-      }
-
-      // diagonalization of the bidiagonal form
-      prec *= x;
-      for (int k=n-1; k>=0; k--) {
-        for (int iteration=0; iteration<itmax; iteration++) {
-          // test f splitting
-          var test_convergence = false;
-          var el = k;
-          for (int ella=k; ella>=0; ella--) {
-            el = ella;
-            if (Math.Abs(e[ella]) <= prec) {
-              test_convergence = true;
-              break;
-            }
-            if (Math.Abs(q[ella - 1]) <= prec)
-              break;
-          }
-          if (!test_convergence) {
-            // cancellation of e[l] if l>0
-            c = 0.0;
-            s = 1.0;
-            var l1 = el - 1;
-            foreach (int i in el.until(k + 1)) {
-              f = s * e[i];
-              e[i] = c * e[i];
-              if (Math.Abs(f) <= prec)
-                break;
-              g = q[i];
-              h = pythag(f, g);
-              q[i] = h;
-              c = g / h;
-              s = -f / h;
-              foreach (int j in 0.until(m))
-              {
-                y = u[j, l1];
-                z = u[j, i];
-                u[j, l1] = y * c + (z * s);
-                u[j, i] = -y * s + (z * c);
-              }
-            }
-          }
-          // test f convergence
-          z = q[k];
-          if (el == k)
-          {
-            //convergence
-            if (z < 0.0) {
-              //q[k] is made non-negative
-              q[k] = -z;
-              foreach (int j in 0.until(n))
-                v[j, k] = -v[j, k];
-            }
-            break;  //break out of iteration loop and move on to next k value
-          }
-          if (iteration >= itmax - 1)
-            throw new Exception("Error: no convergence.");
-          // shift from bottom 2x2 minor
-          x = q[el];
-          y = q[k - 1];
-          g = e[k - 1];
-          h = e[k];
-          f = ((y - z) * (y + z) + (g - h) * (g + h)) / (2.0 * h * y);
-          g = pythag(f, 1.0);
-          if (f < 0.0)
-            f = ((x - z) * (x + z) + h * (y / (f - g) - h)) / x;
-          else
-            f = ((x - z) * (x + z) + h * (y / (f + g) - h)) / x;
-          // next QR transformation
-          c = 1.0;
-          s = 1.0;
-          foreach (int i in (el + 1).until(k + 1)) {
-            g = e[i];
-            y = q[i];
-            h = s * g;
-            g *= c;
-            z = pythag(f, h);
-            e[i - 1] = z;
-            c = f / z;
-            s = h / z;
-            f = x * c + g * s;
-            g = -x * s + g * c;
-            h = y * s;
-            y *= c;
-            foreach (int j in 0.until(n)) {
-              x = v[j, i - 1];
-              z = v[j, i];
-              v[j, i - 1] = x * c + z * s;
-              v[j, i] = -x * s + z * c;
-            }
-            z = pythag(f, h);
-            q[i - 1] = z;
-            c = f / z;
-            s = h / z;
-            f = c * g + s * y;
-            x = -s * g + c * y;
-            foreach (int j in 0.until(m))
-            {
-              y = u[j, i - 1];
-              z = u[j, i];
-              u[j, i - 1] = y * c + z * s;
-              u[j, i] = -y * s + z * c;
-            }
-          }
-          e[el] = 0.0;
-          e[k] = f;
-          q[k] = x;
-        }
-      }
-
-      //vt= transpose(v)
-      //return (u,q,vt)
-      q = q.Select(a => a < prec ? 0.0 : a).ToArray();
-
-      //sort eigenvalues
-      var ii = 1;
-      while (ii < n)
-      {
-        //writeln(q)
-        for (int j = ii - 1; j >= 0; j--)
-        {
-          if (q[j] < q[ii])
-          {
-            //  writeln(i,'-',j)
-            c = q[j];
-            q[j] = q[ii];
-            q[ii] = c;
-            foreach (int k in 0.until(2))
-            {
-              temp = u[k, ii]; u[k, ii] = u[k, j]; u[k, j] = temp;
-            }
-            foreach (int k in 0.until(2))
-            {
-              temp = v[k, ii]; v[k, ii] = v[k, j]; v[k, j] = temp;
-            }
-            //     u.swapCols(i,j)
-            //     v.swapCols(i,j)
-            ii = j;
-          }
-        }
-        ii++;
-      }
-      return Tuple.Create(u, q, v);
+    public static double[,] transpose(this double[,] a) {
+      var x = a.GetUpperBound(1)+1;
+      var y = a.GetUpperBound(0)+1;
+      var retval = new double[x,y];
+      for (int i = 0; i<x; i++)
+        for (int j = 0; j<y; j++)
+          retval[i,j] = a[j,i];
+      return retval;
     }
 
+    public static Tuple<double[,],double[],double[,]> SVD(double[,] A) {
+      var a = A[0,0];
+      var b = A[0,1];
+      var c = A[1,0];
+      var d = A[1,1];
+      //  Check for trivial case
+      var epsilon = 0.0001;
+      if (b.Abs() < epsilon && c.Abs() < epsilon) {
+        double[,] V = { { (a < 0.0) ? -1.0 : 1.0,0.0 },
+                 { 0.0,(d < 0.0) ? -1.0 : 1.0 } };
+        double[] Sigma = { a.Abs(),d.Abs() };
+        double[,] U = { { 1.0,0.0 },{ 0.0,1.0 } };
+        return Tuple.Create(U,Sigma,V);
+      }
+      else {
+        var j = a.Sq() + b.Sq();
+        var k = c.Sq() + d.Sq();
+        var vc = a*c + b*d;
+        //  Check to see if A^T*A is diagonal
+        if (vc.Abs() < epsilon) {
+          var s1 = j.Sqrt();
+          var s2 = ((j-k).Abs() < epsilon) ? s1 : k.Sqrt();
+          double[] Sigma = { s1,s2 };
+          double[,] V = { { 1.0,0.0 },{ 0.0,1.0 } };
+          double[,] U = { { a/s1,b/s1 },{ c/s2,d/s2 } };
+          return Tuple.Create(U,Sigma,V);
+        }
+        else {   //  Otherwise, solve quadratic for eigenvalues
+          var atanarg1 = 2 * a * c + 2 * b * d;
+          var atanarg2 = a * a + b * b - c * c - d * d;
+          var Theta = 0.5 * Math.Atan2(atanarg1,atanarg2);
+          double[,] U = { { Theta.Cos(),-Theta.Sin() },
+                           { Theta.Sin(),Theta.Cos() } };
+          var Phi = 0.5 * Math.Atan2(2*a*b + 2*c*d,a.Sq() - b.Sq() + c.Sq() - d.Sq());
+          var s11 = (a * Theta.Cos() + c * Theta.Sin()) * Phi.Cos() +
+                    (b * Theta.Cos() + d * Theta.Sin()) * Phi.Sin();
+          var s22 = (a * Theta.Sin() - c * Theta.Cos()) * Phi.Sin() +
+                    (-b * Theta.Sin() + d * Theta.Cos()) * Phi.Cos();
+
+          var S1 = a.Sq() + b.Sq() + c.Sq() + d.Sq();
+          var S2 = ((a.Sq() + b.Sq() - c.Sq() - d.Sq()).Sq() + 4 * (a * c + b * d).Sq()).Sqrt();
+          double[] Sigma = { (S1 + S2).Sqrt() / 2,(S1 - S2).Sqrt() / 2 };
+          double[,] V = { { s11.Sign() * Phi.Cos(),-s22.Sign() * Phi.Sin() },
+                   { s11.Sign() * Phi.Sin(),s22.Sign() * Phi.Cos() } };
+          return Tuple.Create(U,Sigma,V);
+        }
+      }
+    }
   }
 
   public static class StringUtilities {
