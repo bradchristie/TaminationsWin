@@ -155,6 +155,11 @@ namespace TaminationsWin {
       animate(beat);
     }
 
+    public void rotateStart(double angle) {
+      starttx = Matrix.CreateRotation(angle.toRadians()) * starttx;
+      tx = starttx;  // structs so this makes a copy
+    }
+
     /**
      *   Draw the entire dancer's path as a translucent colored line
      * @param ds  Canvas to draw to

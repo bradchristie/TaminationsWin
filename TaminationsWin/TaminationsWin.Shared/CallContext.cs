@@ -30,18 +30,17 @@ using Windows.UI;
 namespace TaminationsWin
 {
 
-  class CallContext
-  {
+  class CallContext {
 
     //  Angle of d2 as viewed from d1
     //  If angle is 0 then d2 is in front of d1
     //  Angle returned is in the range -pi to pi
-    static public double angle(Dancer d1, Dancer d2) {
+    static public double angle(Dancer d1,Dancer d2) {
       return d2.location.concatenate(d1.tx.Inverse()).Angle();
     }
 
     //  Distance between two dancers
-    static public double distance(Dancer d1, Dancer d2) {
+    static public double distance(Dancer d1,Dancer d2) {
       return (d1.location - d2.location).Length();
     }
 
@@ -67,17 +66,17 @@ namespace TaminationsWin
     }
 
     //  Test if dancer d2 is directly in front, back. left, right of dancer d1
-    static public Func<Dancer, Func<Dancer, bool>> isInFront = d1 => d2 => {
-      return d1 != d2 && angle(d1, d2).angleEquals(0);
+    static public Func<Dancer,Func<Dancer,bool>> isInFront = d1 => d2 => {
+      return d1 != d2 && angle(d1,d2).angleEquals(0);
     };
-    static public Func<Dancer, Func<Dancer, bool>> isInBack = d1 => d2 => {
-      return d1 != d2 && angle(d1, d2).angleEquals(Math.PI);
+    static public Func<Dancer,Func<Dancer,bool>> isInBack = d1 => d2 => {
+      return d1 != d2 && angle(d1,d2).angleEquals(Math.PI);
     };
-    static public Func<Dancer, Func<Dancer, bool>> isLeft = d1 => d2 => {
-      return d1 != d2 && angle(d1, d2).angleEquals(Math.PI / 2);
+    static public Func<Dancer,Func<Dancer,bool>> isLeft = d1 => d2 => {
+      return d1 != d2 && angle(d1,d2).angleEquals(Math.PI / 2);
     };
-    static public Func<Dancer, Func<Dancer, bool>> isRight = d1 => d2 => {
-      return d1 != d2 && angle(d1, d2).angleEquals(3 * Math.PI / 2);
+    static public Func<Dancer,Func<Dancer,bool>> isRight = d1 => d2 => {
+      return d1 != d2 && angle(d1,d2).angleEquals(3 * Math.PI / 2);
     };
 
 
@@ -114,17 +113,17 @@ namespace TaminationsWin
     public CallContext(IXmlNode f) {
       dancers = new List<Dancer>();
       var fds = f.SelectNodes("dancer");
-      for (uint i=0; i<fds.Count; i++) {
+      for (uint i = 0; i<fds.Count; i++) {
         var fd = fds.Item(i);
         //  Assume square geometry
         var m = Matrix.CreateRotation(fd.attr("angle").toDouble() * Math.PI / 180);
-        m = m * Matrix.CreateTranslation(fd.attr("x").toDouble(), fd.attr("y").toDouble());
-        dancers.Add(new Dancer($"{i * 2 + 1}", $"{i + 1}", 
-          genderMap(fd.attr("gender")), Colors.White, m, 
-          GeometryMaker.makeOne(GeometryType.SQUARE, 0), new List<Movement>()));
-        dancers.Add(new Dancer($"{i * 2 + 2}", $"{i + 1}", 
-          genderMap(fd.attr("gender")), Colors.White, m,
-          GeometryMaker.makeOne(GeometryType.SQUARE, 1), new List<Movement>()));
+        m = m * Matrix.CreateTranslation(fd.attr("x").toDouble(),fd.attr("y").toDouble());
+        dancers.Add(new Dancer($"{i * 2 + 1}",$"{i + 1}",
+          genderMap(fd.attr("gender")),Colors.White,m,
+          GeometryMaker.makeOne(GeometryType.SQUARE,0),new List<Movement>()));
+        dancers.Add(new Dancer($"{i * 2 + 2}",$"{i + 1}",
+          genderMap(fd.attr("gender")),Colors.White,m,
+          GeometryMaker.makeOne(GeometryType.SQUARE,1),new List<Movement>()));
       }
     }
 
@@ -188,7 +187,7 @@ namespace TaminationsWin
           if (success) {
             //  Remove the words we matched, break out of and
             //  the chopped loop, and continue if any words left
-            calltext = calltext.Replace(callname, "").Trim();
+            calltext = calltext.Replace(callname,"").Trim();
           }
           return success;
         }))
@@ -218,24 +217,25 @@ namespace TaminationsWin
         ctx = new CallContext(ctx.actives);
       //  Try to find a match in the xml animations
       var callquery = "^" + TamUtils.callnameQuery(calltext) + "$";
-      var callfiles = TamUtils.calllistdata.Where(x => Regex.Match(x.text, callquery).Success);
+      var callfiles = TamUtils.calllistdata.Where(x => Regex.Match(x.text,callquery).Success);
       //  Found xml file with call, now look through each animation
       //  First read and extract all the animations to a list
       var tams = callfiles.SelectMany(d => TamUtils.getXMLAsset(d.link).SelectNodes("/tamination/tam")).ToList();
       found = tams.Count > 0;
       //  Now find the animations that match the name and formation
-      tams.Where(tam => Regex.Match(tam.attr("title").ToLower().ReplaceAll("\\W",""), callquery).Success)
+      tams.Where(tam => Regex.Match(tam.attr("title").ToLower().ReplaceAll("\\W",""),callquery).Success)
         .Any(tam => {
           var f = tam.hasAttr("formation")
                     ? TamUtils.getFormation(tam.attr("formation"))
                     : tam.SelectNodes("formation").First();
+          var ctx2 = new CallContext(f);
           var sexy = tam.hasAttr("gender-specific");
           //  Try to match the formation to the current dancer positions
-          var mm = matchFormations(ctx, new CallContext(f), sexy);
+          var mm = matchFormations(ctx,ctx2,sexy);
           if (mm != null) {
             matches = true;
             // add XMLCall object to the call stack
-            ctx0.callstack.Add(new XMLCall(tam, mm, ctx));
+            ctx0.callstack.Add(new XMLCall(tam,mm,ctx2));
             ctx0.callname = callname + tam.attr("title") + " ";
           }
           return matches;
@@ -244,6 +244,38 @@ namespace TaminationsWin
         //  Found the call but formations did not match
         throw new FormationNotFoundError(calltext);
       return matches;
+    }
+
+    //  Once a mapping of the current formation to an XML call is found,
+    //  we need to compute the difference between the two,
+    //  and that difference will be added as an offset to the first movement
+    public Vector2[] computeFormationOffsets(CallContext ctx2,int[] mapping) {
+      var dvbest = new Vector2[dancers.Count];
+      var dtotbest = 0.0;
+      //  We don't know how the XML formation needs to be turned to overlap
+      //  the current formation.  So try all 4 angles and use the best.
+      double[,] bxa = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 },};
+      actives.ForEach((d1,i) => {
+        var v1 = d1.location;
+        var v2 = ctx2.dancers[mapping[i]].location;
+        bxa[0,0] += v1.X * v2.X;
+        bxa[0,1] += v1.Y*v2.X;
+        bxa[1,0] += v1.X * v2.Y;
+        bxa[1,1] += v1.Y * v2.Y;
+      });
+      var svd = Matrix.SVD(bxa);
+      var ut = Matrix.putArray(svd.Item1.transpose());
+      var v = Matrix.putArray(svd.Item3);
+      var rotmat = ut * v;
+      //  Now rotate the formation and compute any remaining
+      //  differences in position
+      actives.ForEach((d2,j) => {
+        var v1 = d2.location;
+        var v2 = ctx2.dancers[mapping[j]].location.concatenate(rotmat);
+        dvbest[j] = v1 - v2;
+        dtotbest += dvbest[j].Length();
+      });
+      return dvbest;
     }
 
     /*
@@ -286,12 +318,12 @@ namespace TaminationsWin
         return -1;  // should not happen
     }
 
-    int dancerRelation(Dancer d1, Dancer d2) {
+    int dancerRelation(Dancer d1,Dancer d2) {
       //  TODO fuzzy cases
-      return angleBin(angle(d1, d2));
+      return angleBin(angle(d1,d2));
     }
 
-    int[] matchFormations(CallContext ctx1, CallContext ctx2, bool sexy) {
+    int[] matchFormations(CallContext ctx1,CallContext ctx2,bool sexy,bool fuzzy = false) {
       if (ctx1.dancers.Count != ctx2.dancers.Count)
         return null;
       //  Find mapping using DFS
@@ -305,7 +337,7 @@ namespace TaminationsWin
         while (!found && nextmapping < ctx2.dancers.Count) {
           mapping[mapindex] = nextmapping;
           mapping[mapindex + 1] = nextmapping ^ 1;
-          if (testMapping(ctx1, ctx2, mapping, mapindex, sexy))
+          if (testMapping(ctx1,ctx2,mapping,mapindex,sexy,fuzzy))
             found = true;
           else
             nextmapping++;
@@ -320,27 +352,33 @@ namespace TaminationsWin
           mapindex += 2;
         }
       }
-      return mapindex < 0 ?  null : mapping;
+      return mapindex < 0 ? null : mapping;
     }
 
-    bool testMapping(CallContext ctx1, CallContext ctx2, int[] mapping, int i, bool sexy) {
+    bool testMapping(CallContext ctx1,CallContext ctx2,int[] mapping,int i,bool sexy,bool fuzzy) {
       if (sexy && (ctx1.dancers[i].gender != ctx2.dancers[mapping[i]].gender))
         return false;
-      return Enumerable.Range(0, ctx1.dancers.Count).All(j => {
+      return Enumerable.Range(0,ctx1.dancers.Count).All(j => {
         if (mapping[j] < 0 || i == j)
           return true;
-        var relq1 = dancerRelation(ctx1.dancers[i], ctx1.dancers[j]);
-        var relt1 = dancerRelation(ctx2.dancers[mapping[i]], ctx2.dancers[mapping[j]]);
-        var relq2 = dancerRelation(ctx1.dancers[j], ctx1.dancers[i]);
-        var relt2 = dancerRelation(ctx2.dancers[mapping[j]], ctx2.dancers[mapping[i]]);
+        var relq1 = dancerRelation(ctx1.dancers[i],ctx1.dancers[j]);
+        var relt1 = dancerRelation(ctx2.dancers[mapping[i]],ctx2.dancers[mapping[j]]);
+        var relq2 = dancerRelation(ctx1.dancers[j],ctx1.dancers[i]);
+        var relt2 = dancerRelation(ctx2.dancers[mapping[j]],ctx2.dancers[mapping[i]]);
         //  If dancers are side-by-side, make sure handholding matches by checking distance
-        var d1 = 0.0;
-        var d2 = 0.0;
-        if (relq1 == 2 || relq1 == 6) {
-          d1 = distance(ctx1.dancers[i], ctx1.dancers[j]);
-          d2 = distance(ctx2.dancers[mapping[i]], ctx2.dancers[mapping[j]]);
+        if (!fuzzy && (relq1 == 2 || relq1 == 6)) {
+          var d1 = distance(ctx1.dancers[i],ctx1.dancers[j]);
+          var d2 = distance(ctx2.dancers[mapping[i]],ctx2.dancers[mapping[j]]);
+          return relq1 == relt1 && relq2 == relt2 && (d1 < 2.1) == (d2 < 2.1);
         }
-        return relq1 == relt1 && relq2 == relt2 && (d1 < 2.1) == (d2 < 2.1);
+        else if (fuzzy) {
+          var reldif1 = (relt1-relq1).Abs();
+          var reldif2 = (relt2-relq2).Abs();
+          return (reldif1==0 || reldif1==1 || reldif1==7) &&
+            (reldif2==0 || reldif2==1 || reldif2==7);
+        }
+        else
+          return relq1 == relt1 && relq2 == relt2;
       });
     }
 
@@ -361,10 +399,11 @@ namespace TaminationsWin
       analyze();
       //  Concepts and modifications primarily use the preProcess and
       //  postProcess methods
-      callstack.ForEach((Call c, int i) => c.preProcess(this, i));
+      callstack.ForEach((Call c,int i) => c.preProcess(this,i));
       //  Core calls primarly use the performCall method
-      callstack.ForEach((Call c, int i) => c.performCall(this, i));
-      callstack.ForEach((Call c, int i) => c.postProcess(this, i));
+      callstack.ForEach((Call c,int i) => c.performCall(this,i));
+      callstack.ForEach((Call c,int i) => c.postProcess(this,i));
+      matchStandardFormation();
     }
 
     //  Re-center dancers
@@ -372,8 +411,79 @@ namespace TaminationsWin
       var xave = dancers.Sum(d => d.location.X) / dancers.Count;
       var yave = dancers.Sum(d => d.location.Y) / dancers.Count;
       dancers.ForEach(d => {
-        d.starttx = d.starttx * Matrix.CreateTranslation(xave, yave);
+        d.starttx = d.starttx * Matrix.CreateTranslation(xave,yave);
       });
+    }
+
+    //  See if the current dancer positions resemble a standard formation
+    //  and, if so, snap to the standard
+    private String[] standardFormations = new String[] {
+      "Normal Lines",
+      "Normal Lines Compact",
+      "Double Pass Thru",
+      "Static Square",
+      "Quarter Tag",
+      "Tidal Line RH",
+      "Diamonds RH Girl Points",
+      "Diamonds RH PTP Girl Points",
+      "Hourglass RH BP",
+      "Galaxy RH GP",
+      "Butterfly RH",
+      "O RH",
+      "Sausage RH"
+    };
+    private int[] grayWalk = new int[] { 0,1,0,2,0,1,0,3,0,1,0,2,0,1,0,3 };
+    struct BestMapping {
+      public String name;
+      public int[] mapping;
+      public Vector2[] offsets;
+      public double totOffset;
+    };
+    void matchStandardFormation() {
+      //  Make sure newly added animations are finished
+      dancers.ForEach (d => { d.path.recalculate(); d.animateToEnd(); } );
+      //  Work on a copy with all dancers active, mapping only uses active dancers
+      var ctx1 = new CallContext(this);
+      ctx1.dancers.ForEach(d => d.data.active = true );
+      BestMapping bestMapping = new BestMapping();
+      bestMapping.totOffset = -1.0;
+
+      standardFormations.ForEach(f => {
+        CallContext ctx2 = new CallContext(TamUtils.getFormation(f));
+        grayWalk.ForEach(g => {
+          //  See if this formation matches
+          var mapping = matchFormations(ctx1,ctx2,sexy: false,fuzzy: true);
+          if (mapping != null) {
+            //  If it does, get the offsets
+            var offsets = ctx1.computeFormationOffsets(ctx2,mapping);
+            var totOffset = offsets.Aggregate(0.0,(s,v) => s+v.Length());
+          if (bestMapping.totOffset < 0 || totOffset < bestMapping.totOffset) {
+              bestMapping.name = f;  // only used for debugging
+              bestMapping.mapping = mapping;
+              bestMapping.offsets = offsets;
+              bestMapping.totOffset = totOffset;
+            }
+          }
+          //  Rotate two dancers according to the Gray code
+          ctx2.dancers[g*2].rotateStart(180);
+          ctx2.dancers[g*2+1].rotateStart(180);
+        });
+      });
+      if (bestMapping.totOffset >= 0) {
+        for (var i=0; i<dancers.Count; i++) {
+          var d = dancers[i];
+          if (bestMapping.offsets[i].Length() > 0.1) {
+            //  Get the last movement
+            var m = d.path.pop();
+            //  Transform the offset to the dancer's angle
+            d.animateToEnd();
+            var vd = bestMapping.offsets[i].Rotate(-d.tx.Angle());
+            //  Apply it
+            d.path.add(m.skew(-vd.X,-vd.Y));
+            d.animateToEnd();
+          }
+        }
+      }
     }
 
     //  Return max number of beats among all the dancers

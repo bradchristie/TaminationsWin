@@ -85,8 +85,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
           </Grid.ColumnDefinitions>
-          <Button x:Name="Formation" Tapped="Formation_Tapped" Content="Formation" Style="{StaticResource TamButton}"  FontWeight="Bold" Foreground="Black" FontSize="18.667"  HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch"/>
-          <Button x:Name="Instructions" Tapped="Instructions_Tapped" Content="Instructions" Style="{StaticResource TamButton}"  FontWeight="Bold" Foreground="Black" FontSize="18.667" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch"/>
+          <Button x:Name="Formation" Tapped="Formation_Tapped" Content="Reset" Style="{StaticResource TamButton}"  FontWeight="Bold" Foreground="Black" FontSize="18.667"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1"/>
+          <Button x:Name="Instructions" Tapped="Instructions_Tapped" Content="Instructions" Style="{StaticResource TamButton}"  FontWeight="Bold" Foreground="Black" FontSize="18.667" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"/>
         </Grid>
         <ListBox x:Name="CallList" Grid.Row="5" SelectionChanged="CallList_SelectionChanged">
           <ListBox.ItemContainerStyle>

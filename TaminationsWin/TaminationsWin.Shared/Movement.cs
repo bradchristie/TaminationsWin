@@ -155,12 +155,38 @@ namespace TaminationsWin {
      * Return a new Movement with the end point shifted by x and y
      */
     public Movement skew(double x, double y) {
+      return beats < fullbeats ? skewClip(x,y) : skewFull(x,y);
+    }
+
+    public Movement skewFull(double x, double y) {
       return new Movement(fullbeats, hands, btranslate.ctrlx1, btranslate.ctrly1, 
                           btranslate.ctrlx2+x, btranslate.ctrly2+y, btranslate.x2+x, btranslate.y2+y,
                           brotate.ctrlx1, brotate.ctrlx2, brotate.ctrly2, brotate.x2, brotate.y2, beats);
     }
 
-    public Movement reflect() {
+    /**
+     *   Skew a movement that has been clipped, adjusting so the amount of
+     *   skew is appplied to the clip point
+     */
+    public Movement skewClip(double x, double y) {
+      var vdelta = Vector.Create(x,y);
+      var vfinal = translate().Location() + vdelta;
+      var m = this;
+      var maxiter = 100;
+      do {
+        // Shift the end point by the current difference
+        m = m.skewFull(vdelta.X,vdelta.Y);
+        // See how that affects the clip point
+        var loc = m.translate().Location();
+        vdelta = vfinal - loc;
+        maxiter -= 1;
+      } while (vdelta.Length() > 0.001 && maxiter > 0);
+      //  If timed out, return original rather than something that
+      //  might put the dancers in outer space
+      return maxiter > 0 ? m : this;
+}
+
+public Movement reflect() {
       return scale(1, -1);
     }
 

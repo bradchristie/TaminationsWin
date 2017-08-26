@@ -54,6 +54,12 @@ namespace TaminationsWin {
       recalculate();
     }
 
+    public Path(Path p) {
+      movelist = new List<Movement>();
+      movelist.AddRange(p.movelist);
+      recalculate();
+    }
+
     public Path copy() {
       return new Path(movelist);
     }
@@ -117,6 +123,14 @@ namespace TaminationsWin {
         var m = pop();
         m = m.skew(x, y);
         add(m);
+      }
+      return this;
+    }
+
+    public Path skewFirst(double x, double y) {
+      if (movelist != null && movelist.Count > 0) {
+        movelist[0] = movelist[0].skew(x,y);
+        recalculate();
       }
       return this;
     }

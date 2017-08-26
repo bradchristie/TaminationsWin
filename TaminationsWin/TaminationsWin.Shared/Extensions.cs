@@ -92,6 +92,9 @@ namespace TaminationsWin {
     {
       return Enumerable.Range(i, j - i);
     }
+    public static int Abs(this int i) {
+      return Math.Abs(i);
+    }
   }
 
   public static class ListUtilities {
@@ -210,11 +213,11 @@ namespace TaminationsWin {
     public static Matrix3x2 putArray(double[,] a) {
       var m = new Matrix3x2();
       m.M11 = (float)a[0,0];
-      m.M12 = (float)a[0,1];
-      m.M21 = (float)a[1,0];
+      m.M12 = (float)a[1,0];
+      m.M21 = (float)a[0,1];
       m.M22 = (float)a[1,1];
-      m.M31 = a.GetUpperBound(0) > 1 ? (float)a[2,0] : 0;
-      m.M32 = a.GetUpperBound(0) > 1 ? (float)a[2,1] : 0;
+      m.M31 = a.GetUpperBound(1) > 1 ? (float)a[0,2] : 0;
+      m.M32 = a.GetUpperBound(1) > 1 ? (float)a[1,2] : 0;
       return m;
     }
 

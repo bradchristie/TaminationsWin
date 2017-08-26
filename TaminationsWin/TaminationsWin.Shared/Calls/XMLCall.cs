@@ -56,18 +56,18 @@ namespace TaminationsWin.Calls
         ctx3.levelBeats();
         ctx3.analyze();
       }
-      var vdif = computeFormationOffsets(ctx, ctx2);
-      var bmax = allp.Max(p => p.beats);
+      var vdif = ctx.computeFormationOffsets(ctx2,xmlmap);
       xmlmap.ForEach((m, i3) => {
-        var p = allp[m >> 1];
-        if (p.movelist.Count == 0)
-          p.add(TamUtils.getMove("Stand"));
+        var p = new Path(allp[m >> 1]);
         //  Scale active dancers to fit the space they need
         //  Compute difference between current formation and XML formation
         var vd = vdif[i3].Rotate(-ctx.actives[i3].tx.Angle());
         //  Apply formation difference to first movement of XML path
-        if (vd.Length()>0.1)
-          p.movelist[0].skew(-vd.X,-vd.Y);
+        if (vd.Length() > 0.1) {
+          if (p.movelist.Count == 0)
+            p.add(TamUtils.getMove("Stand"));
+          p.skewFirst(-vd.X,-vd.Y);
+        }
         //  Add XML path to dancer
         ctx.actives[i3].path.add(p);
         //  Move dancer to end so any subsequent modifications (e.g. roll)
@@ -76,38 +76,6 @@ namespace TaminationsWin.Calls
       });
       ctx.levelBeats();
       ctx.analyze();
-    }
-
-    //  Once a mapping of the current formation to an XML call is found,
-    //  we need to compute the difference between the two,
-    //  and that difference will be added as an offset to the first movement
-    private Vector2[] computeFormationOffsets(CallContext ctx1, CallContext ctx2) {
-      var dvbest = new Vector2[ctx1.dancers.Count];
-      var dtotbest = 0.0;
-      //  We don't know how the XML formation needs to be turned to overlap
-      //  the current formation.  So try all 4 angles and use the best.
-      double[,] bxa = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 },};
-      ctx1.actives.ForEach((d1,i) => {
-        var v1 = d1.location;
-        var v2 = ctx2.dancers[xmlmap[i]].location;
-        bxa[0,0] += v1.X * v2.X;
-        bxa[0,1] += v1.Y*v2.X;
-        bxa[1,0] += v1.X * v2.Y;
-        bxa[1,1] += v1.Y * v2.Y;
-      });
-      var svd = Matrix.SVD(bxa);
-      var ut = Matrix.putArray(svd.Item1.transpose());
-      var v = Matrix.putArray(svd.Item3);
-      var rotmat = ut * v;
-      //  Now rotate the formation and compute any remaining
-      //  differences in position
-      ctx1.actives.ForEach((d2,j) => {
-        var v1 = d2.location;
-        var v2 = ctx2.dancers[xmlmap[j]].location.concatenate(rotmat);
-        dvbest[j] = v1 - v2;
-        dtotbest += dvbest[j].Length();
-      });
-      return dvbest;
     }
 
   }
