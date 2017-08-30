@@ -155,7 +155,7 @@ namespace TaminationsWin {
       animate(beat);
     }
 
-    public void rotateStart(double angle) {
+    public void rotateStartAngle(double angle) {
       starttx = Matrix.CreateRotation(angle.toRadians()) * starttx;
       tx = starttx;  // structs so this makes a copy
     }

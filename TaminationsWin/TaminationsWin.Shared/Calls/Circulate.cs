@@ -17,7 +17,7 @@ namespace TaminationsWin.Calls
         try {
           ctx.applyCalls("box circulate");
         }
-        catch (CallError err) {
+        catch (CallError) {
           //  That didn't work, try to find a circulate path for each dancer
           base.perform(ctx);
         }

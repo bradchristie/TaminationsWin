@@ -78,5 +78,14 @@ namespace TaminationsWin.Calls
       ctx.analyze();
     }
 
+    override public void postProcess(CallContext ctx, int i) {
+      base.postProcess(ctx,i);
+      //  If just this one call then assume it knows what
+      //  the ending formation should be
+      if (ctx.callstack.Count > 1)
+        ctx.matchStandardFormation();
+    }
+
+
   }
 }

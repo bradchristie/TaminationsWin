@@ -72,5 +72,10 @@ namespace TaminationsWin.Calls
       }
     }
 
+    public override void postProcess(CallContext ctx,int i = 0) {
+      base.postProcess(ctx,i);
+      ctx.matchStandardFormation();
+    }
+
   }
 }

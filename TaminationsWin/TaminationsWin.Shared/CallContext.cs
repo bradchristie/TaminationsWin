@@ -328,6 +328,7 @@ namespace TaminationsWin
         return null;
       //  Find mapping using DFS
       var mapping = new int[ctx1.dancers.Count];
+      var rotated = new bool[ctx1.dancers.Count];
       for (int i = 0; i < ctx1.dancers.Count; i++)
         mapping[i] = -1;
       var mapindex = 0;
@@ -346,7 +347,15 @@ namespace TaminationsWin
           //  No more mappings for this dancer
           mapping[mapindex] = -1;
           mapping[mapindex + 1] = -1;
-          mapindex -= 2;
+          //  If fuzzy, try rotating this dancer
+          if (fuzzy && !rotated[mapindex]) {
+            ctx1.dancers[mapindex].rotateStartAngle(180.0);
+            ctx1.dancers[mapindex+1].rotateStartAngle(180.0);
+            rotated[mapindex] = true;
+          } else {
+            rotated[mapindex] = false;
+            mapindex -= 2;
+          }
         } else {
           //  Mapping found
           mapindex += 2;
@@ -403,7 +412,6 @@ namespace TaminationsWin
       //  Core calls primarly use the performCall method
       callstack.ForEach((Call c,int i) => c.performCall(this,i));
       callstack.ForEach((Call c,int i) => c.postProcess(this,i));
-      matchStandardFormation();
     }
 
     //  Re-center dancers
@@ -432,14 +440,13 @@ namespace TaminationsWin
       "O RH",
       "Sausage RH"
     };
-    private int[] grayWalk = new int[] { 0,1,0,2,0,1,0,3,0,1,0,2,0,1,0,3 };
     struct BestMapping {
       public String name;
       public int[] mapping;
       public Vector2[] offsets;
       public double totOffset;
     };
-    void matchStandardFormation() {
+    public void matchStandardFormation() {
       //  Make sure newly added animations are finished
       dancers.ForEach (d => { d.path.recalculate(); d.animateToEnd(); } );
       //  Work on a copy with all dancers active, mapping only uses active dancers
@@ -450,24 +457,19 @@ namespace TaminationsWin
 
       standardFormations.ForEach(f => {
         CallContext ctx2 = new CallContext(TamUtils.getFormation(f));
-        grayWalk.ForEach(g => {
-          //  See if this formation matches
-          var mapping = matchFormations(ctx1,ctx2,sexy: false,fuzzy: true);
-          if (mapping != null) {
-            //  If it does, get the offsets
-            var offsets = ctx1.computeFormationOffsets(ctx2,mapping);
-            var totOffset = offsets.Aggregate(0.0,(s,v) => s+v.Length());
-          if (bestMapping.totOffset < 0 || totOffset < bestMapping.totOffset) {
-              bestMapping.name = f;  // only used for debugging
-              bestMapping.mapping = mapping;
-              bestMapping.offsets = offsets;
-              bestMapping.totOffset = totOffset;
-            }
+        //  See if this formation matches
+        var mapping = matchFormations(ctx1,ctx2,sexy: false,fuzzy: true);
+        if (mapping != null) {
+          //  If it does, get the offsets
+          var offsets = ctx1.computeFormationOffsets(ctx2,mapping);
+          var totOffset = offsets.Aggregate(0.0,(s,v) => s+v.Length());
+        if (bestMapping.totOffset < 0 || totOffset < bestMapping.totOffset) {
+            bestMapping.name = f;  // only used for debugging
+            bestMapping.mapping = mapping;
+            bestMapping.offsets = offsets;
+            bestMapping.totOffset = totOffset;
           }
-          //  Rotate two dancers according to the Gray code
-          ctx2.dancers[g*2].rotateStart(180);
-          ctx2.dancers[g*2+1].rotateStart(180);
-        });
+        }
       });
       if (bestMapping.totOffset >= 0) {
         for (var i=0; i<dancers.Count; i++) {

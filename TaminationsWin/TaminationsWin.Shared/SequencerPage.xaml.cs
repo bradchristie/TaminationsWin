@@ -42,7 +42,6 @@ namespace TaminationsWin {
     private List<String> callNames = new List<String>();
     private List<double> callBeats = new List<double>();
     public ObservableCollection<CallListItem> calllistdata = new ObservableCollection<CallListItem>();
-    private int errorLine = -1;
     private int insertRow = 0;
 
     public SequencerPage()
@@ -235,7 +234,6 @@ namespace TaminationsWin {
 
     private bool interpretCall() {
       startSequence();
-      errorLine = -1;
       callBeats.Clear();
       calllistdata.Clear();
       for (int i=0; i<callNames.Count; i++) {
