@@ -21,10 +21,12 @@
 namespace TaminationsWin.Calls {
   class Zig : QuarterTurns {
 
-    public Zig() { name = "Zig"; }
+    public Zig(string calltext) { name = calltext.ToCapCase(); }
 
     public override string select(CallContext ctx, Dancer d) {
-      return d.data.leader ? "Quarter Right" : "Stand";
+      if (d.data.leader)
+        return name.StartsWith("Zig") ? "Quarter Right" : "Quarter Left";
+      return "Stand";
     }
 
   }

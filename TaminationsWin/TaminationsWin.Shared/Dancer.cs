@@ -43,7 +43,7 @@ namespace TaminationsWin {
   public class Dancer : IComparable {
 
     public string number = " ";
-    private string number_couple = " ";
+    public string number_couple = " ";
     public int showNumber = DancerNumbers.OFF;
     private Geometry geom;
     protected Color drawColor;
@@ -103,6 +103,8 @@ namespace TaminationsWin {
     public Dancer(Dancer from) : this(from.number, from.number_couple, from.gender, from.fillColor, from.tx,
       GeometryMaker.makeOne(from.geom.geometry(), 0), new List<Movement>()) {
       clonedFrom = from;
+      //  For the sequencer, copy dancer data
+      data.active = from.data.active;
     }
 
     public Vector2 location {

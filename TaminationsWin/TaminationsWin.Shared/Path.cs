@@ -88,9 +88,10 @@ namespace TaminationsWin {
       return m;
     }
 
-    public void reflect() {
+    public Path reflect() {
       movelist = movelist.Select(m => m.reflect()).ToList();
       recalculate();
+      return this;
     }
 
     public double beats {

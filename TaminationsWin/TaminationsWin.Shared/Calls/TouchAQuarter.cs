@@ -21,13 +21,17 @@
 namespace TaminationsWin.Calls {
   class TouchAQuarter : Action {
 
-    public TouchAQuarter() { name = "Touch a Quarter"; }
+    public TouchAQuarter(string calltext) {
+      name = calltext.ToCapCase().ReplaceAll(" A "," a ");
+    }
 
     public override Path performOne(Dancer d, CallContext ctx) {
       var d2 = ctx.dancerFacing(d);
-      if (d2 != null) {
-        return TamUtils.getMove("Extend Left").scale(CallContext.distance(d, d2) / 2, 1)
-          .add(TamUtils.getMove("Hinge Right"));
+      if (d2 != null && ctx.dancerInFront(d2) == d) {
+        var dist = CallContext.distance(d,d2);
+        return TamUtils.getMove("Extend Left").scale(dist/2,1)
+          .add(TamUtils.getMove("Hinge Right"))
+          .IfDo(name.StartsWith("Left"), p => p.reflect() );
       } else
         throw new CallError($"Dancer {d.number} cannot Touch a Quarter");
     }

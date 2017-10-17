@@ -19,13 +19,15 @@
 */
 
 namespace TaminationsWin.Calls {
-  class FaceRight : QuarterTurns {
 
-    public FaceRight() { name = "Face Right"; }
+  class Sides : FilterActives {
 
-    public override string select(CallContext ctx, Dancer d) {
-      return "Quarter Right";
+    public Sides() { name = "Sides"; }
+
+    public override bool isActive(Dancer d) {
+      return d.number_couple == "2" || d.number_couple == "4";
     }
 
   }
+
 }

@@ -21,10 +21,14 @@
 namespace TaminationsWin.Calls {
   class ZigZag : QuarterTurns {
 
-    public ZigZag() { name = "ZigZag"; }
+    public ZigZag(string callname) { name = callname.ToCapCase(); }
 
     public override string select(CallContext ctx, Dancer d) {
-      return d.data.leader ? "Quarter Right" : d.data.trailer ? "Quarter Left" : "Stand";
+      if (d.data.leader)
+        return name.StartsWith("Zig") ? "Quarter Right" : "Quarter Left";
+      if (d.data.trailer)
+        return name.EndsWith("Zig") ? "Quarter Right" : "Quarter Left";
+      return "Stand";
     }
 
   }

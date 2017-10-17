@@ -30,6 +30,15 @@ using System.Globalization;
 
 namespace TaminationsWin {
 
+  public static class ObjectUtilities {
+
+    public delegate T IfDoDelegate<T>(T obj);
+    public static T IfDo<T>(this T obj, bool exp, IfDoDelegate<T> f) {
+      return exp ? obj : f(obj);
+    }
+
+  }
+
   public static class DoubleUtilities {
 
     public static double Sign(this double x) {
@@ -313,6 +322,11 @@ namespace TaminationsWin {
 
     public static string[] Split(this string str) {
       return str.Split(null);
+    }
+
+    public static string ToCapCase(this string str) {
+      var strs = str.Split().Select(s => s.First().ToString().ToUpper() + s.Skip(1).ToString().ToLower());
+      return string.Join(" ",strs);
     }
 
     // Returns an array of strings, starting with the entire string,

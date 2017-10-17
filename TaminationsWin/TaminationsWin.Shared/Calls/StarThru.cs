@@ -25,7 +25,7 @@ namespace TaminationsWin.Calls {
 
     //  TODO check that facing dancers are opposite genders
     public override void perform(CallContext ctx, int i = 0) {
-      ctx.applyCall("Slide Thru");
+      ctx.applyCalls("Slide Thru");
     }
 
   }

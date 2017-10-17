@@ -171,18 +171,25 @@ namespace TaminationsWin
         if (!calltext.chopped().Any((callname) => {
           var success = false;
           //  First try to find an exact match in Taminations
-          //  Then look for a code match
           try {
             success = matchXMLcall(callname);
           }
           catch (CallError err2) {
             err = err2;
           }
+          //  Then look for a code match
           try {
             success = success || matchCodedCall(callname);
           }
-          catch (CallError err2) {
-            err = err2;
+          catch (CallError err3) {
+            err = err3;
+          }
+          //  Finally try a fuzzier match in Taminations
+          try {
+            success = success || matchXMLcall(callname,true);
+          }
+          catch (CallError err4) {
+            err = err4;
           }
           if (success) {
             //  Remove the words we matched, break out of and
@@ -197,7 +204,7 @@ namespace TaminationsWin
       return this;
     }
 
-    bool matchXMLcall(string calltext) {
+    bool matchXMLcall(string calltext, bool fuzzy=false) {
       var found = false;
       var matches = false;
       var ctx0 = this;
@@ -231,7 +238,7 @@ namespace TaminationsWin
           var ctx2 = new CallContext(f);
           var sexy = tam.hasAttr("gender-specific");
           //  Try to match the formation to the current dancer positions
-          var mm = matchFormations(ctx,ctx2,sexy);
+          var mm = matchFormations(ctx,ctx2, sexy, fuzzy);
           if (mm != null) {
             matches = true;
             // add XMLCall object to the call stack
@@ -323,7 +330,8 @@ namespace TaminationsWin
       return angleBin(angle(d1,d2));
     }
 
-    int[] matchFormations(CallContext ctx1,CallContext ctx2,bool sexy,bool fuzzy = false) {
+    int[] matchFormations(CallContext ctx1,CallContext ctx2,
+      bool sexy=false, bool fuzzy=false, bool rotate=false) {
       if (ctx1.dancers.Count != ctx2.dancers.Count)
         return null;
       //  Find mapping using DFS
@@ -348,7 +356,7 @@ namespace TaminationsWin
           mapping[mapindex] = -1;
           mapping[mapindex + 1] = -1;
           //  If fuzzy, try rotating this dancer
-          if (fuzzy && !rotated[mapindex]) {
+          if (rotate && !rotated[mapindex]) {
             ctx1.dancers[mapindex].rotateStartAngle(180.0);
             ctx1.dancers[mapindex+1].rotateStartAngle(180.0);
             rotated[mapindex] = true;
@@ -364,7 +372,8 @@ namespace TaminationsWin
       return mapindex < 0 ? null : mapping;
     }
 
-    bool testMapping(CallContext ctx1,CallContext ctx2,int[] mapping,int i,bool sexy,bool fuzzy) {
+    bool testMapping(CallContext ctx1,CallContext ctx2,int[] mapping,int i,
+      bool sexy=false,bool fuzzy=false) {
       if (sexy && (ctx1.dancers[i].gender != ctx2.dancers[mapping[i]].gender))
         return false;
       return Enumerable.Range(0,ctx1.dancers.Count).All(j => {
@@ -426,10 +435,9 @@ namespace TaminationsWin
     //  See if the current dancer positions resemble a standard formation
     //  and, if so, snap to the standard
     private String[] standardFormations = new String[] {
-      "Normal Lines",
       "Normal Lines Compact",
+      "Normal Lines",
       "Double Pass Thru",
-      "Static Square",
       "Quarter Tag",
       "Tidal Line RH",
       "Diamonds RH Girl Points",
@@ -438,7 +446,10 @@ namespace TaminationsWin
       "Galaxy RH GP",
       "Butterfly RH",
       "O RH",
-      "Sausage RH"
+      "Sausage RH",
+      "T-Bone URRD",
+      "T-Bone RUUL",
+      "Static Square"
     };
     struct BestMapping {
       public String name;
@@ -463,7 +474,8 @@ namespace TaminationsWin
           //  If it does, get the offsets
           var offsets = ctx1.computeFormationOffsets(ctx2,mapping);
           var totOffset = offsets.Aggregate(0.0,(s,v) => s+v.Length());
-        if (bestMapping.totOffset < 0 || totOffset < bestMapping.totOffset) {
+          //  Favor formations closer to the top of the list
+          if (bestMapping.totOffset < 0 || totOffset+0.1 < bestMapping.totOffset) {
             bestMapping.name = f;  // only used for debugging
             bestMapping.mapping = mapping;
             bestMapping.offsets = offsets;

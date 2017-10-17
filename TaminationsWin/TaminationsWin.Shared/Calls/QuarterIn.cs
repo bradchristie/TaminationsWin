@@ -21,10 +21,11 @@
 namespace TaminationsWin.Calls {
   class QuarterIn : QuarterTurns  {
 
-    public QuarterIn() { name = "Quarter In"; }
+    public QuarterIn(string calltext) { name = calltext.ToCapCase(); }
 
     public override string select(CallContext ctx, Dancer d) {
-      return d.data.beau ? "Quarter Right" : "Quarter Left";
+      return d.data.beau ^ this.name.EndsWith("Out")        
+        ? "Quarter Right" : "Quarter Left";
     }
 
   }

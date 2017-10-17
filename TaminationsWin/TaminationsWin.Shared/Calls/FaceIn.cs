@@ -21,11 +21,17 @@
 namespace TaminationsWin.Calls {
   class FaceIn : QuarterTurns {
 
-    public FaceIn() { name = "Face In"; }
+    public FaceIn(string calltext) { name = calltext.ToCapCase(); }
 
     public override string select(CallContext ctx, Dancer d) {
-      return CallContext.angle(d) < 0 ? "Quarter Right" : "Quarter Left";
+      switch (name) {
+        case "Face In": return CallContext.angle(d) < 0 ? "Quarter Right" : "Quarter Left";
+        case "Face Out": return CallContext.angle(d) > 0 ? "Quarter Right" : "Quarter Left";
+        case "Face Left": return "Quarter Left";
+        case "Face Right": return "Quarter Right";
+        default: return "Stand";
+      }
     }
-
   }
+
 }

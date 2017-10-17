@@ -27,21 +27,27 @@ namespace TaminationsWin.Calls {
       //  We need to look at all the dancers, not just actives
       //  because partners of the runners need to dodge
       ctx.dancers.ForEach(d => {
-        if (d.data.active) {
-          //  Partner must be inactive
-          var d2 = d.data.partner;
-          if (d2 != null) {
-            if (!d2.data.active)
-              d.path.add(TamUtils.getMove(d.data.beau ? "Run Right" : "Run Left"));
-            else
-              throw new CallError("Dancer and partner cannot both Run");
-          } else
-            throw new CallError($"Dancer {d.number} has nobody to Run around");
-        }
-        else { // inactive dancer
-          var d2 = d.data.partner;
-          if (d2 != null && d2.data.active)
-            d.path.add(TamUtils.getMove(d.data.beau ? "Dodge Right" : "Dodge Left"));
+      if (d.data.active) {
+        //  Partner must be inactive
+        var d2 = d.data.partner;
+        if (d2 != null) {
+          if (!d2.data.active) {
+            var m = d.data.beau ? "Run Right" : "Run Left";
+            var dist = CallContext.distance(d,d2);
+            d.path.add(TamUtils.getMove(m).scale(1.0,dist/2));
+          }
+          else
+            throw new CallError("Dancer and partner cannot both Run");
+        } else
+          throw new CallError($"Dancer {d.number} has nobody to Run around");
+      }
+      else { // inactive dancer
+        var d2 = d.data.partner;
+        if (d2 != null && d2.data.active) {
+            var m = d.data.beau ? "Dodge Right" : "Dodge Left";
+            var dist = CallContext.distance(d,d2);
+            d.path.add(TamUtils.getMove(m).scale(1.0,dist/2));
+          }
         }
       });      
     }

@@ -19,12 +19,18 @@
 */
 
 namespace TaminationsWin.Calls {
-  class FaceLeft : QuarterTurns {
+  class LeftTouchAQuarter : Action {
 
-    public FaceLeft() { name = "Face Left"; }
+    public LeftTouchAQuarter() { name = "Left Touch a Quarter"; }
 
-    public override string select(CallContext ctx, Dancer d) {
-      return "Quarter Left";
+    public override Path performOne(Dancer d,CallContext ctx) {
+      var d2 = ctx.dancerFacing(d);
+      if (d2 != null) {
+        return TamUtils.getMove("Extend Right").scale(CallContext.distance(d,d2) / 2,1)
+          .add(TamUtils.getMove("Hinge Left"));
+      }
+      else
+        throw new CallError($"Dancer {d.number} cannot Touch a Quarter");
     }
 
   }

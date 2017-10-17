@@ -18,58 +18,70 @@
 
 */
 
+using System.Text.RegularExpressions;
+
 namespace TaminationsWin.Calls
 {
   abstract class CodedCall : Call
   {
 
-    public static CodedCall getCodedCall(string callname) {
-      switch (callname.ToLower()) {
-        case "allemande left": return new AllemandeLeft();
-        case "and roll": return new Roll();
-        case "and spread": return new Spread();
-        case "beaus": return new Beaus();
-        case "belles": return new Belles();
-        case "box counter rotate": return new BoxCounterRotate();
-        case "box the gnat": return new BoxtheGnat();
-        case "boys": return new Boys();
-        case "centers": return new Centers();
-        case "circulate": return new Circulate();
-        case "cross run": return new CrossRun();
-        case "ends": return new Ends();
-        case "explode and": return new ExplodeAnd();
-        case "face in": return new FaceIn();
-        case "face left": return new FaceLeft();
-        case "face out": return new FaceOut();
-        case "face right": return new FaceRight();
-        case "girls": return new Girls();
-        case "half": return new Half();
-        case "hinge": return new Hinge();
-        case "leaders": return new Leaders();
-        case "one and a half": return new OneAndaHalf();
-        case "pass thru": return new PassThru();
-        case "quarter in": return new QuarterIn();
-        case "quarter out": return new QuarterOut();
-        case "run": return new Run();
-        case "slide thru": return new SlideThru();
-        case "slip": return new Slip();
-        case "star thru": return new StarThru();
-        case "touch a quarter": return new TouchAQuarter();
-        case "trade": return new Trade();
-        case "trailers": return new Trailers();
-        case "turn back": return new TurnBack();
-        case "turn thru": return new TurnThru();
-        case "very centers": return new VeryCenters();
-        case "wheel around": return new WheelAround();
-        case "zig": return new Zig();
-        case "zag": return new Zag();
-        case "zig zig": return new ZigZig();
-        case "zig zag": return new ZigZag();
-        case "zag zig": return new ZagZig();
-        case "zag zag": return new ZagZag();
-        case "zoom": return new Zoom();
-        default: return null;
+    delegate CodedCall CodedCallCreator(string callname);
+    struct CallKey {
+      public string regex;
+      public CodedCallCreator creator;
+      public CallKey(string regex, CodedCallCreator creator) {
+        this.regex = regex;
+        this.creator = creator;
       }
+    }
+
+    static CallKey[] codedCalls = {
+      new CallKey("allemande left", callname => new AllemandeLeft()),
+      new CallKey("and roll", callname => new Roll()),
+      new CallKey("and spread", callname => new Spread()),
+      new CallKey("beaus", callname => new Beaus()),
+      new CallKey("belles", callname => new Belles()),
+      new CallKey("box counter rotate", callname => new BoxCounterRotate()),
+      new CallKey("box the gnat", callname => new BoxtheGnat()),
+      new CallKey("boys?", callname => new Boys()),
+      new CallKey("centers?", callname => new Centers()),
+      new CallKey("circulate", callname => new Circulate()),
+      new CallKey("cross run", callname => new CrossRun()),
+      new CallKey("ends?", callname => new Ends()),
+      new CallKey("explode and", callname => new ExplodeAnd()),
+      new CallKey("face (in|out|left|right)", callname => new FaceIn(callname)),
+      new CallKey("girls?", callname => new Girls()),
+      new CallKey("half", callname => new Half()),
+      new CallKey("heads?", callname => new Heads()),
+      new CallKey("hinge", callname => new Hinge()),
+      new CallKey("leaders?", callname => new Leaders()),
+      new CallKey("left touch a quarter", callname => new LeftTouchAQuarter()),
+      new CallKey("one and a half", callname => new OneAndaHalf()),
+      new CallKey("pass thru", callname => new PassThru()),
+      new CallKey("quarter (in|out)", callname => new QuarterIn(callname)),
+      new CallKey("run", callname => new Run()),
+      new CallKey("sides?", callname => new Sides()),
+      new CallKey("slide thru", callname => new SlideThru()),
+      new CallKey("slip", callname => new Slip()),
+      new CallKey("star thru", callname => new StarThru()),
+      new CallKey("(left )?touch a quarter", callname => new TouchAQuarter(callname)),
+      new CallKey("trade", callname => new Trade()),
+      new CallKey("trailers?", callname => new Trailers()),
+      new CallKey("turn back", callname => new TurnBack()),
+      new CallKey("turn thru", callname => new TurnThru()),
+      new CallKey("very centers", callname => new VeryCenters()),
+      new CallKey("wheel around", callname => new WheelAround()),
+      new CallKey("z[ai]g", callname => new Zig(callname)),
+      new CallKey("z[ai]g z[ai]g", callname => new ZigZag(callname)),
+      new CallKey("zoom", callname => new Zoom()),
+    };
+
+    public static CodedCall getCodedCall(string calltext) {
+      var callname = calltext.ToLower();
+      for (int i = 0; i<codedCalls.Length; i++)
+        if (Regex.Match(callname,"^"+codedCalls[i].regex+"$").Success)
+          return codedCalls[i].creator(callname);
+      return null;
     }
 
     public override void postProcess(CallContext ctx,int i = 0) {

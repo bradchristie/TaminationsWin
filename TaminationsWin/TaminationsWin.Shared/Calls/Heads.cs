@@ -19,13 +19,15 @@
 */
 
 namespace TaminationsWin.Calls {
-  class Zag : QuarterTurns {
 
-    public Zag() { name = "Zag"; }
+  class Heads : FilterActives {
 
-    public override string select(CallContext ctx, Dancer d) {
-      return d.data.leader ? "Quarter Left" : "Stand";
+    public Heads() { name = "Heads"; }
+
+    public override bool isActive(Dancer d) {
+      return d.number_couple == "1" || d.number_couple == "3";
     }
 
   }
+
 }
