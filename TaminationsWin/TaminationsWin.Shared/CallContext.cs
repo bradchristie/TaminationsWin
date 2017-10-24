@@ -469,7 +469,8 @@ namespace TaminationsWin
       standardFormations.ForEach(f => {
         CallContext ctx2 = new CallContext(TamUtils.getFormation(f));
         //  See if this formation matches
-        var mapping = matchFormations(ctx1,ctx2,sexy: false,fuzzy: true);
+        var mapping = matchFormations(ctx1,ctx2,
+          sexy: false, fuzzy: true, rotate:true);
         if (mapping != null) {
           //  If it does, get the offsets
           var offsets = ctx1.computeFormationOffsets(ctx2,mapping);
@@ -614,6 +615,13 @@ namespace TaminationsWin
     //  Return true if 8 dancers are in 2 general columns of 4 dancers each
     public bool isColumns() {
       return dancers.All(d => dancersInFront(d).Count() + dancersInBack(d).Count() == 3);
+    }
+
+    //  Return true if 8 dancers are in two-faced lines
+    public bool isTwoFacedLines() {
+      return isLines() &&
+        dancers.Where(d => d.data.leader).Count() == 4 &&
+        dancers.Where(d => d.data.trailer).Count() == 4;
     }
 
     //  Level off the number of beats for each dancer

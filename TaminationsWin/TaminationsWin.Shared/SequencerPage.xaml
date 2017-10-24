@@ -31,6 +31,7 @@
           <!-- call input -->
         </Grid.RowDefinitions>
         <local:AnimationView Grid.Row="0" x:Name="animationView" />
+        <TextBlock Grid.Row="0" Margin="0,0,20,0" x:Name="beatText" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="40"  />
         <Slider x:Name="slider" Maximum="100" Minimum="0" Grid.Row="1"  ValueChanged="slider_ValueChanged" IsThumbToolTipEnabled="False" />
         <local:SliderTicView x:Name="sliderTicView" Grid.Row="2" Margin="0,4,0,0"/>
         <Grid x:Name="buttonGrid" Grid.Row="3">

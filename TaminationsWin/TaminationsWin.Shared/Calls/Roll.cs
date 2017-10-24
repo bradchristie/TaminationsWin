@@ -31,5 +31,11 @@ namespace TaminationsWin.Calls {
       return roll < -0.1 ? "Quarter Right" : roll > 0.1 ? "Quarter Left" : "Stand";
     }
 
+    public override void preProcess(CallContext ctx,int i = 0) {
+      base.preProcess(ctx,i);
+      if (i == 0)
+        throw new CallError("'and Roll' must follow another call.");
+    }
+
   }
 }

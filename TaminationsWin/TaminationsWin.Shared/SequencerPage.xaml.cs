@@ -75,6 +75,9 @@ namespace TaminationsWin {
         userDrag = false;
         slider.Value = beat * 100 / animationView.totalBeats;
         userDrag = true;
+        //  Show the current beat
+        var b = Math.Min(Math.Max(0,beat-animationView.leadin),animationView.movingBeats);
+        beatText.Text = $"{(int)b}";
       };
       DataTransferManager.GetForCurrentView().DataRequested += DataRequested;
       startSequence();

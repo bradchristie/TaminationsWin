@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace TaminationsWin.Calls
@@ -14,14 +15,21 @@ namespace TaminationsWin.Calls
     public override void perform(CallContext ctx,int i = 0) {
       //  If just 4 dancers, try Box Circulate
       if (ctx.actives.Count == 4) {
-        try {
-          ctx.applyCalls("box circulate");
+        if (ctx.actives.All(d => d.data.center)) {
+          try {
+            ctx.applyCalls("box circulate");
+          }
+          catch (CallError) {
+            //  That didn't work, try to find a circulate path for each dancer
+            base.perform(ctx);
+          }
         }
-        catch (CallError) {
-          //  That didn't work, try to find a circulate path for each dancer
+        else
           base.perform(ctx);
-        }
       }
+      //  If two-faced lines, do Couples Circulate
+      else if (ctx.isTwoFacedLines())
+        ctx.applyCalls("couples circulate");
       //  If in waves or lines, then do All 8 Circulate
       else if (ctx.isLines())
         ctx.applyCalls("all 8 circulate");
