@@ -48,25 +48,48 @@ namespace TaminationsWin
       ay = y2 - y1 - cy - by;
     }
 
+    //  Compute X, Y values for a specific t value
+    private double xt(double t) {
+      return x1 + t * (cx + t * (bx + t * ax));
+    }
+    private double yt(double t) {
+      return y1 + t * (cy + t * (by + t * ay));
+    }
+    //  Compute dx, dy values for a specific t value
+    private double dxt(double t) {
+      return cx + t * (2.0 * bx + t * 3.0 * ax);
+    }
+    private double dyt(double t) {
+      return cy + t * (2.0 * by + t * 3.0 * ay);
+    }
+    private double angle(double t) {
+      return Math.Atan2(dyt(t),dxt(t));
+    }
+
     //  Return the movement along the curve given "t" between 0 and 1
     public Matrix3x2 translate(double t) {
-      var x = x1 + t * (cx + t * (bx + t * ax));
-      var y = y1 + t * (cy + t * (by + t * ay));
+      var x = xt(t);
+      var y = yt(t);
       return Matrix.CreateTranslation(x, y);
     }
 
     public Matrix3x2 rotate(double t) {
-      var x = cx + t * (2.0 * bx + t * 3.0 * ax);
-      var y = cy + t * (2.0 * by + t * 3.0 * ay);
-      var theta = Math.Atan2(y, x);
+      var theta = angle(t);
       return Matrix.CreateRotation(theta);
     }
 
     //  Return turn direction at end of curve
     public double rolling() {
-      var v1 = Vector.Create(x2 - ctrlx2, y2 - ctrly2);
-      var v2 = Vector.Create(x2 - ctrlx1, y2 - ctrly1);
-      return v2.Cross(v1);
+      //  Check angle at end
+      var theta = angle(1.0);
+      //  If it's 180 then use angle at halfway point
+      if (theta.angleEquals(Math.PI))
+        theta = angle(0.5);
+      //  If angle is 0 then no turn
+      if (theta.angleEquals(0.0))
+        return 0.0;
+      else
+        return theta;
     }
 
   }

@@ -28,7 +28,7 @@ namespace TaminationsWin.Calls {
       //  in front of this dancer
       //  who is also facing this dancer
       var d2 = ctx.dancerInFront(d);
-      if (d2 != null) {
+      if (d2 != null && d2.data.active && ctx.dancerInFront(d2) == d) {
         var dist = CallContext.distance(d, d2);
         return TamUtils.getMove("Extend Left").scale(dist / 2, 0.5)
           .add(TamUtils.getMove("Swing Right").scale(0.5, 0.5))

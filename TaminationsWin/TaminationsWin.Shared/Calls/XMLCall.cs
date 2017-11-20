@@ -74,6 +74,17 @@ namespace TaminationsWin.Calls
         //  use the new position
         ctx.actives[i3].animateToEnd();
       });
+
+      //  Mark dancers that had no XML move as inactive
+      //  Needed for post-call modifications e.g. spread
+      var inactives = new List<Dancer>();
+      xmlmap.ForEach((m,i4) => {
+        if (allp[m >> 1].movelist.Count == 0)
+          inactives.Add(ctx.actives[i4]);
+      });
+      inactives.ForEach(d => d.data.active = false);
+
+
       ctx.levelBeats();
       ctx.analyze();
     }

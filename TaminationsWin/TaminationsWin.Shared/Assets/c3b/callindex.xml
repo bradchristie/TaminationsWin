@@ -1370,6 +1370,7 @@
   <call languages="lang-ja" level="Basic and Mainstream" link="ms/pass_to_the_center" sublevel="Mainstream" text="passtothecenter" title="Pass to the Center" />
   <call level="Plus" link="plus/anything_and_roll" sublevel="Plus" text="passtothecenterandroll" title="Pass to the Center and Roll" />
   <call level="Plus" link="plus/anything_and_spread" sublevel="Plus" text="passtothecenterandspread" title="Pass to the Center and Spread" />
+  <call level="Challenge" link="c3b/z_axle" sublevel="C-3B" text="passzaxle" title="Pass Z Axle" />
   <call languages="lang-de lang-ja" level="Basic and Mainstream" link="b1/passing_rule" sublevel="Basic 1" text="passingrule" title="Passing Rule" />
   <call level="Challenge" link="c3a/patch_anyone" sublevel="C-3A" text="patchanyone" title="Patch Anyone" />
   <call level="Challenge" link="c3a/patch_anyone" sublevel="C-3A" text="patchtheboys" title="Patch the Boys" />
@@ -1856,6 +1857,7 @@
   <call level="Challenge" link="c2/anything_and_circle" sublevel="C-2" text="switchandcircle14" title="Switch and Circle 1/4" />
   <call level="Challenge" link="c1/switch_the_line" sublevel="C-1" text="switchtheline" title="Switch the Line" />
   <call level="Advanced" link="a2/switch_the_wave" sublevel="A-2" text="switchthewave" title="Switch the Wave" />
+  <call level="Challenge" link="c1/anything_the_windmill" sublevel="C-1" text="switchthewindmillright" title="Switch the Windmill Right" />
   <call level="Advanced" link="a2/switch_to_a_diamond" sublevel="A-2" text="switchtoadiamond" title="Switch to a Diamond" />
   <call level="Challenge" link="c1/switch_to_a_diamond" sublevel="C-1" text="switchtoadiamond" title="Switch to a Diamond" />
   <call level="Advanced" link="a2/switch_to_an_hourglass" sublevel="A-2" text="switchtoanhourglass" title="Switch to an Hourglass" />

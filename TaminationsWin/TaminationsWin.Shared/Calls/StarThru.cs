@@ -23,8 +23,17 @@ namespace TaminationsWin.Calls {
 
     public StarThru() { name = "Star Thru"; }
 
-    //  TODO check that facing dancers are opposite genders
     public override void perform(CallContext ctx, int i = 0) {
+      //  Check that facing dancers are opposite genders
+      ctx.actives.ForEach(d =>
+      {
+        var d2 = ctx.dancerInFront(d);
+        if (d2 == null || !d2.data.active || ctx.dancerInFront(d2) != d)
+          throw new CallError($"Dancer {d.number} has nobody to Star Thru with");
+        if (d2.gender == d.gender)
+          throw new CallError($"Dancer {d.number} cannot Star Thru with another dancer of the same gender");
+      });
+      //  All ok
       ctx.applyCalls("Slide Thru");
     }
 

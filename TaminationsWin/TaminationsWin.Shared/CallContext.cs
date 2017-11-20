@@ -586,6 +586,13 @@ namespace TaminationsWin
       return d2 != null && d.tx.Angle().angleEquals(d2.tx.Angle());
     }
 
+    //  Return true if this dancer is in tandem with another dancer
+    public bool isInTandem(Dancer d) {
+      return d.data.trailer ? dancerInFront(d).data.leader :
+             d.data.leader ? dancerInBack(d).data.trailer :
+             false;
+    }
+
     //  Return true if this is 4 dancers in a box
     public bool isBox() {
       //  Must have 4 dancers

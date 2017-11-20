@@ -31,7 +31,7 @@ namespace TaminationsWin.Calls {
     public override void performCall(CallContext ctx, int i = 0) {
       //  At this point the call has already been done once
       //  So just do half of it again
-      ctx.applyCall("half " + ctx.callstack[0].name);
+      ctx.applyCalls("half " + ctx.callstack[0].name);
     }
 
   }

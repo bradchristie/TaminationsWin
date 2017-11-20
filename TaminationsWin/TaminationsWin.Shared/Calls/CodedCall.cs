@@ -56,7 +56,7 @@ namespace TaminationsWin.Calls
       new CallKey("hinge", callname => new Hinge()),
       new CallKey("leaders?", callname => new Leaders()),
       new CallKey("left touch a quarter", callname => new LeftTouchAQuarter()),
-      new CallKey("one and a half", callname => new OneAndaHalf()),
+      new CallKey("(onc?e and a half)|(1 1/2)", callname => new OneAndaHalf()),
       new CallKey("pass thru", callname => new PassThru()),
       new CallKey("quarter (in|out)", callname => new QuarterIn(callname)),
       new CallKey("run", callname => new Run()),
@@ -79,7 +79,7 @@ namespace TaminationsWin.Calls
     public static CodedCall getCodedCall(string calltext) {
       var callname = calltext.ToLower();
       for (int i = 0; i<codedCalls.Length; i++)
-        if (Regex.Match(callname,"^"+codedCalls[i].regex+"$").Success)
+        if (Regex.Match(callname,"^("+codedCalls[i].regex+")$").Success)
           return codedCalls[i].creator(callname);
       return null;
     }

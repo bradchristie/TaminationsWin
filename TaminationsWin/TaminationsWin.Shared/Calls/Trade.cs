@@ -27,9 +27,9 @@ namespace TaminationsWin.Calls {
     public override Path performOne(Dancer d, CallContext ctx) {
       //  Figure out what dancer we're trading with
       var leftcount = 0;
-      var bestleft = d;
+      Dancer bestleft = null;
       var rightcount = 0;
-      var bestright = d;
+      Dancer bestright = null;
       ctx.actives.ForEach(d2 => {
         if (d2 != d) {
           if (CallContext.isLeft(d)(d2)) {
@@ -43,17 +43,22 @@ namespace TaminationsWin.Calls {
           }
         }
       });
+      //  Check that the trading dancer is facing same or opposite direction
+      if (bestright!=null && !CallContext.isRight(bestright)(d) && !CallContext.isLeft(bestright)(d))
+        bestright = null;
+      if (bestleft!=null && !CallContext.isRight(bestleft)(d) && !CallContext.isLeft(bestleft)(d))
+        bestleft = null;
 
       var dtrade = d;
       var samedir = false;
       var call = "";
       //  We trade with the nearest dancer in the direction with
       //  an odd number of dancers
-      if (rightcount % 2 == 1 & leftcount % 2 == 0) {
+      if (bestright!=null && ((rightcount % 2 == 1 && leftcount % 2 == 0) || bestleft==null)) {
         dtrade = bestright;
         call = "Run Right";
         samedir = CallContext.isLeft(dtrade)(d);
-      } else if (rightcount % 2 == 0 && leftcount % 2 == 1) {
+      } else if (bestleft!=null && ((rightcount % 2 == 0 && leftcount % 2 == 1) || bestright==null)) {
         dtrade = bestleft;
         call = "Run Left";
         samedir = CallContext.isRight(dtrade)(d);
